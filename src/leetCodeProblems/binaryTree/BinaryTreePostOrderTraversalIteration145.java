@@ -1,4 +1,4 @@
-package leetCodeProblems.binaryTree;
+package leetCodeProblems.BinaryTree;
 
 /**
  * LeetCode Problem Link - https://leetcode.com/problems/binary-tree-postorder-traversal/
