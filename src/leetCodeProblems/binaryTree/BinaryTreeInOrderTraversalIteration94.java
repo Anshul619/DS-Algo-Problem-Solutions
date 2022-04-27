@@ -1,4 +1,4 @@
-package leetCodeProblems;
+package leetCodeProblems.binaryTree;
 
 import java.util.*;
 

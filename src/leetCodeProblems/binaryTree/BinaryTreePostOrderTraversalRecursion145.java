@@ -1,15 +1,13 @@
-package leetCodeProblems;
+package leetCodeProblems.binaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * LeetCode Problem Link - https://leetcode.com/problems/binary-tree-inorder-traversal/
- *
- * InterviewBit - https://www.interviewbit.com/problems/inorder-traversal/
+ * LeetCode Problem Link - https://leetcode.com/problems/binary-tree-postorder-traversal/
  * */
 
-public class BinaryTreeInOrderTraversalRecursion94 {
+public class BinaryTreePostOrderTraversalRecursion145 {
 
 	void recursion(TreeNode node, List<Integer> output) {
 
@@ -21,13 +19,11 @@ public class BinaryTreeInOrderTraversalRecursion94 {
             recursion(node.left, output);
         }
 
-        output.add(node.val);
-
         if (node.right != null) {
             recursion(node.right, output);
         }
 
-
+        output.add(node.val);
     }
 
     public List<Integer> postorderTraversal(TreeNode root) {
@@ -48,7 +44,7 @@ public class BinaryTreeInOrderTraversalRecursion94 {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        BinaryTreeInOrderTraversalRecursion94 ob = new BinaryTreeInOrderTraversalRecursion94();
+        BinaryTreePostOrderTraversalRecursion145 ob = new BinaryTreePostOrderTraversalRecursion145();
 
         List<Integer> output = ob.postorderTraversal(root);
 

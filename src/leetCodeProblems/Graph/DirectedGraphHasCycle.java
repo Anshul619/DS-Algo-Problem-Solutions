@@ -1,4 +1,4 @@
-package leetCodeProblems;
+package leetCodeProblems.Graph;
 
 import java.util.*;
 
