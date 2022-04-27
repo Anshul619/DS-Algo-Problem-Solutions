@@ -4,23 +4,23 @@ import java.util.*;
 
 /**
  * LeetCode Problem Link - https://leetcode.com/problems/binary-tree-inorder-traversal/
- * 
+ *
  * InterviewBit - https://www.interviewbit.com/problems/inorder-traversal/
  * */
 
 
 public class BinaryTreeInOrderTraversalIteration94 {
-	
+
 	public List<Integer> inorderTraversal(TreeNode A) {
-		 
+
        ArrayList<Integer> outputList = new ArrayList<Integer>();
- 
+
        Stack<TreeNode> inputStack = new Stack<TreeNode>();
- 
+
        TreeNode current = A;
- 
+
        while(!inputStack.isEmpty() || current != null) {
-          
+
            if (current != null) {
                inputStack.push(current);
                current = current.left;
@@ -31,13 +31,13 @@ public class BinaryTreeInOrderTraversalIteration94 {
                current = temp.right;
            }
        }
-      
+
        return outputList;
- 
+
     }
-	
+
 	public static void main(String[] args) {
-    	
+
     	TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
@@ -45,13 +45,13 @@ public class BinaryTreeInOrderTraversalIteration94 {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        
+
         BinaryTreeInOrderTraversalIteration94 ob = new BinaryTreeInOrderTraversalIteration94();
-        
+
         List<Integer> output = ob.inorderTraversal(root);
-        
+
         System.out.println(output);
-    	
+
     }
 
 	static class TreeNode {
