@@ -12,40 +12,40 @@ import java.util.*;
 public class BinaryTreePreOrderTraversalIteration144 {
 
 	public List<Integer> preorderTraversal(TreeNode root) {
-		
+
         List<Integer> output = new ArrayList<Integer>();
-        
+
         Stack<TreeNode> stackIn = new Stack<TreeNode>();
-        
+
         TreeNode current = root;
-        
+
         while(!stackIn.isEmpty() || current != null) {
-            
+
             if (current != null) {
                 output.add(current.val);
                 stackIn.push(current);
-                
+
                 if (current.left != null) {
                     current = current.left;
                 }
                 else {
                     current = null;
                 }
-                
+
             }
             else {
                 TreeNode temp = stackIn.pop();
-                
+
                 if (temp.right != null) {
                     current = temp.right;
                 }
                 else {
                     current = null;
                 }
-                
+
             }
         }
-        
+
         return output;
     }
 

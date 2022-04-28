@@ -12,27 +12,27 @@ import java.util.List;
 public class BinaryTreePreOrderTraversalRecursion144 {
 
 	void recursion(TreeNode node, List<Integer> output) {
-        
+
         if (node == null) {
             return;
         }
-        
+
         output.add(node.val);
-        
+
         if (node.left != null) {
             recursion(node.left, output);
         }
-        
+
         if (node.right != null) {
             recursion(node.right, output);
-        }    
+        }
     }
-    
+
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> output = new ArrayList<Integer>();
-        
+
         recursion(root, output);
-        
+
         return output;
     }
 

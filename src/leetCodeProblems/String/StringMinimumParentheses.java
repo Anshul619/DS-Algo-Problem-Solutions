@@ -21,7 +21,7 @@ public class StringMinimumParentheses {
 			} else {
 				c_need -= 1;
 
-				// This is TRICKY and IMPORTANT CODE. 
+				// This is TRICKY and IMPORTANT CODE.
 				// To reset the variables. This is the only closing bracket.
 				if (c_need == -1) {
 					c_need = 0;

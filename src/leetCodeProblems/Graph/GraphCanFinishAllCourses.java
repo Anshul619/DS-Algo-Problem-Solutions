@@ -24,9 +24,9 @@ public class GraphCanFinishAllCourses {
 
     // A DFS based function to check if there is a cycle
     // in the directed graph.
-    boolean dfsCycle(ArrayList<ArrayList<Integer>> graph, int node, 
+    boolean dfsCycle(ArrayList<ArrayList<Integer>> graph, int node,
             boolean[] visitedOnPath, boolean[] allVisited) {
-        
+
         if (allVisited[node]) {
             return false;
         }
@@ -66,12 +66,12 @@ public class GraphCanFinishAllCourses {
     }
 
     public int solve(int A, int[] B, int[] C) {
-       
-        boolean result = canFinish(A, B, C);  
+
+        boolean result = canFinish(A, B, C);
 
         if (result) {
             return 1;
-        }      
+        }
         else {
             return 0;
         }

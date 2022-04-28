@@ -10,35 +10,35 @@ import java.util.*;
  * */
 
 public class BinaryTreeAllRootToLeafPathsWithSum113 {
-	
+
 	List<List<Integer>> result = new ArrayList<>();
-	
+
     public void dfs(TreeNode node, int targetSum, ArrayList<Integer> path) {
-        
+
         if (node == null) {
             return;
         }
-        
+
         int subSum =  targetSum - node.val;
-        
+
         path.add(node.val);
-        
+
         if (subSum == 0 && node.left == null && node.right == null) {
             result.add(path);
         }
-        
+
         dfs(node.left, subSum, new ArrayList<>(path));
         dfs(node.right, subSum, new ArrayList<>(path));
     }
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
-        
+
         if (root == null) {
             return result;
         }
-        
+
         dfs(root, targetSum, new ArrayList<Integer>());
-     
+
         return result;
     }
 
