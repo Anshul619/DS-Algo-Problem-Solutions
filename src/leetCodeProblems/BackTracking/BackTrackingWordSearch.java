@@ -5,8 +5,8 @@ public class BackTrackingWordSearch {
 	static int rows;
     static int cols;
 
-    static int[] dx = {1, 0, -1, 0};
-    static int[] dy = {0, -1, 0, 1};
+    static int[] dx = {0, 1, 0, -1};
+    static int[] dy = {1, 0, -1, 0};
 
     static boolean backTrace(char[][] board, String word, int i, int j, int wIndex) {
 
