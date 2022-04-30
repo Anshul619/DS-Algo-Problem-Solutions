@@ -16,7 +16,7 @@ public class DPLongestPalindromicSubString5 {
         }
         
         // Check for substrings with length 2.
-        // This can't be handled in ( >3) loop due to logic condition problem
+        // This can't be handled in (>3) loop due to logic condition mismatch
         for(int i=0; i< length-1; i++) {
             if (s.charAt(i) == s.charAt(i+1)) {
                 ansSubStringStartIndex = i;
@@ -35,7 +35,8 @@ public class DPLongestPalindromicSubString5 {
                 if (table[i+1][j-1]) { // sub-sub string is already palindrome
                     if (s.charAt(i) == s.charAt(j)) {
                         table[i][j] = true;
-
+                        
+                        // Set the answer variables
                         if (subStringLengthToCheck > ansSubStringLength) {
                             ansSubStringStartIndex = i;
                             ansSubStringLength = subStringLengthToCheck;
