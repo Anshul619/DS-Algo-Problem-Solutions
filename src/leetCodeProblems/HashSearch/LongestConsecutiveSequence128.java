@@ -1,4 +1,4 @@
-package leetCodeProblems.Hashing;
+package leetCodeProblems.HashSearch;
 
 public class LongestConsecutiveSequence128 {
 	public int longestConsecutive(int[] nums) {
