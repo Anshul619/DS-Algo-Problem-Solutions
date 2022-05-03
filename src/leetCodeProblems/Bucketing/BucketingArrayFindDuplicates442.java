@@ -1,4 +1,6 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.Bucketing;
+
+import java.util.*;
 
 public class BucketingArrayFindDuplicates442 {
 
