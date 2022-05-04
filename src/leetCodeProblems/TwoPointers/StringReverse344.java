@@ -1,4 +1,4 @@
-package leetCodeProblems;
+package leetCodeProblems.TwoPointers;
 
 /**
  * LeetCode Problem Link - https://leetcode.com/problems/reverse-string/

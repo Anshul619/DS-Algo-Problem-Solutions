@@ -27,7 +27,7 @@ public class MinInsertionsToBalanceParentheses1541 {
 				// Exception Handling - To reset the variables. This is the only closing bracket.
 				if (closingBracketNeeded == -1) {
 					closingBracketNeeded = 1;
-					ans++; // an open bracket is needed here. Hence incrementing "ans".
+					ans++; // an OPEN bracket is needed here. Hence incrementing "ans".
 				}
 			}
 		}

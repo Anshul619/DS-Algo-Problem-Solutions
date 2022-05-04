@@ -1,5 +1,7 @@
 package leetCodeProblems.TwoPointers;
 
+import java.util.*;
+
 public class ThreeSum15 {
 	
 	public List<List<Integer>> threeSum2PointerApproach(int[] nums) {
@@ -25,9 +27,9 @@ public class ThreeSum15 {
                     temp.add(nums[leftPointer]);
                     temp.add(nums[rightPointer]);
                     
-                    if (!s.contains(temp)) {
+                    /*if (!s.contains(temp)) {
                         output.add(temp);
-                    }
+                    }*/
                     
                     break;
                 }

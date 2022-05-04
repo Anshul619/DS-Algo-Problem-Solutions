@@ -1,5 +1,4 @@
-package leetCodeProblems;
-
+package leetCodeProblems.TwoPointers;
 /**
  * LeetCode Problem Link - https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/
  * */

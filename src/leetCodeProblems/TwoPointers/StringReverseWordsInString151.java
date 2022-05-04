@@ -1,6 +1,11 @@
 package leetCodeProblems.TwoPointers;
 
-public class StringReverseWordsInString {
+/**
+ * LeetCode - https://leetcode.com/problems/reverse-words-in-a-string/
+ * @author anshul.agrawal
+ *
+ */
+public class StringReverseWordsInString151 {
 	void reverse(char[] s, int start, int end ) {
 
         if (start<0 || end <0) {
@@ -36,7 +41,7 @@ public class StringReverseWordsInString {
 
         }
 
-        if (index - 1 >= 0 && index - 1 < n && s[index - 1] == ' ')
+        if (index - 1 >= 0 && index - 1 < s.length && s[index - 1] == ' ')
             index--;
 
         return new String(s, 0, index);
