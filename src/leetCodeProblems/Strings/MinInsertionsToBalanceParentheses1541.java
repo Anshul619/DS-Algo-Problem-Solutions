@@ -12,7 +12,7 @@ public class MinInsertionsToBalanceParentheses1541 {
 				closingBracketNeeded += 2;
 
 				// This is tricky and IMPORTANT code.
-				// There was a closing bracket needed, hence we save it separately ( by
+				// There was a closing bracket ALREADY needed, hence we save it separately ( by
 				// incrementing ans ) & decrementing c_need.
 				// Needed for “())” - Minimum Insertions to balance a parentheses string “())”
 				if (closingBracketNeeded%2 == 1) { 
@@ -24,7 +24,7 @@ public class MinInsertionsToBalanceParentheses1541 {
 				closingBracketNeeded -= 1;
 
 				// This is TRICKY and IMPORTANT CODE.
-				// To reset the variables. This is the only closing bracket.
+				// Exception Handling - To reset the variables. This is the only closing bracket.
 				if (closingBracketNeeded == -1) {
 					closingBracketNeeded = 1;
 					ans++; // an open bracket is needed here. Hence incrementing "ans".
@@ -33,6 +33,14 @@ public class MinInsertionsToBalanceParentheses1541 {
 		}
 
 		return closingBracketNeeded + ans;
+	}
+	
+	public static void main(String[] args) {
+		MinInsertionsToBalanceParentheses1541 obj = new MinInsertionsToBalanceParentheses1541();
+		
+		int minInsertionsToBalanceParentheses = obj.minInsertions("(()))");
+		
+		System.out.println(minInsertionsToBalanceParentheses);
 	}
 
 }
