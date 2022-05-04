@@ -12,6 +12,16 @@ import java.util.*;
 public class BinaryTreeAllRootToLeafPathsWithSum113 {
 
 	List<List<Integer>> result = new ArrayList<>();
+	
+	 public ArrayList<Integer> getNewArrayList(ArrayList<Integer> baseArrayList) {
+        ArrayList<Integer> newArrayList = new ArrayList<Integer>();
+        
+        for(int i=0; i< baseArrayList.size(); i++) {
+            newArrayList.add(baseArrayList.get(i));
+        }
+        
+        return newArrayList;
+    }
 
     public void dfs(TreeNode node, int targetSum, ArrayList<Integer> path) {
 
@@ -27,8 +37,8 @@ public class BinaryTreeAllRootToLeafPathsWithSum113 {
             result.add(path);
         }
 
-        dfs(node.left, subSum, new ArrayList<>(path));
-        dfs(node.right, subSum, new ArrayList<>(path));
+        dfs(node.left, subSum, getNewArrayList(path));
+        dfs(node.right, subSum, getNewArrayList(path));
     }
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {

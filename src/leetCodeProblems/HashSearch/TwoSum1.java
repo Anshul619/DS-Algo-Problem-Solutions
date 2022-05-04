@@ -1,5 +1,7 @@
 package leetCodeProblems.HashSearch;
 
+import java.util.*;
+
 /**
  * LeetCode - https://leetcode.com/problems/two-sum/
  * 

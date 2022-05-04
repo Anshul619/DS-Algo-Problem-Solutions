@@ -1,5 +1,7 @@
 package leetCodeProblems.HashSearch;
 
+import java.util.*;
+
 public class LongestConsecutiveSequence128 {
 	public int longestConsecutive(int[] nums) {
         HashSet<Integer> hashSet = new HashSet<Integer>();

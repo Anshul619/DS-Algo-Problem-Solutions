@@ -1,6 +1,13 @@
 package leetCodeProblems.Arrays;
 
+import java.util.*;
+
 public class ArrayMergeOverlappingIntervals56 {
+	
+	static class Interval {
+		int start;
+		int end;
+	}
 	
 	// Helper class extending Comparator interface
     static class CompareStartInterval implements Comparator<Interval> {

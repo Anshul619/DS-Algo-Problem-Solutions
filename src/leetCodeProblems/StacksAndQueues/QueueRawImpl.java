@@ -33,11 +33,11 @@ public class QueueRawImpl {
 	}
 
 	public boolean isEmpty() {
-		return (top == -1);
+		return (last == -1);
 	}
 
 	public boolean isFull() {
-		return (top == maxSize - 1);
+		return (last == maxSize - 1);
 	}
 
 }

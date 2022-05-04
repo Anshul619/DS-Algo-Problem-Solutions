@@ -1,5 +1,7 @@
 package leetCodeProblems.HashSearch;
 
+import java.util.*;
+
 public class FourSum18 {
 	
     List<List<Integer>> output = new ArrayList<List<Integer>>(); 

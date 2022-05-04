@@ -1,5 +1,7 @@
 package leetCodeProblems.Graph;
 
+import java.util.*;
+
 public class GraphCanFinishAllCourses {
 	ArrayList<ArrayList<Integer>> buildGraph(int A, int[] B, int[] C) {
 

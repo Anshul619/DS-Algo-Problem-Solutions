@@ -48,7 +48,7 @@ public class BinaryTreePreOrderTraversalRecursion144 {
 
         BinaryTreePreOrderTraversalRecursion144 ob = new BinaryTreePreOrderTraversalRecursion144();
 
-        List<Integer> output = ob.postorderTraversal(root);
+        List<Integer> output = ob.preorderTraversal(root);
 
         System.out.println(output);
 
