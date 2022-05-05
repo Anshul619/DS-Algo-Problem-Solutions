@@ -24,13 +24,14 @@ public class BinarySearchRotatedSortedArray {
             return -1;
         }
         else if (nums1[start] <= nums1[middle]) { // Left side is sorted array
-
-        	 // Target element value is b/w start and middle
-            if (nums1[start] <= target && target <= nums1[middle]) {
+        	 
+            if (nums1[start] <= target && target <= nums1[middle]) { // Apply Binary Search i.e. target element value is b/w start and middle
+            	// start = start; // unchanged
                 end = middle - 1;
             }
             else {
                 start = middle + 1;
+                // end = end; // unchanged
             }
 
         }

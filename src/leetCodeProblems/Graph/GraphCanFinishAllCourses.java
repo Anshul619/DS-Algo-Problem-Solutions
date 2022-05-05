@@ -55,7 +55,7 @@ public class GraphCanFinishAllCourses {
         ArrayList<ArrayList<Integer>> graph = buildGraph(A, B, C);
 
         boolean[] visitedOnPath = new boolean[A];
-        boolean[] allVisited = new boolean[A];
+        boolean[] allVisited = new boolean[A]; // This is needed to remove redundant looping/cycles.
 
         for(int j=0; j < A; j++) {
             if (!allVisited[j] && dfsCycle(graph, j, visitedOnPath, allVisited)) {

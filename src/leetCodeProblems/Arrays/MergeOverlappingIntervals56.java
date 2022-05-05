@@ -2,7 +2,7 @@ package leetCodeProblems.Arrays;
 
 import java.util.*;
 
-public class ArrayMergeOverlappingIntervals56 {
+public class MergeOverlappingIntervals56 {
 	
 	static class Interval {
 		int start;

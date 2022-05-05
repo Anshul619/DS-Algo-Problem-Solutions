@@ -1,6 +1,6 @@
 package leetCodeProblems.Arrays;
 
-public class ArrayMaxSumContiguousSubArray {
+public class MaxSumContiguousSubArray {
 
 	// DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public int maxSubArray(final int[] A) {
