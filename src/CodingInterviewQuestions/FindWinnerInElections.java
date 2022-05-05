@@ -1,5 +1,10 @@
 package CodingInterviewQuestions;
 
+/**
+ * GeeksForGeeks - https://practice.geeksforgeeks.org/problems/winner-of-an-election-where-votes-are-represented-as-candidate-names-1587115621/1
+ * 
+ * 
+ */
 import java.util.HashMap;
 
 public class FindWinnerInElections {
