@@ -25,9 +25,7 @@ public class ThreeSumClosest16 {
             while(leftPointer < rightPointer) {
                 
                 int sum = nums[fixedPointer] + nums[leftPointer] + nums[rightPointer];
-                int sumDiff = sum - targetSum;
-                int closestDiff = closestSum - targetSum;
-
+                
                 if (sum == targetSum) {
                     return targetSum;
                 }
@@ -40,6 +38,9 @@ public class ThreeSumClosest16 {
 
                 //System.out.println("Sum diff -> " + Math.abs(sumDiff));
                 //System.out.println("Closest diff -> " + Math.abs(closestDiff));
+                
+                int sumDiff = sum - targetSum;
+                int closestDiff = closestSum - targetSum;
                 
                 if (Math.abs(sumDiff) < Math.abs(closestDiff)) {
                     closestSum = sum;
