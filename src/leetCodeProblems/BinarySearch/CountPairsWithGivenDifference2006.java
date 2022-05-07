@@ -8,20 +8,50 @@ import java.util.*;
 
 public class CountPairsWithGivenDifference2006 {
 
-	private int binarySearch(int[] arr, int X, int low)  {
+	/**
+	 * This is little different binary search.
+	 * - It is handling duplicates.
+	 * 
+	 * For incremented target value, 
+	 * - Instead of returning -1 ( if not found ), we would return next index ( with different value ) of the target value's index.
+	 * 
+	 * @param arr
+	 * @param target
+	 * @param low
+	 * @return
+	 */
+	private int binarySearchWithDuplicatesHandling(int[] arr, int target, int low)  {
+		
         int high = arr.length - 1;
          
-        int ans = arr.length;
+        int ans = arr.length;//-1;
          
         while(low <= high) {
-            int mid = low + (high - low) / 2;
-            if(arr[mid] >= X) {
-                ans = mid;
+        	
+            int mid = (low + high) / 2;
+            
+            if (arr[mid] == target) {
+            	return mid;
+            }
+            else if (arr[mid] > target) {
+            	
+            	// This is special thing in this Binary Search. 
+            	// This is needed to handle duplicates, when incremented target value is searched.
+                ans = mid; 
+                
+                // low = low; // unchanged
                 high = mid - 1;
             }
-            else low = mid + 1;
+            else {
+            	
+            	low = mid + 1;
+            	// high = high; // unchanged
+            	
+            }
         }
+        
         return ans;
+        
     }
     
     
@@ -33,18 +63,28 @@ public class CountPairsWithGivenDifference2006 {
         
         for(int i=0; i<nums.length; i++) {
 
-            int targetNumUsingSum = k+nums[i];
+            int targetNum = k+nums[i];
             
-            //System.out.println("nums[i] ->" + nums[i]);
+            int targetNumIndex = binarySearchWithDuplicatesHandling(nums, targetNum, i+1);
             
-            int searchIndex = binarySearch(nums, targetNumUsingSum, i+1);
-            
-            if (searchIndex != nums.length) {
-                int incrementalSearchIndex = binarySearch(nums, targetNumUsingSum+1, i+1);
-                count += incrementalSearchIndex - searchIndex;
+            if (targetNumIndex != nums.length) {
+            	
+            	int incrementedTargetSum = targetNum+1;
+            	
+                int incrementedTargetSumIndex = binarySearchWithDuplicatesHandling(nums, incrementedTargetSum, i+1);
+                
+                System.out.println("nums[i] -> " + nums[i]);
+                
+                System.out.println("targetNum -> " + targetNum + ", targetSumIndex -> " + targetNumIndex);
+
+            	System.out.println("incrementedTargetSum -> " + incrementedTargetSum + ", incrementedTargetSumIndex -> " + incrementedTargetSumIndex);
+            	
+            	System.out.println("---");
+            	
+                count += incrementedTargetSumIndex - targetNumIndex;
             }
             
-            //System.out.println("searchIndex ->" + searchIndex);
+            //
             
         }
         
@@ -54,8 +94,14 @@ public class CountPairsWithGivenDifference2006 {
     
     public static void main(String[] args) {
 				
-		int[] inputArray = {1, 2, 2, 1};
-		int targetDifference = 1;
+		//int[] inputArray = {1, 2, 2, 1};
+		//int targetDifference = 1; // Output = 4
+		
+		int[] inputArray = {3,2,1,5,4};
+		int targetDifference = 2; // Output = 3
+		
+		//int[] inputArray = {1, 3, 6};
+		//int targetDifference = 2; // Output = 1
 		
 		CountPairsWithGivenDifference2006 obj = new CountPairsWithGivenDifference2006();
 		
