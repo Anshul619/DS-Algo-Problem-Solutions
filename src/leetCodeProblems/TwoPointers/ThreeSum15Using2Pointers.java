@@ -2,7 +2,7 @@ package leetCodeProblems.TwoPointers;
 
 import java.util.*;
 
-public class ThreeSum15 {
+public class ThreeSum15Using2Pointers {
 	
 	public List<List<Integer>> threeSum2PointerApproach(int[] nums) {
         
