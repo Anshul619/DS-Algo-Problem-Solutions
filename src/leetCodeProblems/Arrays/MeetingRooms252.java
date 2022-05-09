@@ -38,7 +38,9 @@ public class MeetingRooms252 {
     	
     	//int[][] intervals = {{7,10},{2,4}}; // Sorted - {{2,4}, {7,10}}
     	
-    	int[][] intervals = {{0,30},{5,10},{15,20}}; // Sorted - {{0,30},{5,10},{15,20}}
+    	//int[][] intervals = {{0,30},{5,10},{15,20}};
+    	
+    	int[][] intervals = {{4,9},{4,17},{9,10}};
     	
     	//int[][] intervals = {{13,15},{1,13}};
     	
