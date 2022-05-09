@@ -1,5 +1,10 @@
 package leetCodeProblems.TwoPointers;
 
+/**
+ * LeetCode - https://leetcode.com/problems/merge-sorted-array/
+ * InterviewBit - https://www.interviewbit.com/problems/merge-two-sorted-lists-ii/
+ */
+
 import java.util.*;
 
 public class MergeTwoSortedListsInPlace88 {
@@ -75,7 +80,7 @@ public class MergeTwoSortedListsInPlace88 {
             //System.out.println("first array ->" + Arrays.toString(nums1));
         }
         
-        //System.out.println("FINAL merged array ->" + Arrays.toString(nums1));
+        System.out.println("FINAL merged array ->" + Arrays.toString(a.toArray()));
 	}
 	
 	public static void main(String[] args) {
@@ -105,12 +110,17 @@ public class MergeTwoSortedListsInPlace88 {
         firstArrayList.add(3);
         
         ArrayList<Integer> secondArrayList = new ArrayList<Integer>();
-        firstArrayList.add(-2);
-        firstArrayList.add(-2);
+        secondArrayList.add(-2);
+        secondArrayList.add(-2);
 
+        System.out.println("Merged array1 ->" + Arrays.toString(firstArrayList.toArray()));
+        System.out.println("Merged array2 ->" + Arrays.toString(secondArrayList.toArray()));
+        
         MergeTwoSortedListsInPlace88 obj = new MergeTwoSortedListsInPlace88();
         
         obj.merge(firstArrayList, secondArrayList);
+        
+        System.out.println("Output");
     }
 
 }
