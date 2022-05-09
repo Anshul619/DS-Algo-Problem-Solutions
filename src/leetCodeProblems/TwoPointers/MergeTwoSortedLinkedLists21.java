@@ -1,4 +1,4 @@
-package leetCodeProblems.LinkedList;
+package leetCodeProblems.TwoPointers;
 
 /**
  * LeetCode - https://leetcode.com/problems/merge-two-sorted-lists/
@@ -7,7 +7,7 @@ package leetCodeProblems.LinkedList;
  * @author anshul.agrawal
  *
  */
-public class MergeTwoSortedLists21 {
+public class MergeTwoSortedLinkedLists21 {
 	
 	static class ListNode {
 		
@@ -119,7 +119,7 @@ public class MergeTwoSortedLists21 {
         list2.next = new ListNode(10);
         list2.next.next = new ListNode(20);
         
-        MergeTwoSortedLists21 obj = new MergeTwoSortedLists21();
+        MergeTwoSortedLinkedLists21 obj = new MergeTwoSortedLinkedLists21();
         obj.mergeTwoLists(list1, list2);
         
         obj.print();
