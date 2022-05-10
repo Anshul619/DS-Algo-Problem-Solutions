@@ -1,17 +1,17 @@
 package leetCodeProblems.Sorting;
 
 /**
- * LeetCode - https://leetcode.com/problems/majority-element/
- * 
- * InterviewBit - https://www.interviewbit.com/problems/majority-element/
+ * LeetCode - https://leetcode.com/problems/majority-element-ii/
  */
 import java.util.*;
 
-public class MajorityElementIUsingSorting169 {
+public class MajorityElementII229 {
 	
-	public int majorityElement(int[] nums) {
+	public List<Integer> majorityElement(int[] nums) {
         
 		Arrays.sort(nums);        
+        
+        List<Integer> outputList = new ArrayList<Integer>();
         
         int localCurrentCount = 0;
         int localCurrentElement = 0;
@@ -25,26 +25,26 @@ public class MajorityElementIUsingSorting169 {
             
             localCurrentCount++;
             
-            if (localCurrentCount > (nums.length/2)) {
-                return nums[i];
+            if (localCurrentCount > (nums.length/3) && !outputList.contains(nums[i])) {
+                outputList.add(nums[i]);
             }
         }
         
-        return -1;
+        return outputList;
         
     }
     
     public static void main(String[] args) {
         
+    	//int[] inputArray = {1};
+    	
         //int[] inputArray = {3, 2, 3};
         
         int[] inputArray = {2,2,1,1,1,2,2};
         
-        MajorityElementIUsingSorting169 obj = new MajorityElementIUsingSorting169();
+        MajorityElementII229 obj = new MajorityElementII229();
         
-        int elementWithMaxCount = obj.majorityElement(inputArray);
-
-        System.out.println(elementWithMaxCount);
+        System.out.println(obj.majorityElement(inputArray));
     }
 
 }

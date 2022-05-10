@@ -2,6 +2,8 @@ package leetCodeProblems.HashSearch;
 
 /**
  * LeetCode - https://leetcode.com/problems/majority-element/
+ * 
+ * InterviewBit - https://www.interviewbit.com/problems/majority-element/
  */
 import java.util.*;
 
