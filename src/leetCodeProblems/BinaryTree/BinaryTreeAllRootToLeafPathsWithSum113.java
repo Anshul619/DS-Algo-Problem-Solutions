@@ -13,7 +13,7 @@ public class BinaryTreeAllRootToLeafPathsWithSum113 {
 
 	List<List<Integer>> result = new ArrayList<>();
 	
-	 public ArrayList<Integer> getNewArrayList(ArrayList<Integer> baseArrayList) {
+	private ArrayList<Integer> getNewArrayList(ArrayList<Integer> baseArrayList) {
         ArrayList<Integer> newArrayList = new ArrayList<Integer>();
         
         for(int i=0; i< baseArrayList.size(); i++) {
@@ -23,7 +23,7 @@ public class BinaryTreeAllRootToLeafPathsWithSum113 {
         return newArrayList;
     }
 
-    public void dfs(TreeNode node, int targetSum, ArrayList<Integer> path) {
+	private void dfs(TreeNode node, int targetSum, ArrayList<Integer> path) {
 
         if (node == null) {
             return;
