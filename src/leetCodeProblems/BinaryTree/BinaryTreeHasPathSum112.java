@@ -13,7 +13,7 @@ public class BinaryTreeHasPathSum112 {
 
 	public boolean hasPathSum(TreeNode root, int targetSum) {
 
-	  if (root == null) {
+	   if (root == null) {
            return false;
        }
 

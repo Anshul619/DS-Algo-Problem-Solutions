@@ -23,7 +23,7 @@ public class BinarySearchRotatedSortedArray {
         else if (start == end) {
             return -1;
         }
-        else if (nums1[start] <= nums1[middle]) { // Left side is sorted array
+        else if (nums1[start] <= nums1[middle]) { // Left side is SORTED array
         	 
             if (nums1[start] <= target && target <= nums1[middle]) { // Apply Binary Search i.e. target element value is b/w start and middle
             	// start = start; // unchanged

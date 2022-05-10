@@ -22,7 +22,9 @@ public class BinaryTreePreOrderTraversalIteration144 {
         while(!stackIn.isEmpty() || current != null) {
 
             if (current != null) {
+            	
                 output.add(current.val);
+                
                 stackIn.push(current);
 
                 if (current.left != null) {

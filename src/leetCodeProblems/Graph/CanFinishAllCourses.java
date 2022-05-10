@@ -1,8 +1,12 @@
 package leetCodeProblems.Graph;
 
+/**
+ * InterviewBit - https://www.interviewbit.com/problems/possibility-of-finishing-all-courses-given-prerequisites/
+ */
+
 import java.util.*;
 
-public class GraphCanFinishAllCourses {
+public class CanFinishAllCourses {
 	ArrayList<ArrayList<Integer>> buildGraph(int A, int[] B, int[] C) {
 
         ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();

@@ -18,7 +18,7 @@ public class MaxPointsOnSameLine149 {
             return Integer.MAX_VALUE;
         }
         else {
-            return 0.0 + ((double)(yDif)/(double)(xDif));
+            return 0.0 + ((double)(yDif)/(double)(xDif)); // Impoortant
             //return yDif/xDif;
         }     
     }

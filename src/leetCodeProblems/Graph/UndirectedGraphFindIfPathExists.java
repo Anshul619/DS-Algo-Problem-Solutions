@@ -2,18 +2,20 @@ package leetCodeProblems.Graph;
 
 import java.util.*;
 
-public class GraphFindIfPathExists {
+public class UndirectedGraphFindIfPathExists {
 
 	ArrayList<ArrayList<Integer>> buildGraph(int A, int[][] B) {
 
 		ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
-
+		
+		ArrayList<Integer> temp;
+		
 		for (int i = 0; i < A; i++) {
 			graph.add(new ArrayList<Integer>());
 		}
 
 		for (int j = 0; j < B.length; j++) {
-			ArrayList<Integer> temp = graph.get(B[j][0]);
+			temp = graph.get(B[j][0]);
 			temp.add(B[j][1]);
 
 			temp = graph.get(B[j][1]);
@@ -24,10 +26,11 @@ public class GraphFindIfPathExists {
 	}
 
 	boolean bfsPath(ArrayList<ArrayList<Integer>> graph, int source, int destination, boolean[] visitedOnPath) {
+		
 		Queue<Integer> queue = new LinkedList<Integer>();
+		
 		visitedOnPath[source] = true;
 
-		// https://www.geeksforgeeks.org/queue-offer-method-in-java/
 		queue.add(source);
 
 		while (!queue.isEmpty()) {
@@ -45,8 +48,11 @@ public class GraphFindIfPathExists {
 				int next = neighbors.get(j);
 
 				if (!visitedOnPath[next]) {
+					
 					visitedOnPath[next] = true;
+					
 					queue.add(next);
+					
 				}
 			}
 		}

@@ -13,7 +13,7 @@ public class LongestConsecutiveSequence128 {
 
         for(int i=0; i < nums.length; i++) {
 
-            // This is important, to remove unrequired loops.
+            // This is important, to remove UNREQUIRED loops.
             if (!hashSet.contains(nums[i]-1)) {
 
                 int j = 0;

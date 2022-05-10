@@ -58,6 +58,7 @@ public class BinaryTreeConstructFromInOrderPostOrder106 {
         return node;
     }
     
+    // Driver method
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         
         for(int i=0; i < inorder.length; i++) {
