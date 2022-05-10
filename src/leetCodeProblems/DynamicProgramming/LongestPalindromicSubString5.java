@@ -1,6 +1,6 @@
 package leetCodeProblems.DynamicProgramming;
 
-public class DPLongestPalindromicSubString5 {
+public class LongestPalindromicSubString5 {
 	public String longestPalindrome(String s) {
         
         int length = s.length();

@@ -1,6 +1,12 @@
 package leetCodeProblems.BackTracking;
 
-public class BackTrackingWordSearch {
+/**
+ * LeetCode Link - https://leetcode.com/problems/word-search/
+ * 
+ * @author anshul.agrawal
+ *
+ */
+public class WordSearch79 {
 
 	static int rows;
     static int cols;

@@ -1,6 +1,13 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.GreedyAlgo;
 
-public class MaxSumContiguousSubArray {
+/**
+ * LeetCode - https://leetcode.com/problems/maximum-subarray/
+ * 
+ * @author anshul.agrawal
+ *
+ */
+
+public class MaxSumSubArray53 {
 
 	// DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public int maxSubArray(final int[] A) {

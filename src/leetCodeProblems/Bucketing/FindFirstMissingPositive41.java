@@ -1,6 +1,6 @@
 package leetCodeProblems.Bucketing;
 
-public class BucketingArrayFindFirstMissingPositive41 {
+public class FindFirstMissingPositive41 {
 	
 	public int[] shiftPositveNumbersToNewArray(int[] nums, int negativeNumbersArrSize) {
         int[] positiveNumbersArr = new int[nums.length - negativeNumbersArrSize];
@@ -82,7 +82,7 @@ public class BucketingArrayFindFirstMissingPositive41 {
     {
         int arr[] = { 0, 10, 2, -10, -20 };
         
-        BucketingArrayFindFirstMissingPositive41 obj = new BucketingArrayFindFirstMissingPositive41();
+        FindFirstMissingPositive41 obj = new FindFirstMissingPositive41();
         
         int missing = obj.firstMissingPositive(arr);
         System.out.println("The smallest positive missing number is " + missing);

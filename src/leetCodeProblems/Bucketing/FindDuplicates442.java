@@ -2,7 +2,7 @@ package leetCodeProblems.Bucketing;
 
 import java.util.*;
 
-public class BucketingArrayFindDuplicates442 {
+public class FindDuplicates442 {
 
 	// DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
     public int findDuplicatesHashSet(final int[] A) {
