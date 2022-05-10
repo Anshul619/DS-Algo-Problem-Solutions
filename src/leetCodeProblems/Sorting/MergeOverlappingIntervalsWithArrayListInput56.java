@@ -1,4 +1,4 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.Sorting;
 
 import java.util.ArrayList;
 import java.util.Collections;

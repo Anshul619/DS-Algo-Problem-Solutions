@@ -1,4 +1,4 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.Sorting;
 
 /**
  * LeetCode - https://leetcode.com/problems/wiggle-sort/
