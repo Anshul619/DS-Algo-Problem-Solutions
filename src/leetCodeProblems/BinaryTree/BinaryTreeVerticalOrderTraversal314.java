@@ -2,6 +2,7 @@ package leetCodeProblems.BinaryTree;
 
 /**
  * LeetCode - https://leetcode.com/problems/binary-tree-vertical-order-traversal/
+ * InterviewBit - https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/
  * 
  */
 import java.util.*;
@@ -65,6 +66,16 @@ public class BinaryTreeVerticalOrderTraversal314 {
         return;
     }
     
+    private void setupOutputList() {
+    	int numberOfVTraversalRows = max - min;
+        
+        for(int i = 0; i <= numberOfVTraversalRows; i++) {
+            result.add(new ArrayList<Integer>());
+        }
+        
+        return;
+    }
+    
     // Driver method
     public List<List<Integer>> verticalOrder(TreeNode root) {
         
@@ -74,11 +85,7 @@ public class BinaryTreeVerticalOrderTraversal314 {
         
         findMinMax(root, 0);
         
-        int numberOfVTraversalRows = max - min;
-        
-        for(int i = 0; i <= numberOfVTraversalRows; i++) {
-            result.add(new ArrayList<Integer>());
-        }
+        setupOutputList();
         
         bfsTraversal(root);
         
