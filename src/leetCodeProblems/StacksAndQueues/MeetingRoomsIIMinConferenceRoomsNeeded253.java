@@ -2,7 +2,7 @@ package leetCodeProblems.StacksAndQueues;
 
 import java.util.*;
 
-public class MeetingRoomsII253 {
+public class MeetingRoomsIIMinConferenceRoomsNeeded253 {
 	
 	// Helper class extending Comparator interface
     static class CompareStartIntervalArray implements Comparator<int[]> {
@@ -64,7 +64,7 @@ public class MeetingRoomsII253 {
         
         int[][] intervals = {{4,9},{4,17},{9,10}};
         
-        MeetingRoomsII253 obj = new MeetingRoomsII253();
+        MeetingRoomsIIMinConferenceRoomsNeeded253 obj = new MeetingRoomsIIMinConferenceRoomsNeeded253();
     	
         int minMeetingRoomsNeeded = obj.minMeetingRooms(intervals);
         

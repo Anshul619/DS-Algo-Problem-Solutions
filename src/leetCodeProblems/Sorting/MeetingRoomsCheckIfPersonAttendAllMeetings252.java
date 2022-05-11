@@ -2,7 +2,7 @@ package leetCodeProblems.Sorting;
 
 import java.util.*;
 
-public class MeetingRooms252 {
+public class MeetingRoomsCheckIfPersonAttendAllMeetings252 {
 	
 	// Helper class extending Comparator interface
     static class CompareStartIntervalArray implements Comparator<int[]> {
@@ -46,7 +46,7 @@ public class MeetingRooms252 {
     	
     	//int[][] intervals = {{8, 11}, {17,20}, {17,20}};
     	
-    	MeetingRooms252 obj = new MeetingRooms252();
+    	MeetingRoomsCheckIfPersonAttendAllMeetings252 obj = new MeetingRoomsCheckIfPersonAttendAllMeetings252();
     	
     	boolean result = obj.canAttendMeetings(intervals);
     	
