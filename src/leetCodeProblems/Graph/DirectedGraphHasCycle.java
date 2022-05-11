@@ -11,7 +11,13 @@ import java.util.*;
 
 public class DirectedGraphHasCycle {
 		
-	  //Consider Zero-based indexing carefully, while building Graph in ArrayList.
+	  /**
+	   * Consider Zero-based indexing carefully, while building Graph in ArrayList.
+	   * 
+	   * @param A
+	   * @param B
+	   * @return
+	   */
 	  ArrayList<ArrayList<Integer>> buildGraph(int A, int[][] B) {
 
 	       ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
@@ -28,7 +34,14 @@ public class DirectedGraphHasCycle {
 	       return graph;
 	   }
 
-	   // A DFS based function to check if there is a cycle in the directed graph.
+	   /**
+	    * A DFS based function to check if there is a cycle in the directed graph.
+	    * 
+	    * @param graph
+	    * @param node
+	    * @param visitedOnPath
+	    * @return
+	    */
 	   boolean dfsCycle(ArrayList<ArrayList<Integer>> graph, int node,
 	           boolean[] visitedOnPath) {
 
@@ -47,7 +60,14 @@ public class DirectedGraphHasCycle {
 	       return false;
 
 	   }
-
+	   
+	   /**
+	    * Driver method
+	    * 
+	    * @param A
+	    * @param B
+	    * @return
+	    */
 	   public int solve(int A, int[][] B) {
 
 	       ArrayList<ArrayList<Integer>> graph = buildGraph(A, B);
