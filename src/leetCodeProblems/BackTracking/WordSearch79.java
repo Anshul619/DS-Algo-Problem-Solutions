@@ -13,8 +13,8 @@ public class WordSearch79 {
 
     static int[] dx = {0, 1, 0, -1};
     static int[] dy = {1, 0, -1, 0};
-
-    static boolean backTrace(char[][] board, String word, int i, int j, int wIndex) {
+    
+    public boolean backTrace(char[][] board, String word, int i, int j, int wIndex) {
 
         // This means, all words are traversed successfully
         if (wIndex >= word.length()) {
@@ -25,8 +25,9 @@ public class WordSearch79 {
             return false;
         }
         else {
-
+        	//Nothing
         }
+        
         char matched = board[i][j];
         board[i][j] = '$'; // Since this is matched, hence replace with "#" to remove unrequired traversals
 
@@ -40,8 +41,8 @@ public class WordSearch79 {
 
         return false;
     }
-
-    static boolean patternSearch(char[][] board, String word) {
+    
+    public boolean patternSearch(char[][] board, String word) {
 
         rows = board.length;
         cols = board[0].length;
@@ -57,9 +58,19 @@ public class WordSearch79 {
         return false;
 
     }
-
+    
+    /**
+     * Driver method.
+     * 
+     * @param board
+     * @param word
+     * @return
+     */
     public boolean exist(char[][] board, String word) {
-        return patternSearch(board, word);
+    	
+    	WordSearch79 obj = new WordSearch79();
+    	
+        return obj.patternSearch(board, word);
     }
 
 }
