@@ -1,5 +1,12 @@
 package leetCodeProblems.BinaryTree;
 
+/**
+ * 
+ * LeetCode - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+ * 
+ * @author anshul.agrawal
+ *
+ */
 public class BinaryTreeLCA236 {
 	static boolean isN1Found = false;
     static boolean isN2Found = false;
@@ -20,7 +27,17 @@ public class BinaryTreeLCA236 {
         }
     }
     
-    // node is nothing BUT root of that recursive TREE.
+    /**
+     * 
+     * findLCAUtil - Recursive function to find LCA.
+     * 
+     * Note - Node is nothing BUT root of that recursive TREE.
+     * 
+     * @param node
+     * @param n1
+     * @param n2
+     * @return
+     */
     TreeNode findLCAUtil(TreeNode node, int n1, int n2) {
 
         if (node == null) {
@@ -62,6 +79,14 @@ public class BinaryTreeLCA236 {
         }
     }
 
+    /**
+     * Driver method.
+     * 
+     * @param A
+     * @param B
+     * @param C
+     * @return
+     */
     public int lca(TreeNode A, int B, int C) {
     	isN1Found = isN2Found = false;
 

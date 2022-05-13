@@ -51,7 +51,9 @@ public class BinaryTreeConstructFromInOrderPreOrder105 {
         return buildTreeRecursion(preorder, 0, inorder.length-1);
     }
     
-    /* This function is here just to test buildTree() */
+    /**
+     * This function is here just to test buildTree() 
+     **/
     void printInorder(TreeNode node)
     {
         if (node == null)

@@ -1,4 +1,4 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.TwoDArrayMatrix;
 
 /**
  * LeetCode - https://leetcode.com/problems/rotate-image/
@@ -27,12 +27,12 @@ public class RotateMatrix48 {
         // This is SQUARE matrix.
         int N = matrix.length;
         
-        // This is half of N, because once one half is rotated, other half would be rotated automatically.
+        // Because once one half is rotated, other half would be rotated automatically.
         int numberOfCyclesNeeded = N/2;
         
         for (int i=0; i < numberOfCyclesNeeded; i++) {
             
-            // Its start, end indexes have to be based on i. This is needed to remove unrequired rotations.
+            // Its start & end indexes have to be based on i. This is needed to remove unrequired rotations.
             for(int j=i; j < N-i-1; j++) {
                 
                 int temp = matrix[i][j];

@@ -13,6 +13,12 @@ public class BinaryTreeAllRootToLeafPathsWithSum113 {
 
 	List<List<Integer>> result = new ArrayList<>();
 	
+	/**
+	 * Generate a new array list, based on input base array list
+	 * 
+	 * @param baseArrayList
+	 * @return
+	 */
 	private ArrayList<Integer> getNewArrayList(ArrayList<Integer> baseArrayList) {
         ArrayList<Integer> newArrayList = new ArrayList<Integer>();
         
@@ -40,7 +46,14 @@ public class BinaryTreeAllRootToLeafPathsWithSum113 {
         dfs(node.left, subSum, getNewArrayList(path));
         dfs(node.right, subSum, getNewArrayList(path));
     }
-
+	
+	/**
+	 * Driver method.
+	 * 
+	 * @param root
+	 * @param targetSum
+	 * @return
+	 */
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
 
         if (root == null) {

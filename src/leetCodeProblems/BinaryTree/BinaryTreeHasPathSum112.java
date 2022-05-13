@@ -1,12 +1,9 @@
 package leetCodeProblems.BinaryTree;
 
-import java.util.*;
-
 /**
  * LeetCode Problem Link - https://leetcode.com/problems/path-sum/submissions/
  *
  * InterviewBit - https://www.interviewbit.com/problems/path-sum/
-
  * */
 
 public class BinaryTreeHasPathSum112 {

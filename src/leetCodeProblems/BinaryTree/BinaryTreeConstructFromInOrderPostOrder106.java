@@ -2,12 +2,10 @@ package leetCodeProblems.BinaryTree;
 
 import java.util.*;
 
-import leetCodeProblems.BinaryTree.BinaryTreeConstructFromInOrderPreOrder105.TreeNode;
-
 public class BinaryTreeConstructFromInOrderPostOrder106 {
 	static HashMap<Integer, Integer> inHashMap = new HashMap<Integer, Integer>();
     
-    public TreeNode buildTreeRecursion(int[] inorder, int[] postorder, int inStart, 
+    public TreeNode buildTreeRecursion(int[] postorder, int inStart, 
                                         int inEnd, int postStart, int postEnd) {
         
         if (inStart > inEnd) {
@@ -33,12 +31,14 @@ public class BinaryTreeConstructFromInOrderPostOrder106 {
         
         int inLeftStart = inStart;
         int inLeftEnd = inorderIndex-1;
-        int lengthOfInorderLeft = inLeftEnd-inLeftStart +1; //Since inLeftStart, inLeftEnd are ZERO based, hence incrementing it by 1 is needed.
+        
+        // Since inLeftStart, inLeftEnd are ZERO based, hence incrementing it by 1 is needed.
+        int lengthOfInorderLeft = inLeftEnd-inLeftStart +1; 
         
         int postLeftStart = postStart;
         int postLeftEnd = postStart + lengthOfInorderLeft - 1; //Since lengthOfInorderLeft is NON-Zero based, hence decrement by 1 is needed.
         
-        node.left = buildTreeRecursion(inorder, postorder, 
+        node.left = buildTreeRecursion(postorder, 
                                        inLeftStart, inLeftEnd, 
                                        postLeftStart, postLeftEnd);
         
@@ -51,7 +51,7 @@ public class BinaryTreeConstructFromInOrderPostOrder106 {
         int postRightStart = postEnd - lengthOfInorderRight;
         int postRightEnd = postEnd-1;
         
-        node.right = buildTreeRecursion(inorder, postorder, 
+        node.right = buildTreeRecursion(postorder, 
                                         inRightStart, inRightEnd,
                                         postRightStart, postRightEnd);
         
@@ -65,10 +65,12 @@ public class BinaryTreeConstructFromInOrderPostOrder106 {
             inHashMap.put(inorder[i], i);
         }
         
-        return buildTreeRecursion(inorder, postorder, 0, inorder.length-1, 0, postorder.length-1);
+        return buildTreeRecursion(postorder, 0, inorder.length-1, 0, postorder.length-1);
     }
     
-    /* This function is here just to test buildTree() */
+    /**
+     *  This function is here just to test buildTree() 
+     *  */
     void printInorder(TreeNode node)
     {
         if (node == null)
