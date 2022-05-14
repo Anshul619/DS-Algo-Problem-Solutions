@@ -6,7 +6,7 @@ package leetCodeProblems.HashSearch;
 
 import java.util.*;
 
-public class MinDeletionsForUniqueString1647 {
+public class MinDeletionsForUniqueString1647Using2HashSets {
 	
 	
 	/**
@@ -98,7 +98,7 @@ public class MinDeletionsForUniqueString1647 {
     
     public static void main(String[] args) {
         
-    	MinDeletionsForUniqueString1647 obj = new MinDeletionsForUniqueString1647();
+    	MinDeletionsForUniqueString1647Using2HashSets obj = new MinDeletionsForUniqueString1647Using2HashSets();
         
         System.out.println(obj.minDeletions("hello")); // expected output = 2
         System.out.println(obj.minDeletions("aab")); // // expected output = 0
