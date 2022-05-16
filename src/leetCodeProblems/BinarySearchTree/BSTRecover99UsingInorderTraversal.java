@@ -10,7 +10,7 @@ public class BSTRecover99UsingInorderTraversal {
 	
 	TreeNode firstIncorrectNode = null;
 	TreeNode lastIncorrectNode = null;
-	TreeNode predessor = null;
+	TreeNode predecessor = null;
 	
 	/**
 	 * Swap the two nodes
@@ -37,19 +37,17 @@ public class BSTRecover99UsingInorderTraversal {
 		
 		findTwoSwapped(root.left);
     
-		if (predessor != null && root.val <= predessor.val) {
+		if (predecessor != null && root.val <= predecessor.val) {
 			
 			lastIncorrectNode = root;
 			
 			if (firstIncorrectNode == null) {
-				firstIncorrectNode = predessor;
+				firstIncorrectNode = predecessor;
 			}	
 		}
 	
-		predessor = root;
-		
-		System.out.println("predessor -> " + predessor.val);
-		
+		predecessor = root;
+	
 		findTwoSwapped(root.right);
 	}
     

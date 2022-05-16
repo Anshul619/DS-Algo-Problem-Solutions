@@ -8,34 +8,32 @@ package leetCodeProblems.BinarySearchTree;
  */
 public class BSTValidate98UsingInorderTraversal {
 	
-	TreeNode predessor = null;
+	TreeNode predecessor = null;
 	
 	/**
 	 * Check if the BST is valid or not
 	 * 
-	 * @param root
+	 * @param node
 	 */
-	public boolean isValidBSTUtil(TreeNode root) {
+	public boolean isValidBSTUtil(TreeNode node) {
 		
-		if (root == null) {
+		if (node == null) {
 			return true;
 		}
-		
-		boolean isLeftBST = isValidBSTUtil(root.left);
+	
+		boolean isLeftBST = isValidBSTUtil(node.left);
     
 		if (!isLeftBST) {
 			return false;
 		}
-		
-		if (predessor != null && root.val <= predessor.val) {
+	
+		if (predecessor != null && node.val <= predecessor.val) {
 			return false;
 		}
-	
-		predessor = root;
 		
-		System.out.println("predessor -> " + predessor.val);
+		predecessor = node;
 		
-		boolean isRightBST = isValidBSTUtil(root.right);
+		boolean isRightBST = isValidBSTUtil(node.right);
 		
 		if (!isRightBST) {
 			return false;
@@ -53,6 +51,13 @@ public class BSTValidate98UsingInorderTraversal {
 		/*TreeNode root = new TreeNode(1);
         root.left = new TreeNode(3);
         root.left.right = new TreeNode(2);*/
+        
+		/*TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(8);
+        root.right.left = new TreeNode(7);
+        root.right.right = new TreeNode(9); // Return true
+        root.right.left.left = new TreeNode(6);*/
         
         TreeNode root = new TreeNode(5);
         root.left = new TreeNode(1);
