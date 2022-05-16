@@ -1,5 +1,12 @@
 package leetCodeProblems.DynamicProgramming;
 
+/**
+ * 
+ * LeetCode - https://leetcode.com/problems/longest-palindromic-substring/
+ * 
+ * @author anshul.agrawal
+ *
+ */
 public class LongestPalindromicSubString5 {
 	public String longestPalindrome(String s) {
         
@@ -9,7 +16,7 @@ public class LongestPalindromicSubString5 {
         
         boolean[][] table = new boolean[length][length];
         
-        // All substrings of length 1, are palindrome
+        // All substrings of length 1, are PALINDROME
         ansSubStringLength = 1;
         for(int i=0; i < length; i++) {
             table[i][i] = true;
@@ -28,17 +35,17 @@ public class LongestPalindromicSubString5 {
         // Check for substrings with length greater than 3
         for(int subStringLengthToCheck = 3; subStringLengthToCheck <= length; subStringLengthToCheck++) {
             
-            for(int i=0; i < length-subStringLengthToCheck+1; i++) {
+            for(int startIndex=0; startIndex < length-subStringLengthToCheck+1; startIndex++) {
                 
-                int j = i+subStringLengthToCheck-1;
+                int endIndex = startIndex+subStringLengthToCheck-1;
                 
-                if (table[i+1][j-1]) { // sub-sub string is already palindrome
-                    if (s.charAt(i) == s.charAt(j)) {
-                        table[i][j] = true;
+                if (table[startIndex+1][endIndex-1]) { // sub-sub string is already PALINDROME
+                    if (s.charAt(startIndex) == s.charAt(endIndex)) {
+                        table[startIndex][endIndex] = true;
                         
                         // Set the answer variables
                         if (subStringLengthToCheck > ansSubStringLength) {
-                            ansSubStringStartIndex = i;
+                            ansSubStringStartIndex = startIndex;
                             ansSubStringLength = subStringLengthToCheck;
                         }
                     }

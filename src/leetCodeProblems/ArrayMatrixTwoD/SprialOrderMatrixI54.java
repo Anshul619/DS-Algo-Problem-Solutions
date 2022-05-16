@@ -1,21 +1,26 @@
-package leetCodeProblems.TwoDArrayMatrix;
+package leetCodeProblems.ArrayMatrixTwoD;
 
-public class SprialOrderMatrixII59 {
-	
-	public int[][] generateMatrix(int n) {
+/**
+ * LeetCode - https://leetcode.com/problems/spiral-matrix/
+ * 
+ */
+import java.util.*;
+
+public class SprialOrderMatrixI54 {
+	public List<Integer> spiralOrder(int[][] matrix) {
         
-        if (n == 0) {
-            return new int[0][0];
+        List<Integer> output = new ArrayList<Integer>();
+        
+        if (matrix.length == 0) {
+            return output;
         }
-        
-        int[][] matrix = new int[n][n];
         
         // Clockwise direction traversal
         int[] directionX = {0, 1, 0,-1};
         int[] directionY = {1, 0, -1, 0};
         
-        int rows = n;
-        int columns = n;
+        int rows = matrix.length;
+        int columns = matrix[0].length;
         
         boolean[][] visited = new boolean[rows][columns]; 
         
@@ -26,7 +31,7 @@ public class SprialOrderMatrixII59 {
         
         for(int i=0; i < rows*columns; i++) {
             
-            matrix[currentRowIndex][currentColumnIndex] = i+1;
+            output.add(matrix[currentRowIndex][currentColumnIndex]);
             visited[currentRowIndex][currentColumnIndex] = true;
             
             int nextRowIndex = currentRowIndex + directionX[direction];
@@ -53,7 +58,6 @@ public class SprialOrderMatrixII59 {
             }  
         }
         
-        return matrix;
+        return output;
     }
-
 }

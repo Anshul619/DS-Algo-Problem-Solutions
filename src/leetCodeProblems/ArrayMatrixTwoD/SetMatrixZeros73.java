@@ -1,4 +1,4 @@
-package leetCodeProblems.TwoDArrayMatrix;
+package leetCodeProblems.ArrayMatrixTwoD;
 
 /**
  * Leet Code Link - https://leetcode.com/problems/set-matrix-zeroes/

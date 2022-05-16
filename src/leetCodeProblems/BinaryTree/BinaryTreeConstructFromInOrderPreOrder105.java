@@ -26,7 +26,7 @@ public class BinaryTreeConstructFromInOrderPreOrder105 {
         TreeNode node = new TreeNode(preOrderValue);
         preIndex += 1;
         
-        // There is no left or right childs of this node.
+        // There is no left or right child of this node.
         if (inStart == inEnd) {
             return node;
         }

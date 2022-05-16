@@ -1,4 +1,4 @@
-package leetCodeProblems.TwoDArrayMatrix;
+package leetCodeProblems.ArrayMatrixTwoD;
 
 /**
  * LeetCode - https://leetcode.com/problems/rotate-image/
