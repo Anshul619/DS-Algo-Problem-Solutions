@@ -63,8 +63,6 @@ public class ThreeSum19UsingHashSearch {
     	ThreeSum19UsingHashSearch obj = new ThreeSum19UsingHashSearch();
     	
     	System.out.println(obj.threeSum(inputArray, 0));
-    	
-    	
     }
 
 }
