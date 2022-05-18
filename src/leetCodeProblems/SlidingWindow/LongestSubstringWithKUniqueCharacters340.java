@@ -1,4 +1,8 @@
-package leetCodeProblems.HashSearch;
+package leetCodeProblems.SlidingWindow;
+
+/**
+ * LeetCode link - https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
+ */
 
 import java.util.Collections;
 import java.util.HashMap;
