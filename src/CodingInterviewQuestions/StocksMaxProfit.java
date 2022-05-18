@@ -14,7 +14,7 @@ public class StocksMaxProfit {
 
     /**
      * This would calculate the maximum profit, based on the current savings.
-     * 
+     *
      * Total time complexity = O(nLogn)
      * Total space complexity = 2n
      *
