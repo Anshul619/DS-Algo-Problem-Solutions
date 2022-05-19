@@ -66,6 +66,9 @@ public class StocksMaxProfit {
         int profit = obj.maxProfit(totalSavings, currentValue, futureValue);
 
         System.out.println(profit);
+
+        //1606636800
+        System.out.println(System.currentTimeMillis());
     }
 
 }
