@@ -1,4 +1,4 @@
-package leetCodeProblems.Strings;
+package leetCodeProblems.MathCalculations;
 
 /**
  * LeetCode Link - https://leetcode.com/problems/integer-to-roman/

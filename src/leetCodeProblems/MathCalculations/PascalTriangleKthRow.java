@@ -1,4 +1,4 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.MathCalculations;
 
 public class PascalTriangleKthRow {
 

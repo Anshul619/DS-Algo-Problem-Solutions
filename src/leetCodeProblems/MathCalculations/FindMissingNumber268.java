@@ -1,4 +1,4 @@
-package leetCodeProblems.Arrays;
+package leetCodeProblems.MathCalculations;
 
 /**
  * LeetCode Link - https://leetcode.com/problems/missing-number/
