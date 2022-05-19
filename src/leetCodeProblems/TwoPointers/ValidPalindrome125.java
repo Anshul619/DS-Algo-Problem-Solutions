@@ -1,6 +1,8 @@
-package leetCodeProblems.Strings;
+package leetCodeProblems.TwoPointers;
 
-
+/**
+ * LeetCode - https://leetcode.com/problems/valid-palindrome/
+ */
 public class ValidPalindrome125 {
 
     public boolean isPalindrome(String s) {
