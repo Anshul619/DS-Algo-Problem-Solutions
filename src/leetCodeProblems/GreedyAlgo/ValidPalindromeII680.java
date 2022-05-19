@@ -1,4 +1,4 @@
-package leetCodeProblems.TwoPointers;
+package leetCodeProblems.GreedyAlgo;
 
 /**
  * LeetCode - https://leetcode.com/problems/valid-palindrome-ii/
