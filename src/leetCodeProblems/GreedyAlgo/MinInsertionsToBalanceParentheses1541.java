@@ -1,4 +1,4 @@
-package leetCodeProblems.Strings;
+package leetCodeProblems.GreedyAlgo;
 
 public class MinInsertionsToBalanceParentheses1541 {
 	public int minInsertions(String s) {
