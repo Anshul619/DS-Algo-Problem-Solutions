@@ -111,8 +111,11 @@ public class CombinationSum39 {
     	//int[] inputArray = {2, 3, 6, 7};
     	//int targetSum = 7;
     	
-    	int[] inputArray = {2, 3, 5};
-    	int targetSum = 8;
+    	//int[] inputArray = {2, 3, 5};
+    	//int targetSum = 8;
+
+        int[] inputArray = {1, 2};
+        int targetSum = 3;
     			
     	CombinationSum39 obj = new CombinationSum39();
     	

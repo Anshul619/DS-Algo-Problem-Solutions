@@ -23,6 +23,6 @@ public class FibonacciNumber509 {
 
         FibonacciNumber509 obj = new FibonacciNumber509();
 
-        System.out.println(obj.fib(4));
+        System.out.println(obj.fib(2));
     }
 }
