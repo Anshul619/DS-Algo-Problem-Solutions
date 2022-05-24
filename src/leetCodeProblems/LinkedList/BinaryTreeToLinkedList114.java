@@ -1,4 +1,4 @@
-package leetCodeProblems.BinaryTree;
+package leetCodeProblems.LinkedList;
 
 /**
  * LeetCode - https://leetcode.com/problems/flatten-binary-tree-to-linked-list/

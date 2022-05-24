@@ -1,5 +1,9 @@
 package leetCodeProblems.HashSearch;
 
+/**
+ * LeetCode - https://leetcode.com/problems/longest-consecutive-sequence/
+ */
+
 import java.util.*;
 
 public class LongestConsecutiveSequence128 {

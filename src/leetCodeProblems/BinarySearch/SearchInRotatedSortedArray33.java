@@ -1,13 +1,13 @@
 package leetCodeProblems.BinarySearch;
 
 /**
- * Leet Code - https://leetcode.com/problems/binary-search/submissions/
+ * Leet Code - https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/
  *
  * @author anshul.agrawal
  *
  */
 
-public class BinarySearchRotatedSortedArray {
+public class SearchInRotatedSortedArray33 {
 
 	public static int binarySearch(int start, int end, int[] nums1, int target) {
 

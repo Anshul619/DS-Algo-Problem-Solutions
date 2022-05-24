@@ -7,7 +7,7 @@ package leetCodeProblems.StacksAndQueues;
  * @author anshul.agrawal
  *
  */
-public class ValidParentheses20 {
+public class isValidParentheses20 {
 	
 	static class ParenthesesStack {
 		private int maxSize;
@@ -95,7 +95,7 @@ public class ValidParentheses20 {
 		
 		//String inputString ="(])";
 		
-		ValidParentheses20 obj = new ValidParentheses20();
+		isValidParentheses20 obj = new isValidParentheses20();
 		
 		System.out.println(obj.isValid(inputString));
 		
