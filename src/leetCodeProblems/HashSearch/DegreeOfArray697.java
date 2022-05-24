@@ -49,7 +49,7 @@ public class DegreeOfArray697 {
                 degreeMap.put(nums[i], obj);
             }
         }
-        
+
         for (Integer element: degreeMap.keySet()) {
 
             DegreeWithLength obj = degreeMap.get(element);
