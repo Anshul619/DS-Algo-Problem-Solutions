@@ -1,4 +1,4 @@
-package leetCodeProblems.GreedyAlgo;
+package leetCodeProblems.PriorityQueue;
 
 /**
  * https://leetcode.com/problems/minimum-number-of-refueling-stops/submissions/

@@ -8,7 +8,7 @@ package leetCodeProblems.StacksAndQueues;
  */
 import java.util.*;
 
-public class StackLongestValidParenthesis32 {
+public class LongestValidParenthesis32 {
 	public int longestValidParentheses(String s) {
 
 		Stack<Integer> stack = new Stack<>();

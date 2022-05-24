@@ -1,4 +1,4 @@
-package leetCodeProblems.StacksAndQueues;
+package leetCodeProblems.PriorityQueue;
 
 import java.util.*;
 

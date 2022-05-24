@@ -1,4 +1,4 @@
-package leetCodeProblems.StacksAndQueues;
+package leetCodeProblems.PriorityQueue;
 
 /**
  * LeetCode - https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/submissions/
