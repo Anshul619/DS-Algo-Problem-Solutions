@@ -10,9 +10,11 @@ public class LongestCommonPrefix14 {
 
             String currentString = strs[i];
 
-            
+
             //for (int j=0; j < )
         }
+
+        return commonPrefix;
     }
 
     public static void main(String[] args) {
