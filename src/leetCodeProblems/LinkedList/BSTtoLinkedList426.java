@@ -1,4 +1,4 @@
-package leetCodeProblems.BinarySearchTree;
+package leetCodeProblems.LinkedList;
 
 /**
  * LeetCode - https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/solution/

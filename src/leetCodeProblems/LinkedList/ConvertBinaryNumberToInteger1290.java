@@ -1,10 +1,10 @@
-package leetCodeProblems.BackTracking;
+package leetCodeProblems.LinkedList;
 
 /**
  * LeetCode - https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
  */
 
-public class ConvertBinaryNumberToInteger {
+public class ConvertBinaryNumberToInteger1290 {
 
     static class ListNode {
         int val;
@@ -50,7 +50,7 @@ public class ConvertBinaryNumberToInteger {
 
         ListNode root = new ListNode(0);
 
-        ConvertBinaryNumberToInteger obj = new ConvertBinaryNumberToInteger();
+        ConvertBinaryNumberToInteger1290 obj = new ConvertBinaryNumberToInteger1290();
         System.out.println(obj.getDecimalValue(root));
     }
 }
