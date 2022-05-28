@@ -1,11 +1,11 @@
-package leetCodeProblems.GreedyAlgo;
+package leetCodeProblems.PrefixSum;
 
 /**
  * LeetCode - https://leetcode.com/problems/find-pivot-index/
  * Similar Code - https://leetcode.com/problems/find-the-middle-index-in-array/
  * Time Complexity - O(n)
  * Space Complexity - O(1)
- * 
+ *
  */
 public class FindPivotIndex724 {
 
