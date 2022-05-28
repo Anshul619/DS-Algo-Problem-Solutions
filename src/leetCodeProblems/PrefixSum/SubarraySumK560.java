@@ -12,6 +12,8 @@ public class SubarraySumK560 {
         int currentSum = 0;
         int ansCount = 0;
 
+        System.out.println(map);
+
         for (int i=0; i<nums.length; i++) {
 
             currentSum += nums[i];
@@ -26,6 +28,8 @@ public class SubarraySumK560 {
             else {
                 map.put(currentSum, 1);
             }
+
+            System.out.println(map);
         }
 
         return ansCount;
@@ -38,6 +42,8 @@ public class SubarraySumK560 {
         int[] input = {10, 2, -2, -20, 10};
         int k = -10;
 
+        //int[] input = {1,1,1};
+        //int k= 2;
         System.out.println(obj.subarraySum(input, k));
 
     }
