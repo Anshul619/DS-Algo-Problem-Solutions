@@ -24,10 +24,7 @@ public class SlotMachine2 {
             ArrayList<Integer> temp = new ArrayList<>();
 
             for (int j=0; j < history.get(i).length(); j++) {
-
-                //Integer.valueOf(
                 temp.add(Character.getNumericValue(history.get(i).charAt(j)));
-
             }
 
             intList.add(temp);
