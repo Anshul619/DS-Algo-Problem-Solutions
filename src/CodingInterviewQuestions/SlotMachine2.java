@@ -73,7 +73,12 @@ public class SlotMachine2 {
         history.add("312");
         System.out.println("TC2 o/p ->" + SlotMachine2.slotWheels(history));  // Excepted o/p = 15;
 
-        System.out.println(SlotMachine2.slotWheels(history));
+        history.clear();
+        history.add("1112");
+        history.add("1111");
+        history.add("1211");
+        history.add("1111");
+        System.out.println("TC3 o/p ->" + SlotMachine2.slotWheels(history));  // Excepted o/p = 5;
     }
 }
 
