@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class ContinuousSubarraySum523 {
     public boolean checkSubarraySum(int[] nums, int k) {
         HashMap<Integer, Integer> remainderMap = new HashMap<>();
-        //remainderMap.put(0, -1);
+        //remainderMap.put(0, 1);
 
         int currentSum = 0;
         int remainder = 0;
@@ -24,6 +24,13 @@ public class ContinuousSubarraySum523 {
             else {
                 currentSum += nums[i];
                 remainder = currentSum%k;
+            }
+
+            System.out.println(currentSum);
+            System.out.println(remainderMap);
+
+            if (currentSum%k == 0) {
+                return true;
             }
 
             if (remainderMap.containsKey(remainder)) {
