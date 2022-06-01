@@ -3,6 +3,8 @@ package leetCodeProblems.DynamicProgramming;
 /**
  * 
  * LeetCode - https://leetcode.com/problems/longest-palindromic-substring/
+ * Time Complexity - O(n2)
+ * Space Complexity - O(n2)
  * 
  * @author anshul.agrawal
  *

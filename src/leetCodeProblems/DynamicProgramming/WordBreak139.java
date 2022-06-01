@@ -21,7 +21,6 @@ public class WordBreak139 {
 
                 // alreadySavedResults[i] - Check whether rest of the string is breaking or not
                 if (alreadySavedResults[i] && wordDict.contains(s.substring(i, lengthToCheck))) {
-
                     alreadySavedResults[lengthToCheck] = true;
                     break;
                 }

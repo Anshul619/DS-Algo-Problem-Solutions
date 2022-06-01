@@ -1,27 +1,16 @@
 package leetCodeProblems.Bucketing;
 
+/**
+ * LeetCode - https://leetcode.com/problems/find-all-duplicates-in-an-array/
+ * TimeComplexity - O(n)
+ * SpaceComplexity - O(1)
+ */
+
 import java.util.*;
 
 public class FindDuplicates442 {
 
-	// DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
-    public int findDuplicatesHashSet(final int[] A) {
-
-        HashSet<Integer> hashSet = new HashSet<Integer>();
-
-        for(int i=0; i<A.length; i++) {
-
-            if (hashSet.contains(A[i])) {
-                return A[i];
-            }
-
-            hashSet.add(A[i]);
-        }
-
-        return -1;
-    }
-
-	public List<Integer> findDuplicatesConstantSpace(int[] nums) {
+	public List<Integer> findDuplicates(int[] nums) {
 
         List<Integer> output = new ArrayList<Integer>();
 
@@ -39,7 +28,7 @@ public class FindDuplicates442 {
 
         for(int i=0; i<nums.length; i++) {
 
-            System.out.println(nums[i]);
+            //System.out.println(nums[i]);
             if (nums[i] > (nums.length*2)) {
 
                 if (i == 0) {

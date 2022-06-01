@@ -69,7 +69,6 @@ public class IntegerToRoman12 {
         String ansRomanNumber = "";
         
         for(int i=0; i<fractionsArray.length; i++) {
-    
             ansRomanNumber += appendRomanSymbols(leftOverNum, fractionsArray[i]); 
             leftOverNum = leftOverNum%fractionsArray[i];
         }   

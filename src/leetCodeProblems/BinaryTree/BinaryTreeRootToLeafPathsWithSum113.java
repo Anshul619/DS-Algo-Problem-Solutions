@@ -8,7 +8,7 @@ import java.util.*;
  * InterviewBit - https://www.interviewbit.com/problems/root-to-leaf-paths-with-sum/
  * */
 
-public class BinaryTreeAllRootToLeafPathsWithSum113 {
+public class BinaryTreeRootToLeafPathsWithSum113 {
 
 	List<List<Integer>> result = new ArrayList<>();
 	
@@ -74,7 +74,7 @@ public class BinaryTreeAllRootToLeafPathsWithSum113 {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        BinaryTreeAllRootToLeafPathsWithSum113 ob = new BinaryTreeAllRootToLeafPathsWithSum113();
+        BinaryTreeRootToLeafPathsWithSum113 ob = new BinaryTreeRootToLeafPathsWithSum113();
 
         List<List<Integer>> output = ob.pathSum(root, 8);
 

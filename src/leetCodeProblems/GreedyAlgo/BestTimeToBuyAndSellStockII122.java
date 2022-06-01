@@ -45,8 +45,6 @@ public class BestTimeToBuyAndSellStockII122 {
             }
             
             //print(currentProfit, currentBuy, totalProfit);
-            
-            
         }
         
         totalProfit += currentProfit;

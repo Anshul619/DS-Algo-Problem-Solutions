@@ -28,8 +28,9 @@ public class CanFinishAllCourses {
         return graph;
     }
 
-    // A DFS based function to check if there is a cycle
-    // in the directed graph.
+    /**
+     * A DFS based function to check if there is a cycle in the directed graph.
+     */
     boolean dfsCycle(ArrayList<ArrayList<Integer>> graph, int node,
             boolean[] visitedOnPath, boolean[] allVisited) {
 

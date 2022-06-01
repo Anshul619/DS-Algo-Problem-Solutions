@@ -29,7 +29,7 @@ public class NextGreaterElementI496 {
             nums2Stack.push(nums2[i]);
         }
 
-        System.out.println(nums2NextGreaterMap);
+        //System.out.println(nums2NextGreaterMap);
         while(!nums2Stack.isEmpty()) {
             nums2NextGreaterMap.put(nums2Stack.pop(), -1);
         }
