@@ -4,6 +4,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray34 {
 
     public int[] searchRange(int[] nums, int target) {
 
+        return new int[0];
     }
 
     public static void main(String[] args) {
