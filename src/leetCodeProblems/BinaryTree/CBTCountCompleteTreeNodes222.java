@@ -5,8 +5,8 @@ import com.sun.source.tree.Tree;
 /**
  * LeetCode - https://leetcode.com/problems/count-complete-tree-nodes/
  *
- * Approach
- * -
+ * Time Complexity - O(log2n )
+ * Space Complexity - O(1)
  */
 public class CBTCountCompleteTreeNodes222 {
 
@@ -35,17 +35,29 @@ public class CBTCountCompleteTreeNodes222 {
 
     public boolean exists(int indexToCheck, int depth, TreeNode node) {
 
+        //System.out.println("exists1 start");
+        //System.out.println("indexToCheck ->" + indexToCheck);
         int left = 1;
         int right = (int) Math.pow(2, depth-1);
 
         int mid;
 
-        for(int i=0; i < depth; i++) {
+        for(int i=0; i < depth-1; i++) {
 
             mid = (left+right)/2;
 
-            System.out.println("Mid ->" + mid);
-            System.out.println("indexToCheck ->" + indexToCheck);
+            /*System.out.println("LEFT ->" +left);
+            System.out.println("RIGHT ->" +right);
+            System.out.println("Mid ->" + mid);*/
+
+            /*if (node != null) {
+                System.out.println("Node value ->" + node.val);
+            }
+            else {
+                System.out.println("Node is NULL");
+            }
+
+            System.out.println("--->");*/
 
             if (indexToCheck <= mid) {
                 node = node.left;
@@ -53,12 +65,12 @@ public class CBTCountCompleteTreeNodes222 {
             }
             else {
                 node = node.right;
-                left = mid+1;
+                left = mid + 1;
             }
         }
 
         if (node != null) {
-            System.out.println("Index to check ->"+ indexToCheck);
+            //System.out.println("Index found ->"+ indexToCheck);
             return true;
         }
         return false;
@@ -73,30 +85,36 @@ public class CBTCountCompleteTreeNodes222 {
 
         //System.out.println(right);
 
-        while(left < right) {
+        while(left <= right) {
 
             int mid = (left + right)/2;
 
+            System.out.println("LEFT ->" +left);
+            System.out.println("RIGHT ->" +right);
+            System.out.println("Mid ->" + mid);
+            System.out.println("--->");
+
             if (exists(mid, depth, root)) {
-                left = mid;
+                left = mid+1;
             }
             else {
-                right = mid;
+                right = mid-1;
             }
         }
 
         //System.out.println("Depth ->" + depth);
-        int nodes = 0;
+        int answerCount = 0;
 
         for(int i=0; i < depth-1; i++) {
             //System.out.println(Math.pow(2, i));
-            nodes += Math.pow(2, i);
+            answerCount += Math.pow(2, i);
         }
 
-        //System.out.println(nodes);
-        nodes += left;
+        //System.out.println(answerCount);
+        System.out.println(left);
+        answerCount += left;
 
-        return nodes;
+        return answerCount-1;
 
     }
 
