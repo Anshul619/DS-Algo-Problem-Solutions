@@ -5,7 +5,7 @@ package leetCodeProblems.TwoPointers;
  * @author anshul.agrawal
  *
  */
-public class StringReverseWordsInString151 {
+public class ReverseWordsInString151 {
 	void reverse(char[] s, int start, int end ) {
 
         if (start<0 || end <0) {
@@ -66,6 +66,26 @@ public class StringReverseWordsInString151 {
         reverse(arr, 0, arr.length-1);
 
         return removeExtraSpaces(arr);
+    }
+
+    public static String reverseWordsUsingSplitFunction(String input) {
+
+        //String input = "I am  Anshul  Agrawal  ";
+
+        String[] splitArray = input.split(" ");
+
+        String output = "";
+
+        for(int i = splitArray.length-1; i >=0; i--) {
+            output += splitArray[i] + " ";
+        }
+
+        return output;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(ReverseWordsInString151.reverseWordsUsingSplitFunction("I am Anshul Agrawal"));
     }
 
 }
