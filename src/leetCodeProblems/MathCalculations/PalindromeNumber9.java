@@ -1,7 +1,5 @@
 package leetCodeProblems.MathCalculations;
 
-import java.util.ArrayList;
-
 /**
  * LeetCode - https://leetcode.com/problems/palindrome-number/
  *
