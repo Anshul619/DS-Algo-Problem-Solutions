@@ -19,6 +19,7 @@ public class SlotMachine2 {
             numberOfWheels = history.get(0).length();
         }
 
+
         for(int i=0; i < history.size(); i++) {
 
             ArrayList<Integer> temp = new ArrayList<>();
