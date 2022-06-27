@@ -4,7 +4,7 @@ package CodingInterviewQuestions;
  * Asked in Vonage Coding Round, 4thJune2022.
  */
 
-/*import org.springframework.http.ResponseEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -58,4 +58,4 @@ class HealthCheckController {
         return ResponseEntity.status(405).build();
     }
 
-}*/
+}
