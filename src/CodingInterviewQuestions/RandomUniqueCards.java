@@ -1,6 +1,7 @@
 package CodingInterviewQuestions;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -51,7 +52,6 @@ public class RandomUniqueCards {
 
         HashSet<String> set = new HashSet();
 
-        ArrayList<Theme> tempList = new ArrayList();
         ArrayList<Theme> output = new ArrayList();
 
         for (int i = 0; i < input.size(); i++) {
@@ -60,19 +60,38 @@ public class RandomUniqueCards {
 
             if (!set.contains(uniqueKey)) {
                 set.add(uniqueKey);
-                tempList.add(input.get(i));
+                output.add(input.get(i));
             }
         }
 
-        for (int i = 0; i < tempList.size(); i++) {
+        Collections.shuffle(output);
 
-            int randomNumber = new Random().nextInt(tempList.size());
-
-            output.add(tempList.get(randomNumber));
-            tempList.remove(randomNumber);
-        }
+        //int randomNumber = new Random().nextInt(tempList1.size());
 
         return output;
+    }
+
+    public static void main(String[] args) {
+
+        ArrayList<Theme> input = new ArrayList<>();
+
+        String[] theme1Tag = {"birthday", "thankyou"};
+        Theme theme1 = new Theme("117", "auidk-oiwd", theme1Tag);
+        input.add(theme1);
+
+        Theme theme2 = new Theme("118", "auidk-oiwd", theme1Tag);
+        input.add(theme2);
+
+        Theme theme3 = new Theme("119", "auidk-oiwe", theme1Tag);
+        input.add(theme3);
+
+        RandomUniqueCards cards = new RandomUniqueCards();
+
+        ArrayList<Theme> output = cards.getRandomThemes(input);
+
+        for(int i=0; i < output.size(); i++) {
+            System.out.println(output.get(i).illustrationId);
+        }
     }
 
 }
