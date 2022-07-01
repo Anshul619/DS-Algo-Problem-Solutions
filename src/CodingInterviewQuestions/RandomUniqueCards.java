@@ -3,7 +3,6 @@ package CodingInterviewQuestions;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Random;
 
 /**
  * Asked in TouchNote, 1stJuly, 2022.
