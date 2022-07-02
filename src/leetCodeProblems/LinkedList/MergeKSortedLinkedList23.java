@@ -37,7 +37,7 @@ public class MergeKSortedLinkedList23
             }
         }
 
-        System.out.println("Queue ->" + sortedQueue);
+        //System.out.println("Queue ->" + sortedQueue);
 
         while (!sortedQueue.isEmpty()) {
 
@@ -47,12 +47,12 @@ public class MergeKSortedLinkedList23
 
             if (output != null) {
                 lastPointer.next = temp;
-                lastPointer = temp;
             }
             else {
                 output = temp;
-                lastPointer = temp;
             }
+
+            lastPointer = temp;
         }
 
         return output;
@@ -82,7 +82,7 @@ public class MergeKSortedLinkedList23
         ListNode out = obj.merge(input);
 
         while(out != null) {
-            System.out.println("Number ->" + out.val);
+            //System.out.println("Number ->" + out.val);
             out = out.next;
         }
 
