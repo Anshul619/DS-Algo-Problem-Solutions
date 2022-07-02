@@ -22,7 +22,7 @@ public class MergeKSortedLinkedList23
 
     public ListNode merge (ArrayList<ListNode> input) {
 
-        PriorityQueue queue = new PriorityQueue();
+        PriorityQueue<Integer> sortedQueue = new PriorityQueue();
 
         ListNode output = null;
         ListNode lastPointer = null;
@@ -32,16 +32,16 @@ public class MergeKSortedLinkedList23
             ListNode node = input.get(i);
 
             while(node != null) {
-                queue.add(node.val);
+                sortedQueue.add(node.val);
                 node = node.next;
             }
         }
 
-        System.out.println("Queue ->" + queue);
+        System.out.println("Queue ->" + sortedQueue);
 
-        while (!queue.isEmpty()) {
+        while (!sortedQueue.isEmpty()) {
 
-            int value = (int) queue.remove();
+            int value = sortedQueue.remove();
 
             ListNode temp = new ListNode(value);
 
