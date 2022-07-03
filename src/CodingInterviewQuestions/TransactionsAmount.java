@@ -1,11 +1,9 @@
 package CodingInterviewQuestions;
 
 /**
- * Asked in Amex, 29thJune2022
+ * Asked in Amex-Online-Test, 29thJune2022
  *
  */
-
-// you can also use imports, for example:
 import java.util.*;
 
 class TransactionsAmount {
