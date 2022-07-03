@@ -1,3 +1,5 @@
+package CodingInterviewQuestions;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -102,7 +104,6 @@ public class AuthorTopArticles {
     }
 
     public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
-        System.out.println("Hello world!");
 
         AuthorTopArticles.topArticles("olalonde", 5);
     }
