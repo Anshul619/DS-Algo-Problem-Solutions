@@ -27,14 +27,19 @@ public class FlattenMultiLevelDoublyLinkedList430 {
         if (outputLast != null) {
             temp.prev = outputLast;
             outputLast.next = temp;
-            outputLast = temp;
         }
         else {
             outputHead = temp;
-            outputLast = temp;
         }
+
+        outputLast = temp;
     }
 
+    /**
+     * DFS Traversal, original solution
+     * @param head
+     * @return
+     */
     public Node flatten(Node head) {
 
         if (head == null) {
@@ -53,6 +58,20 @@ public class FlattenMultiLevelDoublyLinkedList430 {
 
         }
 
+        return outputHead;
+    }
+
+    /**
+     * BFS Traversal
+     * - Reference - https://www.geeksforgeeks.org/flatten-a-linked-list-with-next-and-child-pointers/amp/
+     *
+     * @param head
+     *
+     * @return
+     */
+    public Node flattenBFS(Node head) {
+
+        // TBD
         return outputHead;
     }
 }
