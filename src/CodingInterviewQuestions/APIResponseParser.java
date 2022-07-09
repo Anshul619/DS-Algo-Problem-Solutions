@@ -159,6 +159,7 @@ class APIResponseParser {
 
         return userFieldValue;
     }
+
     public static List<Integer> apiResponseParser(List<String> inputList, int size) {
 
         List<Integer> output = new ArrayList<>();
