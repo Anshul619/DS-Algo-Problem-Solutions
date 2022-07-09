@@ -1,4 +1,4 @@
-package leetCodeProblems.Strings;
+package leetCodeProblems.GreedyAlgo;
 
 /**
  * LeetCode - https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/submissions/
