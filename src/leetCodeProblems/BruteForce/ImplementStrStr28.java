@@ -1,4 +1,4 @@
-package leetCodeProblems.Strings;
+package leetCodeProblems.BruteForce;
 
 /**
  * LeetCode - https://www.interviewbit.com/problems/implement-strstr/

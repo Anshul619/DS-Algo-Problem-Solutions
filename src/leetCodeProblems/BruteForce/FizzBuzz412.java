@@ -1,4 +1,4 @@
-package leetCodeProblems.Strings;
+package leetCodeProblems.BruteForce;
 
 /**
  * https://leetcode.com/problems/fizz-buzz/submissions/
