@@ -2,7 +2,7 @@ package leetCodeProblems.PriorityQueue;
 
 import java.util.PriorityQueue;
 
-public class PriorityQueueSample {
+public class SamplePriorityQueue {
 	public static void main(String[] args) {
 		
 		PriorityQueue<Integer> priorityQueue =new PriorityQueue<Integer>();
