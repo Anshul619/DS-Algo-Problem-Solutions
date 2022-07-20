@@ -1,7 +1,19 @@
 package CodingInterviewQuestions;
 
 /**
- * Related LeetCode - https://leetcode.com/problems/race-car/
+ * Input = 25m, Output = "AAAAARAAARA"
+ *
+ * 32m -> Nearest 2n greater 25m
+ * - 1->2->4->8->16->32 ( n=5 ) -> AAAAA
+ *
+ * 7m - exceeded
+ * -> RAAA -> 1, 8m
+ *
+ * 1m exceeded
+ * -> RA -> 1m
+ *
+ * Asked in Google, 20July2022
+ * - Related LeetCode - https://leetcode.com/problems/race-car/
  */
 public class SelfDrivingCarInstructionsFromDistance {
 
@@ -42,6 +54,8 @@ public class SelfDrivingCarInstructionsFromDistance {
         instructions = "";
 
         calculateInstructions(target);
+
+        System.out.println(instructions);
 
         return instructions.length();
     }
