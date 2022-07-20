@@ -34,6 +34,8 @@ package CodingInterviewQuestions;
  int CurrentSpeed =
  boolean isForward -> true
 
+
+ Related LeetCode - https://leetcode.com/problems/race-car/
  ***/
 
 public class SelfDrivingCarDistanceFromInstructions {
