@@ -1,7 +1,7 @@
 package main
 
 /**
-- LeetCode - https://leetcode.com/problems/build-array-from-permutation/
+- LeetCode Link - https://leetcode.com/problems/build-array-from-permutation/
 - TimeComplexity - O(n)
 - SpaceComplexity - O(n)
 */
