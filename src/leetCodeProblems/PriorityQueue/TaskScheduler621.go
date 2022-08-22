@@ -110,5 +110,6 @@ func main() {
 
 	//tasks := []byte{'A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'}
 	//n := 2
+
 	log.Println(leastInterval(tasks, n))
 }
