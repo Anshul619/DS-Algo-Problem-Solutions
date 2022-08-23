@@ -5,11 +5,11 @@ package main
 */
 import "log"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+//type TreeNode struct {
+//	Val   int
+//	Left  *TreeNode
+//	Right *TreeNode
+//}
 
 func rightSideViewUtil(root *TreeNode, out *[]int, level int) {
 
