@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/running-sum-of-1d-array/
 */
-import "log"
+//import "log"
 
 func runningSum(nums []int) []int {
 
@@ -16,9 +16,9 @@ func runningSum(nums []int) []int {
 	return nums
 }
 
-func main() {
+// func main() {
 
-	input := []int{1, 2, 3, 4}
+// 	input := []int{1, 2, 3, 4}
 
-	log.Println(runningSum(input))
-}
+// 	log.Println(runningSum(input))
+// }

@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/isomorphic-strings/
 */
-import "log"
+//import "log"
 
 func isIsomorphic(s string, t string) bool {
 
@@ -28,19 +28,19 @@ func isIsomorphic(s string, t string) bool {
 	return true
 }
 
-func main() {
+// func main() {
 
-	s := "egg"
-	t := "add"
+// 	s := "egg"
+// 	t := "add"
 
-	//s := "paper"
-	//t := "title"
+// 	//s := "paper"
+// 	//t := "title"
 
-	//s := "foo"
-	//t := "bar"
+// 	//s := "foo"
+// 	//t := "bar"
 
-	//s := "badc"
-	//t := "baba"
+// 	//s := "badc"
+// 	//t := "baba"
 
-	log.Println(isIsomorphic(s, t))
-}
+// 	log.Println(isIsomorphic(s, t))
+// }

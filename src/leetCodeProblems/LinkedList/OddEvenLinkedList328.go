@@ -5,7 +5,7 @@ package main
 - TimeComplexity - O(n)
 - SpaceComplexity - O(1)
 */
-import "log"
+//import "log"
 
 type ListNode struct {
 	Val  int
@@ -47,42 +47,42 @@ func oddEvenList(head *ListNode) *ListNode {
 	return head
 }
 
-func print(node *ListNode) {
-	for node != nil {
-		log.Println(node.Val)
-		node = node.Next
-	}
-}
-func main() {
+// func print(node *ListNode) {
+// 	for node != nil {
+// 		log.Println(node.Val)
+// 		node = node.Next
+// 	}
+// }
+// func main() {
 
-	//head := ListNode{
-	//	Val: 10,
-	//	Next: &ListNode{
-	//		Val:  10,
-	//		Next: new(ListNode),
-	//	},
-	//}
+// 	//head := ListNode{
+// 	//	Val: 10,
+// 	//	Next: &ListNode{
+// 	//		Val:  10,
+// 	//		Next: new(ListNode),
+// 	//	},
+// 	//}
 
-	//head := new(ListNode)
-	//head.Val = 1
-	//head.Next = new(ListNode)
-	//head.Next.Val = 2
-	//head.Next.Next = new(ListNode)
-	//head.Next.Next.Val = 3
+// 	//head := new(ListNode)
+// 	//head.Val = 1
+// 	//head.Next = new(ListNode)
+// 	//head.Next.Val = 2
+// 	//head.Next.Next = new(ListNode)
+// 	//head.Next.Next.Val = 3
 
-	//head := new(ListNode)
-	//head.Val = 1
-	//head.Next = new(ListNode)
-	//head.Next.Val = 2
-	//head.Next.Next = new(ListNode)
-	//head.Next.Next.Val = 3
-	//head.Next.Next.Next = new(ListNode)
-	//head.Next.Next.Next.Val = 4
-	//head.Next.Next.Next.Next = new(ListNode)
-	//head.Next.Next.Next.Next.Val = 5
+// 	//head := new(ListNode)
+// 	//head.Val = 1
+// 	//head.Next = new(ListNode)
+// 	//head.Next.Val = 2
+// 	//head.Next.Next = new(ListNode)
+// 	//head.Next.Next.Val = 3
+// 	//head.Next.Next.Next = new(ListNode)
+// 	//head.Next.Next.Next.Val = 4
+// 	//head.Next.Next.Next.Next = new(ListNode)
+// 	//head.Next.Next.Next.Next.Val = 5
 
-	head := new(ListNode)
-	head.Val = 1
+// 	head := new(ListNode)
+// 	head.Val = 1
 
-	print(oddEvenList(head))
-}
+// 	print(oddEvenList(head))
+// }

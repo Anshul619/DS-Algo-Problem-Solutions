@@ -5,7 +5,7 @@ LeetCode - https://leetcode.com/problems/maximum-number-of-words-found-in-senten
 */
 
 import (
-	"log"
+	//"log"
 	"strings"
 )
 
@@ -23,9 +23,9 @@ func mostWordsFound(sentences []string) int {
 	return max
 }
 
-func main() {
+// func main() {
 
-	input := []string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}
+// 	input := []string{"alice and bob love leetcode", "i think so too", "this is great thanks very much"}
 
-	log.Println(mostWordsFound(input))
-}
+// 	log.Println(mostWordsFound(input))
+// }

@@ -42,8 +42,8 @@ func sortedArrayToBST(nums []int) *TreeNode {
 	return sortedArrayToBSTUtil(nums, 0, len(nums))
 }
 
-func main() {
+// func main() {
 
-	input := []int{-10, -3, 0, 5, 9}
-	printInOrder(sortedArrayToBST(input))
-}
+// 	input := []int{-10, -3, 0, 5, 9}
+// 	printInOrder(sortedArrayToBST(input))
+// }

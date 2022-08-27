@@ -1,6 +1,6 @@
 package main
 
-import "log"
+//import "log"
 
 type Stack []string
 
@@ -24,11 +24,11 @@ func (s *Stack) Pop() (string, bool) {
 	}
 }
 
-func main() {
+// func main() {
 
-	stack := new(Stack)
-	stack.Push("One")
-	stack.Push("Two")
-	log.Println(stack.Pop())
-	log.Println(stack.Pop())
-}
+// 	stack := new(Stack)
+// 	stack.Push("One")
+// 	stack.Push("Two")
+// 	log.Println(stack.Pop())
+// 	log.Println(stack.Pop())
+// }

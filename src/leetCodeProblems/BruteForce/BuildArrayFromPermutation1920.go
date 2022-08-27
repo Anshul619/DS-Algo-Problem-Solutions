@@ -6,7 +6,7 @@ package main
 - SpaceComplexity - O(n)
 */
 
-import "log"
+//import "log"
 
 func buildArray(nums []int) []int {
 
@@ -19,9 +19,9 @@ func buildArray(nums []int) []int {
 	return output
 }
 
-func main() {
+// func main() {
 
-	input := []int{0, 2, 1, 5, 3, 4}
+// 	input := []int{0, 2, 1, 5, 3, 4}
 
-	log.Println(buildArray(input)) //expected o/p = [0,1,2,4,5,3]
-}
+// 	log.Println(buildArray(input)) //expected o/p = [0,1,2,4,5,3]
+// }

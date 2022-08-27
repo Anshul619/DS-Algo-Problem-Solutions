@@ -3,9 +3,9 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/find-the-highest-altitude/submissions/
 */
-import (
-	"log"
-)
+// import (
+// 	"log"
+// )
 
 func largestAltitude(gain []int) int {
 
@@ -22,8 +22,8 @@ func largestAltitude(gain []int) int {
 	return max
 }
 
-func main() {
+// func main() {
 
-	input := []int{-5, 1, 5, 0, -7}
-	log.Println(largestAltitude(input))
-}
+// 	input := []int{-5, 1, 5, 0, -7}
+// 	log.Println(largestAltitude(input))
+// }

@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/binary-tree-right-side-view/submissions/
 */
-import "log"
+//import "log"
 
 //type TreeNode struct {
 //	Val   int
@@ -34,17 +34,17 @@ func rightSideView(root *TreeNode) []int {
 	return out
 }
 
-func main() {
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 2
-	root.Left = new(TreeNode)
-	root.Left.Val = 1
-	root.Right = new(TreeNode)
-	root.Right.Val = 3
-	root.Right.Left = new(TreeNode)
-	root.Right.Left.Val = 0
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 1
+// func main() {
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 2
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 1
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 3
+// 	root.Right.Left = new(TreeNode)
+// 	root.Right.Left.Val = 0
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 1
 
-	log.Println(rightSideView(root))
-}
+// 	log.Println(rightSideView(root))
+// }

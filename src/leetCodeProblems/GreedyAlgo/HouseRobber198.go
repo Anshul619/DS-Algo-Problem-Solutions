@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/house-robber/
 */
-import "log"
+//import "log"
 
 func max(num1 int, num2 int) int {
 
@@ -44,12 +44,12 @@ func rob(nums []int) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//input := []int{1, 2, 3, 1}
-	//input := []int{2, 7, 9, 3, 1}
+// 	//input := []int{1, 2, 3, 1}
+// 	//input := []int{2, 7, 9, 3, 1}
 
-	input := []int{2, 1, 1, 2}
+// 	input := []int{2, 1, 1, 2}
 
-	log.Println(rob(input))
-}
+// 	log.Println(rob(input))
+// }

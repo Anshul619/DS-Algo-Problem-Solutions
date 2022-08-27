@@ -5,7 +5,7 @@ package main
 */
 import (
 	"container/heap"
-	"log"
+	//"log"
 )
 
 type wordFreq struct {
@@ -67,15 +67,15 @@ func topKFrequent(words []string, k int) []string {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//input := []string{"i", "love", "leetcode", "i", "love", "coding"}
-	//k := 2
+// 	//input := []string{"i", "love", "leetcode", "i", "love", "coding"}
+// 	//k := 2
 
-	input := []string{"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"}
-	k := 4
+// 	input := []string{"the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is"}
+// 	k := 4
 
-	//input := []string{"i", "love", "leetcode", "i", "love", "coding"}
-	//k := 3
-	log.Println(topKFrequent(input, k))
-}
+// 	//input := []string{"i", "love", "leetcode", "i", "love", "coding"}
+// 	//k := 3
+// 	log.Println(topKFrequent(input, k))
+// }

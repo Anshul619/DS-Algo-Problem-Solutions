@@ -1,6 +1,6 @@
 package main
 
-import "log"
+//import "log"
 
 func shuffle(nums []int, n int) []int {
 
@@ -14,10 +14,10 @@ func shuffle(nums []int, n int) []int {
 	return output
 }
 
-func main() {
+// func main() {
 
-	input := []int{2, 5, 1, 3, 4, 7}
-	n := 3
+// 	input := []int{2, 5, 1, 3, 4, 7}
+// 	n := 3
 
-	log.Println(shuffle(input, n))
-}
+// 	log.Println(shuffle(input, n))
+// }

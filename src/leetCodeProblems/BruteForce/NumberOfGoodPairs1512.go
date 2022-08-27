@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/running-sum-of-1d-array/
 */
-import "log"
+//import "log"
 
 func numIdenticalPairs(nums []int) int {
 
@@ -37,10 +37,10 @@ func numIdenticalPairsBruteForce(nums []int) int {
 	return output
 }
 
-func main() {
+// func main() {
 
-	input := []int{1, 2, 3, 1, 1, 3}
+// 	input := []int{1, 2, 3, 1, 1, 3}
 
-	log.Println(numIdenticalPairs(input))
+// 	log.Println(numIdenticalPairs(input))
 
-}
+// }

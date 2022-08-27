@@ -5,7 +5,7 @@ package main
 */
 
 import (
-	"log"
+	//"log"
 	"sort"
 )
 
@@ -33,9 +33,9 @@ func smallerNumbersThanCurrent(nums []int) []int {
 	return nums
 }
 
-func main() {
+// func main() {
 
-	input := []int{8, 1, 2, 2, 3}
+// 	input := []int{8, 1, 2, 2, 3}
 
-	log.Println(smallerNumbersThanCurrent(input))
-}
+// 	log.Println(smallerNumbersThanCurrent(input))
+// }

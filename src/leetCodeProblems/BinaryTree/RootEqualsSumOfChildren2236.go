@@ -5,13 +5,13 @@ package main
 - TimeComplexity - O(1)
 - SpaceComplexity - None
 */
-import "log"
+//import "log"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
 
 func checkTree(root *TreeNode) bool {
 
@@ -21,14 +21,14 @@ func checkTree(root *TreeNode) bool {
 	return false
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode) // pointer to TreeNode
-	root.Val = 10
-	root.Left = new(TreeNode)
-	root.Left.Val = 5
-	root.Right = new(TreeNode)
-	root.Right.Val = 6
+// 	root := new(TreeNode) // pointer to TreeNode
+// 	root.Val = 10
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 5
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 6
 
-	log.Println(checkTree(root))
-}
+// 	log.Println(checkTree(root))
+// }

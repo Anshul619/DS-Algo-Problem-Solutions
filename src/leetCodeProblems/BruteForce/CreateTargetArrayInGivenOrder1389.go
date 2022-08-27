@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/create-target-array-in-the-given-order/
 */
-import "log"
+//import "log"
 
 func createTargetArrayBruteForce(nums []int, index []int) []int {
 
@@ -44,13 +44,13 @@ func createTargetArray(nums []int, index []int) []int {
 	return output
 }
 
-func main() {
+// func main() {
 
-	//nums := []int{0, 1, 2, 3, 4}
-	//index := []int{0, 1, 2, 2, 1}
+// 	//nums := []int{0, 1, 2, 3, 4}
+// 	//index := []int{0, 1, 2, 2, 1}
 
-	nums := []int{1, 2, 3, 4, 0}
-	index := []int{0, 1, 2, 3, 0}
+// 	nums := []int{1, 2, 3, 4, 0}
+// 	index := []int{0, 1, 2, 3, 0}
 
-	log.Println(createTargetArray(nums, index))
-}
+// 	log.Println(createTargetArray(nums, index))
+// }

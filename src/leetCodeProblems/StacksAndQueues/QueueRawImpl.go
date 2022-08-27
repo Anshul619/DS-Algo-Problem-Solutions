@@ -1,6 +1,6 @@
 package main
 
-import "log"
+//import "log"
 
 type Queue []int
 
@@ -23,11 +23,11 @@ func (s *Queue) Pop() (int, bool) {
 	}
 }
 
-func main() {
-	queue := new(Queue)
-	queue.Push(1)
-	queue.Push(2)
-	queue.Push(3)
-	log.Println(queue.Pop())
-	log.Println(queue.Pop())
-}
+// func main() {
+// 	queue := new(Queue)
+// 	queue.Push(1)
+// 	queue.Push(2)
+// 	queue.Push(3)
+// 	log.Println(queue.Pop())
+// 	log.Println(queue.Pop())
+// }

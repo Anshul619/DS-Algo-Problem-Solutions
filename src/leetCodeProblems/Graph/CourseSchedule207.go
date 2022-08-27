@@ -3,7 +3,7 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/course-schedule/
 */
-import "log"
+//import "log"
 
 func buildDependenciesMap(prerequisites [][]int) map[int][]int {
 
@@ -55,12 +55,12 @@ func canFinish(numCourses int, prerequisites [][]int) bool {
 	return true
 }
 
-func main() {
+// func main() {
 
-	numCourses := 2
-	//prerequisites := [][]int{{1, 0}}
+// 	numCourses := 2
+// 	//prerequisites := [][]int{{1, 0}}
 
-	prerequisites := [][]int{{1, 0}, {0, 1}}
+// 	prerequisites := [][]int{{1, 0}, {0, 1}}
 
-	log.Println(canFinish(numCourses, prerequisites))
-}
+// 	log.Println(canFinish(numCourses, prerequisites))
+// }
