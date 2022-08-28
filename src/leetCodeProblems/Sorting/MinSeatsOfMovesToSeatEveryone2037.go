@@ -4,7 +4,7 @@ package main
 	- LeetCode - https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/
 */
 import (
-	"log"
+	//"log"
 	"sort"
 )
 
@@ -28,13 +28,13 @@ func minMovesToSeat(seats []int, students []int) int {
 
 }
 
-func main() {
+// func main() {
 
-	//seats := []int{3, 1, 5}
-	//students := []int{2, 7, 4}
+// 	//seats := []int{3, 1, 5}
+// 	//students := []int{2, 7, 4}
 
-	seats := []int{4, 1, 5, 9}
-	students := []int{1, 3, 2, 6}
+// 	seats := []int{4, 1, 5, 9}
+// 	students := []int{1, 3, 2, 6}
 
-	log.Println(minMovesToSeat(seats, students))
-}
+// 	log.Println(minMovesToSeat(seats, students))
+// }
