@@ -6,7 +6,7 @@ package main
 - SpaceComplexity - O(n)
 */
 import (
-	"log"
+	//"log"
 	"math"
 )
 
@@ -27,9 +27,9 @@ func maximumWealth(accounts [][]int) int {
 	return int(output)
 }
 
-func main() {
+// func main() {
 
-	input := [][]int{{10, 2, 3}, {3, 2, 5}}
+// 	input := [][]int{{10, 2, 3}, {3, 2, 5}}
 
-	log.Println(maximumWealth(input))
-}
+// 	log.Println(maximumWealth(input))
+// }
