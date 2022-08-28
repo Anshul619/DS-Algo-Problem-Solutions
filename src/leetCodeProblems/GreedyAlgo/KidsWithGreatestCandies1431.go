@@ -3,7 +3,7 @@ package main
 /*
 LeetCode - https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 */
-import "log"
+//import "log"
 
 func kidsWithCandies(candies []int, extraCandies int) []bool {
 
@@ -26,16 +26,16 @@ func kidsWithCandies(candies []int, extraCandies int) []bool {
 	return output
 }
 
-func main() {
+// func main() {
 
-	//input := []int{2, 3, 5, 1, 3}
-	//extraCandies := 3
+// 	//input := []int{2, 3, 5, 1, 3}
+// 	//extraCandies := 3
 
-	//input := []int{4, 2, 1, 1, 2}
-	//extraCandies := 1
+// 	//input := []int{4, 2, 1, 1, 2}
+// 	//extraCandies := 1
 
-	input := []int{12, 1, 12}
-	extraCandies := 10
+// 	input := []int{12, 1, 12}
+// 	extraCandies := 10
 
-	log.Println(kidsWithCandies(input, extraCandies))
-}
+// 	log.Println(kidsWithCandies(input, extraCandies))
+// }
