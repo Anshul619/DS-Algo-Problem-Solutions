@@ -3,9 +3,9 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/lru-cache/
 */
-import (
-	"log"
-)
+// import (
+// 	"log"
+// )
 
 type Queue []int
 
@@ -102,13 +102,13 @@ func (this *LRUCache) Put(key int, value int) {
 	this.lruMap[key] = value
 }
 
-func main() {
-	obj := Constructor(3)
-	obj.Put(1, 2)
-	obj.Put(3, 4)
-	obj.Put(5, 6)
-	log.Println(obj.Get(-1))
-	log.Println(obj.Get(1))
-	log.Println(obj.Get(3))
-	log.Println(obj.Get(5))
-}
+// func main() {
+// 	obj := Constructor(3)
+// 	obj.Put(1, 2)
+// 	obj.Put(3, 4)
+// 	obj.Put(5, 6)
+// 	log.Println(obj.Get(-1))
+// 	log.Println(obj.Get(1))
+// 	log.Println(obj.Get(3))
+// 	log.Println(obj.Get(5))
+// }

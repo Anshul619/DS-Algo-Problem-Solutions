@@ -9,21 +9,16 @@ func minOperations(boxes string) []int {
 	balls := []int{}
 
 	for i, v := range boxes {
-		// log.Println()
-		// log.Println(boxes[i])
 		if string(v) == "1" {
 			balls = append(balls, i)
 		}
 	}
-
-	// log.Println(balls)
 
 	for i := range out {
 
 		move := 0
 
 		for _, j := range balls {
-
 			if i > j {
 				move += i - j
 			} else {

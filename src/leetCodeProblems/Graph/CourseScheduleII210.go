@@ -1,9 +1,11 @@
 package main
 
+import "log"
+
 /*
 - LeetCode - https://leetcode.com/problems/course-schedule-ii/
 */
-import "log"
+//import "log"
 
 func buildDependenciesMap1(prerequisites [][]int) map[int][]int {
 
@@ -59,13 +61,13 @@ func canFinish1(numCourses int, prerequisites [][]int) bool {
 	return true
 }
 
-func main() {
+// func main() {
 
-	numCourses := 4
-	//prerequisites := [][]int{{1, 0}}
+// 	numCourses := 4
+// 	//prerequisites := [][]int{{1, 0}}
 
-	//prerequisites := [][]int{{1, 0}, {0, 1}}
-	prerequisites := [][]int{{1, 0}, {2, 1}, {3, 1}, {3, 2}}
+// 	//prerequisites := [][]int{{1, 0}, {0, 1}}
+// 	prerequisites := [][]int{{1, 0}, {2, 1}, {3, 1}, {3, 2}}
 
-	log.Println(canFinish1(numCourses, prerequisites))
-}
+// 	log.Println(canFinish1(numCourses, prerequisites))
+// }

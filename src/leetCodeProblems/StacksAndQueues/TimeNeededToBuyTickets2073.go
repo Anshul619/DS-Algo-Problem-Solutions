@@ -3,7 +3,7 @@ package main
 /*
 LeetCode - https://leetcode.com/problems/time-needed-to-buy-tickets
 */
-import "log"
+//import "log"
 
 func timeRequiredToBuy(tickets []int, k int) int {
 
@@ -35,22 +35,22 @@ func timeRequiredToBuy(tickets []int, k int) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//tickets := []int{2, 3, 2}
-	//k := 2
+// 	//tickets := []int{2, 3, 2}
+// 	//k := 2
 
-	//tickets := []int{5, 1, 1, 1}
-	//k := 0
+// 	//tickets := []int{5, 1, 1, 1}
+// 	//k := 0
 
-	tickets := []int{84, 49, 5, 24, 70, 77, 87, 8}
-	k := 3
+// 	tickets := []int{84, 49, 5, 24, 70, 77, 87, 8}
+// 	k := 3
 
-	//tickets := []int{32, 90, 5, 48, 69, 21, 41, 55, 32}
-	//k := 2
+// 	//tickets := []int{32, 90, 5, 48, 69, 21, 41, 55, 32}
+// 	//k := 2
 
-	//[]int{1, 2, 1}
-	//[]int{0, 1, 0} // 6 seconds
+// 	//[]int{1, 2, 1}
+// 	//[]int{0, 1, 0} // 6 seconds
 
-	log.Println(timeRequiredToBuy(tickets, k))
-}
+// 	log.Println(timeRequiredToBuy(tickets, k))
+// }
