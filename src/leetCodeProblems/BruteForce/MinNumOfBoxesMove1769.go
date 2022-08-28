@@ -1,6 +1,6 @@
 package main
 
-import "log"
+//import "log"
 
 func minOperations(boxes string) []int {
 
@@ -31,8 +31,8 @@ func minOperations(boxes string) []int {
 	return out
 }
 
-func main() {
-	//boxes := "110"
-	boxes := "001011"
-	log.Println(minOperations(boxes))
-}
+// func main() {
+// 	//boxes := "110"
+// 	boxes := "001011"
+// 	log.Println(minOperations(boxes))
+// }
