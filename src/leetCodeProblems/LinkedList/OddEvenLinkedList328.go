@@ -7,10 +7,10 @@ package main
 */
 //import "log"
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+// type ListNode struct {
+// 	Val  int
+// 	Next *ListNode
+// }
 
 func oddEvenList(head *ListNode) *ListNode {
 

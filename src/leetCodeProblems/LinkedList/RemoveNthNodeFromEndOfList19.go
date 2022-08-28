@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 //type ListNode struct {
 //	Val  int
 //	Next *ListNode
@@ -34,36 +32,36 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	return head
 }
 
-func main() {
+// func main() {
 
-	head := new(ListNode)
-	head.Val = 1
-	head.Next = new(ListNode)
-	head.Next.Val = 2
-	head.Next.Next = new(ListNode)
-	head.Next.Next.Val = 3
-	head.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Val = 4
-	head.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Val = 5
+// 	head := new(ListNode)
+// 	head.Val = 1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = 2
+// 	head.Next.Next = new(ListNode)
+// 	head.Next.Next.Val = 3
+// 	head.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Val = 4
+// 	head.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Val = 5
 
-	output := removeNthFromEnd(head, 2)
+// 	output := removeNthFromEnd(head, 2)
 
-	/*head := new(ListNode)
-	head.Val = 1
+// 	/*head := new(ListNode)
+// 	head.Val = 1
 
-	output := removeNthFromEnd(head, 1)*/
+// 	output := removeNthFromEnd(head, 1)*/
 
-	/*head := new(ListNode)
-	head.Val = 1
-	head.Next = new(ListNode)
-	head.Next.Val = 2
+// 	/*head := new(ListNode)
+// 	head.Val = 1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = 2
 
-	output := removeNthFromEnd(head, 2)*/
+// 	output := removeNthFromEnd(head, 2)*/
 
-	for output != nil {
-		log.Println(output.Val)
-		output = output.Next
-	}
+// 	for output != nil {
+// 		log.Println(output.Val)
+// 		output = output.Next
+// 	}
 
-}
+// }
