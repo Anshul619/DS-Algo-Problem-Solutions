@@ -3,13 +3,12 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/deepest-leaves-sum
 */
-import "log"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// }
 
 func findLastLevel(node *TreeNode, level int) int {
 
@@ -55,26 +54,26 @@ func deepestLeavesSum(root *TreeNode) int {
 	return *sum
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 1
-	root.Left = new(TreeNode)
-	root.Left.Val = 2
-	root.Right = new(TreeNode)
-	root.Right.Val = 3
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 4
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 5
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 1
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 2
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 3
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 4
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 5
 
-	root.Left.Left.Left = new(TreeNode)
-	root.Left.Left.Left.Val = 7
+// 	root.Left.Left.Left = new(TreeNode)
+// 	root.Left.Left.Left.Val = 7
 
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 6
-	root.Right.Right.Right = new(TreeNode)
-	root.Right.Right.Right.Val = 8
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 6
+// 	root.Right.Right.Right = new(TreeNode)
+// 	root.Right.Right.Right.Val = 8
 
-	log.Println(deepestLeavesSum(root))
-}
+// 	log.Println(deepestLeavesSum(root))
+// }
