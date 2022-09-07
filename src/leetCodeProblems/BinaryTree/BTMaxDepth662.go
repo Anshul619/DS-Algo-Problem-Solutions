@@ -3,13 +3,13 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/maximum-width-of-binary-tree
 */
-import "log"
+// import "log"
 
-type TreeNode struct {
-	Left  *TreeNode
-	Right *TreeNode
-	Val   int
-}
+// type TreeNode struct {
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// 	Val   int
+// }
 
 type TreeNodeIndexed struct {
 	Node  *TreeNode
@@ -99,26 +99,26 @@ func widthOfBinaryTree(root *TreeNode) int {
 	return maxWidth
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 1
-	root.Left = new(TreeNode)
-	root.Left.Val = 3
-	root.Right = new(TreeNode)
-	root.Right.Val = 2
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 5
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 3
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 1
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 3
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 2
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 5
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 3
 
-	// 	root.Left.Left.Left = new(TreeNode)
-	// 	root.Left.Left.Left.Val = 7
+// 	// 	root.Left.Left.Left = new(TreeNode)
+// 	// 	root.Left.Left.Left.Val = 7
 
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 9
-	// 	root.Right.Right.Right = new(TreeNode)
-	// 	root.Right.Right.Right.Val = 8
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 9
+// 	// 	root.Right.Right.Right = new(TreeNode)
+// 	// 	root.Right.Right.Right.Val = 8
 
-	log.Println(widthOfBinaryTree(root))
-}
+// 	log.Println(widthOfBinaryTree(root))
+// }
