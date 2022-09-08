@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/number-of-provinces/submissions/
 */
-import "log"
 
 func visitNeighbours(isConnected [][]int, visited []bool, vertex int) {
 
@@ -31,8 +30,8 @@ func findCircleNum(isConnected [][]int) int {
 	return out
 }
 
-func main() {
-	//input := [][]int{{1, 1, 0}, {1, 1, 0}, {0, 0, 1}}
-	input := [][]int{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
-	log.Println(findCircleNum(input))
-}
+// func main() {
+// 	//input := [][]int{{1, 1, 0}, {1, 1, 0}, {0, 0, 1}}
+// 	input := [][]int{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+// 	log.Println(findCircleNum(input))
+// }
