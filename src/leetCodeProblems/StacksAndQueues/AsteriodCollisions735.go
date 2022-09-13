@@ -4,8 +4,6 @@ package main
 - LeetCode - https://leetcode.com/problems/asteroid-collision/
 */
 
-import "log"
-
 type stack []int
 
 func (s *stack) push(elem int) {
@@ -116,9 +114,9 @@ func asteroidCollision(asteroids []int) []int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	input := []int{1, -2, -2, -2}
+// 	input := []int{1, -2, -2, -2}
 
-	log.Println(asteroidCollision(input))
-}
+// 	log.Println(asteroidCollision(input))
+// }
