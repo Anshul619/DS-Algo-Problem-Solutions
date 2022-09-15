@@ -2,6 +2,8 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/continuous-subarray-sum
+- Time Complexity - O(n)
+- Space Complexity - O(min(n,k))
 */
 import "log"
 
