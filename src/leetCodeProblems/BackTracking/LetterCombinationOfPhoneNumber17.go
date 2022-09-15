@@ -3,9 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 */
-import (
-	"log"
-)
 
 func util(digits string, index int, m map[string][]string, out *[]string, combination string) {
 
@@ -48,9 +45,9 @@ func letterCombinations(digits string) []string {
 	return out
 }
 
-func main() {
-	//digits := "1234556789"
-	digits := "2314"
-	//digits := ""
-	log.Println(letterCombinations(digits))
-}
+// func main() {
+// 	//digits := "1234556789"
+// 	digits := "2314"
+// 	//digits := ""
+// 	log.Println(letterCombinations(digits))
+// }
