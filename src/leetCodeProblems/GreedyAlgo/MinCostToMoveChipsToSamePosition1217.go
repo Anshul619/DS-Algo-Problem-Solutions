@@ -4,10 +4,6 @@ package main
 - LeetCode - https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/solution/
 */
 
-import (
-	"log"
-)
-
 func minCostToMoveChips(position []int) int {
 
 	evenCount, oddCount := 0, 0
@@ -30,10 +26,10 @@ func minCostToMoveChips(position []int) int {
 	return out
 }
 
-func main() {
-	//input := []int{2, 2, 2, 3, 3}
-	//input := []int{1, 2, 3}
-	//input := []int{3, 3, 1, 2, 2}
-	input := []int{6, 4, 7, 8, 2, 10, 2, 7, 9, 7}
-	log.Println(minCostToMoveChips(input))
-}
+// func main() {
+// 	//input := []int{2, 2, 2, 3, 3}
+// 	//input := []int{1, 2, 3}
+// 	//input := []int{3, 3, 1, 2, 2}
+// 	input := []int{6, 4, 7, 8, 2, 10, 2, 7, 9, 7}
+// 	log.Println(minCostToMoveChips(input))
+// }
