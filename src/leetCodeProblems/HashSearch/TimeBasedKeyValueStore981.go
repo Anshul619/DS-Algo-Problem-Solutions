@@ -5,7 +5,6 @@ package main
 */
 
 import (
-	"log"
 	"strconv"
 )
 
@@ -101,20 +100,20 @@ func (this *TimeMap) Get(key string, timestamp int) string {
 	return out
 }
 
-func main() {
-	// tm := Constructor()
-	// tm.Set("foo", "bar", 1)
-	// log.Println(tm.Get("foo", 1))
-	// log.Println(tm.Get("foo", 3))
-	// tm.Set("foo", "bar2", 4)
-	// log.Println(tm.Get("foo", 4))
-	// log.Println(tm.Get("foo", 5))
+// func main() {
+// 	// tm := Constructor()
+// 	// tm.Set("foo", "bar", 1)
+// 	// log.Println(tm.Get("foo", 1))
+// 	// log.Println(tm.Get("foo", 3))
+// 	// tm.Set("foo", "bar2", 4)
+// 	// log.Println(tm.Get("foo", 4))
+// 	// log.Println(tm.Get("foo", 5))
 
-	tm := Constructor()
-	tm.Set("ctondw", "ztpearaw", 1)
-	tm.Set("vrobykydll", "hwliiq", 2)
-	tm.Set("gszaw", "ztpearaw", 3)
-	tm.Set("ctondw", "gszaw", 4)
-	log.Println(tm.Get("gszaw", 5))
+// 	tm := Constructor()
+// 	tm.Set("ctondw", "ztpearaw", 1)
+// 	tm.Set("vrobykydll", "hwliiq", 2)
+// 	tm.Set("gszaw", "ztpearaw", 3)
+// 	tm.Set("ctondw", "gszaw", 4)
+// 	log.Println(tm.Get("gszaw", 5))
 
-}
+// }
