@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - LeetCode - https://leetcode.com/problems/permutations
 */
@@ -40,13 +38,13 @@ func permute(nums []int) [][]int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//nums := []int{1, 2, 3}
-	nums := []int{1, 2, 3, 4}
-	//nums := []int{1, 2, 3}
-	//nums := []int{0, 1}
-	//nums := []int{1}
-	//nums := []int{}
-	log.Println(permute(nums))
-}
+// 	//nums := []int{1, 2, 3}
+// 	nums := []int{1, 2, 3, 4}
+// 	//nums := []int{1, 2, 3}
+// 	//nums := []int{0, 1}
+// 	//nums := []int{1}
+// 	//nums := []int{}
+// 	log.Println(permute(nums))
+// }
