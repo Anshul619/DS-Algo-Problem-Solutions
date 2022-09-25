@@ -58,44 +58,45 @@ func print(node *ListNode) {
 		node = node.Next
 	}
 }
-func main() {
 
-	//head := ListNode{
-	//	Val: 10,
-	//	Next: &ListNode{
-	//		Val:  10,
-	//		Next: new(ListNode),
-	//	},
-	//}
+// func main() {
 
-	// head := new(ListNode)
-	// head.Val = 0
-	// head.Next = new(ListNode)
-	// head.Next.Val = 1
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 2
+// 	//head := ListNode{
+// 	//	Val: 10,
+// 	//	Next: &ListNode{
+// 	//		Val:  10,
+// 	//		Next: new(ListNode),
+// 	//	},
+// 	//}
 
-	// print(rotateRight(head, 4))
+// 	// head := new(ListNode)
+// 	// head.Val = 0
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 1
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 2
 
-	// head := new(ListNode)
-	// head.Val = 1
-	// head.Next = new(ListNode)
-	// head.Next.Val = 2
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 3
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = 4
-	// head.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Val = 5
+// 	// print(rotateRight(head, 4))
 
-	head := new(ListNode)
-	head.Val = 1
-	head.Next = new(ListNode)
-	head.Next.Val = 2
+// 	// head := new(ListNode)
+// 	// head.Val = 1
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 2
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 3
+// 	// head.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Val = 4
+// 	// head.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Val = 5
 
-	print(rotateRight(head, 5))
+// 	head := new(ListNode)
+// 	head.Val = 1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = 2
 
-	// //var head *ListNode
+// 	print(rotateRight(head, 5))
 
-	// print(rotateRight(head, 2))
-}
+// 	// //var head *ListNode
+
+// 	// print(rotateRight(head, 2))
+// }
