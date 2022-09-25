@@ -5,23 +5,21 @@ package main
 
 func hasCycle(head *ListNode) bool {
 
-	nodesMap := make(map[*ListNode]bool)
-
 	if head == nil {
 		return false
 	}
 
-	nodesMap[head] = true
+	slow := head
+	fast := head
 
-	for head.Next != nil {
+	for slow != nil && fast != nil && fast.Next != nil {
 
-		head = head.Next
+		slow = slow.Next
+		fast = fast.Next.Next
 
-		if _, ok := nodesMap[head]; ok {
+		if slow == fast {
 			return true
 		}
-
-		nodesMap[head] = true
 	}
 
 	return false

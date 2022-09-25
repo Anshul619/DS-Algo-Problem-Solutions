@@ -1,33 +1,46 @@
+package main
+
 /*
 - LeetCode - https://leetcode.com/problems/linked-list-cycle-ii/
 */
 
-package main
-
-import "log"
+import (
+	"log"
+)
 
 func detectCycle(head *ListNode) *ListNode {
-
-	nodesMap := make(map[*ListNode]bool)
 
 	if head == nil {
 		return nil
 	}
 
-	nodesMap[head] = true
+	slow := head
+	fast := head
+	isCycle := false
 
-	for head.Next != nil {
+	for slow != nil && fast != nil && fast.Next != nil {
 
-		head = head.Next
+		slow = slow.Next
+		fast = fast.Next.Next
 
-		if _, ok := nodesMap[head]; ok {
-			return head
+		log.Println("Slow - ", slow.Val)
+		log.Println("Fast - ", fast.Val)
+		if slow == fast {
+			isCycle = true
+			break
 		}
-
-		nodesMap[head] = true
 	}
 
-	return nil
+	if !isCycle {
+		return nil
+	}
+
+	for head != slow {
+		head = head.Next
+		slow = slow.Next
+	}
+
+	return head
 }
 
 func main() {
@@ -64,34 +77,33 @@ func main() {
 	// head.Next.Val = 2
 	// head.Next.Next = head
 
-	// head := new(ListNode)
-	// head.Val = -1
-	// head.Next = new(ListNode)
-	// head.Next.Val = -7
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 7
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = -4
-	// head.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Val = 19
-	// head.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Val = 6
-	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Val = -9
-	// head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Next.Val = -5
-	// head.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Next.Next.Val = -2
-	// head.Next.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Val = -5
-	// head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Next = head.Next.Next.Next.Next.Next.Next
-
 	head := new(ListNode)
-	head.Val = 1
-	head.Next = nil
+	head.Val = -1
+	head.Next = new(ListNode)
+	head.Next.Val = -7
+	head.Next.Next = new(ListNode)
+	head.Next.Next.Val = 7
+	head.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Val = -4
+	head.Next.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Next.Val = 19
+	head.Next.Next.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Next.Next.Val = 6
+	head.Next.Next.Next.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Next.Next.Next.Val = -9
+	head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Next.Next.Next.Next.Val = -5
+	head.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Next.Next.Next.Next.Next.Val = -2
+	head.Next.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+	head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Val = -5
+	head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Next = head.Next.Next.Next.Next.Next.Next
+
+	// head := new(ListNode)
+	// head.Val = 1
+	// head.Next = new(ListNode)
 	// head.Next.Val = 2
 	// head.Next.Next = head
 
-	//log.Println
 	log.Println(detectCycle(head))
 }
