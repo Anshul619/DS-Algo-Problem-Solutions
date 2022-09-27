@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/count-binary-substrings/
 */
-import "log"
 
 func countBinarySubstrings(s string) int {
 
@@ -55,9 +54,9 @@ func countBinarySubstrings(s string) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//s := "00110011"
-	s := "00100"
-	log.Println(countBinarySubstrings(s))
-}
+// 	//s := "00110011"
+// 	s := "00100"
+// 	log.Println(countBinarySubstrings(s))
+// }

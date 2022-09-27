@@ -43,67 +43,67 @@ func detectCycle(head *ListNode) *ListNode {
 	return head
 }
 
-func main() {
-	// head := new(ListNode)
-	// head.Val = 0
-	// head.Next = new(ListNode)
-	// head.Next.Val = 3
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 1
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = 0
-	// head.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Val = 4
-	// head.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Val = 5
-	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Val = 2
-	// head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Next.Val = 0
+// func main() {
+// 	// head := new(ListNode)
+// 	// head.Val = 0
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 3
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 1
+// 	// head.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Val = 0
+// 	// head.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Val = 4
+// 	// head.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Val = 5
+// 	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Next.Val = 2
+// 	// head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Next.Next.Val = 0
 
-	// head := new(ListNode)
-	// head.Val = 3
-	// head.Next = new(ListNode)
-	// head.Next.Val = 2
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 0
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = -4
-	// head.Next.Next.Next.Next = head.Next
+// 	// head := new(ListNode)
+// 	// head.Val = 3
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 2
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 0
+// 	// head.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Val = -4
+// 	// head.Next.Next.Next.Next = head.Next
 
-	// head := new(ListNode)
-	// head.Val = 1
-	// head.Next = new(ListNode)
-	// head.Next.Val = 2
-	// head.Next.Next = head
+// 	// head := new(ListNode)
+// 	// head.Val = 1
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 2
+// 	// head.Next.Next = head
 
-	head := new(ListNode)
-	head.Val = -1
-	head.Next = new(ListNode)
-	head.Next.Val = -7
-	head.Next.Next = new(ListNode)
-	head.Next.Next.Val = 7
-	head.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Val = -4
-	head.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Val = 19
-	head.Next.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Next.Val = 6
-	head.Next.Next.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Next.Next.Val = -9
-	head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Next.Next.Next.Val = -5
-	head.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Next.Next.Next.Next.Val = -2
-	head.Next.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Val = -5
-	head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Next = head.Next.Next.Next.Next.Next.Next
+// 	head := new(ListNode)
+// 	head.Val = -1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = -7
+// 	head.Next.Next = new(ListNode)
+// 	head.Next.Next.Val = 7
+// 	head.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Val = -4
+// 	head.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Val = 19
+// 	head.Next.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Next.Val = 6
+// 	head.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Next.Next.Val = -9
+// 	head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Next.Next.Next.Val = -5
+// 	head.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Next.Next.Next.Next.Val = -2
+// 	head.Next.Next.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Val = -5
+// 	head.Next.Next.Next.Next.Next.Next.Next.Next.Next.Next = head.Next.Next.Next.Next.Next.Next
 
-	// head := new(ListNode)
-	// head.Val = 1
-	// head.Next = new(ListNode)
-	// head.Next.Val = 2
-	// head.Next.Next = head
+// 	// head := new(ListNode)
+// 	// head.Val = 1
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 2
+// 	// head.Next.Next = head
 
-	log.Println(detectCycle(head))
-}
+// 	log.Println(detectCycle(head))
+// }
