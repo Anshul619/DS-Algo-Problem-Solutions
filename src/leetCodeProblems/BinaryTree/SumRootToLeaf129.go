@@ -5,7 +5,6 @@ package main
 */
 
 import (
-	"log"
 	"strconv"
 )
 
@@ -34,14 +33,14 @@ func sumNumbers(root *TreeNode) int {
 	return sumNumbersUtil(root, 0)
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 1
-	root.Left = new(TreeNode)
-	root.Left.Val = 2
-	root.Right = new(TreeNode)
-	root.Right.Val = 3
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 1
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 2
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 3
 
-	log.Println(sumNumbers(root))
-}
+// 	log.Println(sumNumbers(root))
+// }
