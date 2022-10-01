@@ -3,7 +3,6 @@ package main
 /*
 LeetCode - https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/
 */
-import "log"
 
 func util(node *TreeNode, sum *int) {
 	if node == nil {
@@ -44,30 +43,30 @@ func sumEvenGrandparent(root *TreeNode) int {
 	return out
 }
 
-func main() {
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 6
-	root.Left = new(TreeNode)
-	root.Left.Val = 7
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 2
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 7
-	root.Left.Right.Right = new(TreeNode)
-	root.Left.Right.Right.Val = 4
-	root.Left.Left.Left = new(TreeNode)
-	root.Left.Left.Left.Val = 9
-	root.Left.Right.Left = new(TreeNode)
-	root.Left.Right.Left.Val = 1
+// func main() {
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 6
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 7
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 2
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 7
+// 	root.Left.Right.Right = new(TreeNode)
+// 	root.Left.Right.Right.Val = 4
+// 	root.Left.Left.Left = new(TreeNode)
+// 	root.Left.Left.Left.Val = 9
+// 	root.Left.Right.Left = new(TreeNode)
+// 	root.Left.Right.Left.Val = 1
 
-	root.Right = new(TreeNode)
-	root.Right.Val = 8
-	root.Right.Left = new(TreeNode)
-	root.Right.Left.Val = 1
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 3
-	root.Right.Right.Right = new(TreeNode)
-	root.Right.Right.Right.Val = 5
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 8
+// 	root.Right.Left = new(TreeNode)
+// 	root.Right.Left.Val = 1
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 3
+// 	root.Right.Right.Right = new(TreeNode)
+// 	root.Right.Right.Right.Val = 5
 
-	log.Println(sumEvenGrandparent(root))
-}
+// 	log.Println(sumEvenGrandparent(root))
+// }
