@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/is-subsequence/submissions/
 */
-import "log"
 
 func isSubsequence(s string, t string) bool {
 
@@ -27,15 +26,15 @@ func isSubsequence(s string, t string) bool {
 	return false
 }
 
-func main() {
-	//s := "abc"
-	//t := "ahbgdc"
+// func main() {
+// 	//s := "abc"
+// 	//t := "ahbgdc"
 
-	// s := "axc"
-	// t := "ahbgdc"
+// 	// s := "axc"
+// 	// t := "ahbgdc"
 
-	s := "ahb"
-	t := "ahbgdc"
+// 	s := "ahb"
+// 	t := "ahbgdc"
 
-	log.Println(isSubsequence(s, t))
-}
+// 	log.Println(isSubsequence(s, t))
+// }
