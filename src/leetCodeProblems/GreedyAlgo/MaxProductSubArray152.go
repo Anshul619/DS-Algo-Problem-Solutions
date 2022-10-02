@@ -3,9 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/maximum-product-subarray
 */
-import (
-	"log"
-)
 
 func min(n1 int, n2 int) int {
 	if n1 > n2 {
@@ -42,10 +39,10 @@ func maxProduct(nums []int) int {
 	return max_so_far
 }
 
-func main() {
-	nums := []int{2, -5, -2, -4, 3}
+// func main() {
+// 	nums := []int{2, -5, -2, -4, 3}
 
-	//nums := []int{3, -1, 4}
-	//nums := []int{-2, 0, -1}
-	log.Println(maxProduct(nums))
-}
+// 	//nums := []int{3, -1, 4}
+// 	//nums := []int{-2, 0, -1}
+// 	log.Println(maxProduct(nums))
+// }
