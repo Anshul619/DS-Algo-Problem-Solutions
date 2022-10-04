@@ -3,7 +3,6 @@ package leetCodeProblems.BinaryTree;
 /**
  * LeetCode - https://leetcode.com/problems/binary-tree-vertical-order-traversal/
  * InterviewBit - https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/
- * 
  */
 import java.util.*;
 

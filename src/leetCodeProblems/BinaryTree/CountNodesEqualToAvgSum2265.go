@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/submissions/
 */
-import "log"
 
 func averageOfSubtreeUtil(node *TreeNode, out *int) (int, int) {
 
@@ -50,23 +49,23 @@ func averageOfSubtree(root *TreeNode) int {
 	return count
 }
 
-func main() {
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 4
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 8
-	// root.Left.Left = new(TreeNode)
-	// root.Left.Left.Val = 0
-	// root.Left.Right = new(TreeNode)
-	// root.Left.Right.Val = 1
+// func main() {
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 4
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 8
+// 	// root.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Val = 0
+// 	// root.Left.Right = new(TreeNode)
+// 	// root.Left.Right.Val = 1
 
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 5
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 6
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 5
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 6
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 1
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 1
 
-	log.Println(averageOfSubtree(root))
-}
+// 	log.Println(averageOfSubtree(root))
+// }
