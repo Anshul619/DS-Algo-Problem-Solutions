@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 */
-import "log"
 
 type TreeNode struct {
 	Val   int
@@ -34,34 +33,34 @@ func kthSmallest(root *TreeNode, k int) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//root := new(TreeNode)
-	//root.Val = 3
-	//root.Left = new(TreeNode)
-	//root.Left.Val = 1
-	//root.Right = new(TreeNode)
-	//root.Right.Val = 4
-	//root.Left.Right = new(TreeNode)
-	//root.Left.Right.Val = 2
+// 	//root := new(TreeNode)
+// 	//root.Val = 3
+// 	//root.Left = new(TreeNode)
+// 	//root.Left.Val = 1
+// 	//root.Right = new(TreeNode)
+// 	//root.Right.Val = 4
+// 	//root.Left.Right = new(TreeNode)
+// 	//root.Left.Right.Val = 2
 
-	root := new(TreeNode)
-	root.Val = 5
-	root.Left = new(TreeNode)
-	root.Left.Val = 3
-	root.Right = new(TreeNode)
-	root.Right.Val = 6
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 2
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 4
-	root.Left.Left.Left = new(TreeNode)
-	root.Left.Left.Left.Val = 1
+// 	root := new(TreeNode)
+// 	root.Val = 5
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 3
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 6
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 2
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 4
+// 	root.Left.Left.Left = new(TreeNode)
+// 	root.Left.Left.Left.Val = 1
 
-	log.Println(kthSmallest(root, 1))
-	log.Println(kthSmallest(root, 2))
-	log.Println(kthSmallest(root, 3))
-	log.Println(kthSmallest(root, 4))
-	log.Println(kthSmallest(root, 5))
-	log.Println(kthSmallest(root, 6))
-}
+// 	log.Println(kthSmallest(root, 1))
+// 	log.Println(kthSmallest(root, 2))
+// 	log.Println(kthSmallest(root, 3))
+// 	log.Println(kthSmallest(root, 4))
+// 	log.Println(kthSmallest(root, 5))
+// 	log.Println(kthSmallest(root, 6))
+// }
