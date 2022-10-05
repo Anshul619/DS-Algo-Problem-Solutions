@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/smallest-even-multiple/submissions/
 */
-import "log"
 
 func smallestEvenMultiple(n int) int {
 
@@ -18,8 +17,8 @@ func smallestEvenMultiple(n int) int {
 	return n * 2
 }
 
-func main() {
-	//n := 5
-	n := 6
-	log.Println(smallestEvenMultiple(n))
-}
+// func main() {
+// 	//n := 5
+// 	n := 6
+// 	log.Println(smallestEvenMultiple(n))
+// }
