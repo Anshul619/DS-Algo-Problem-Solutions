@@ -98,48 +98,48 @@ func verticalOrder(root *TreeNode) [][]int {
 
 }
 
-func main() {
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 3
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 9
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 20
-	// root.Right.Left = new(TreeNode)
-	// root.Right.Left.Val = 15
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 7
+// func main() {
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 3
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 9
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 20
+// 	// root.Right.Left = new(TreeNode)
+// 	// root.Right.Left.Val = 15
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 7
 
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 1
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 2
-	// root.Left.Left = new(TreeNode)
-	// root.Left.Left.Val = 4
-	// root.Left.Right = new(TreeNode)
-	// root.Left.Right.Val = 5
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 1
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 2
+// 	// root.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Val = 4
+// 	// root.Left.Right = new(TreeNode)
+// 	// root.Left.Right.Val = 5
 
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 3
-	// root.Right.Left = new(TreeNode)
-	// root.Right.Left.Val = 6
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 7
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 3
+// 	// root.Right.Left = new(TreeNode)
+// 	// root.Right.Left.Val = 6
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 7
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 0
-	root.Left = new(TreeNode)
-	root.Left.Val = 1
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 2
-	root.Left.Right.Left = new(TreeNode)
-	root.Left.Right.Left.Val = 6
-	root.Left.Right.Right = new(TreeNode)
-	root.Left.Right.Right.Val = 3
-	root.Left.Right.Right.Right = new(TreeNode)
-	root.Left.Right.Right.Right.Val = 4
-	root.Left.Right.Right.Right.Right = new(TreeNode)
-	root.Left.Right.Right.Right.Right.Val = 5
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 0
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 1
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 2
+// 	root.Left.Right.Left = new(TreeNode)
+// 	root.Left.Right.Left.Val = 6
+// 	root.Left.Right.Right = new(TreeNode)
+// 	root.Left.Right.Right.Val = 3
+// 	root.Left.Right.Right.Right = new(TreeNode)
+// 	root.Left.Right.Right.Right.Val = 4
+// 	root.Left.Right.Right.Right.Right = new(TreeNode)
+// 	root.Left.Right.Right.Right.Right.Val = 5
 
-	log.Println(verticalTraversal(root))
-}
+// 	log.Println(verticalTraversal(root))
+// }
