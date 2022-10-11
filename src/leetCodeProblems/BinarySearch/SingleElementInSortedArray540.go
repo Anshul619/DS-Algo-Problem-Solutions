@@ -2,6 +2,8 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/single-element-in-a-sorted-array/
+- TimeComplexity - O(logn)
+- SpaceComplexity - O(1)
 */
 import "log"
 
