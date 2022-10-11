@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/find-peak-element/submissions/
 */
-import "log"
 
 func binarySearch(nums []int, start int, end int) (int, bool) {
 
@@ -31,9 +30,9 @@ func findPeakElement(nums []int) int {
 	return peak
 }
 
-func main() {
+// func main() {
 
-	//input := []int{1, 2, 3, 1}
-	input := []int{1, 2, 3}
-	log.Println(findPeakElement(input))
-}
+// 	//input := []int{1, 2, 3, 1}
+// 	input := []int{1, 2, 3}
+// 	log.Println(findPeakElement(input))
+// }
