@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"strings"
 )
 
@@ -35,9 +34,9 @@ func numberOfBeams(bank []string) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	bank := []string{"011001", "000000", "010100", "001000"}
-	//bank := []string{"000", "111", "000"}
-	log.Println(numberOfBeams(bank))
-}
+// 	bank := []string{"011001", "000000", "010100", "001000"}
+// 	//bank := []string{"000", "111", "000"}
+// 	log.Println(numberOfBeams(bank))
+// }
