@@ -85,7 +85,7 @@ func diagonalSort(mat [][]int) [][]int {
 	return mat
 }
 
-func main() {
-	mat := [][]int{{3, 3, 1, 1}, {2, 2, 1, 2}, {1, 1, 1, 2}}
-	log.Println(diagonalSort(mat))
-}
+// func main() {
+// 	mat := [][]int{{3, 3, 1, 1}, {2, 2, 1, 2}, {1, 1, 1, 2}}
+// 	log.Println(diagonalSort(mat))
+// }
