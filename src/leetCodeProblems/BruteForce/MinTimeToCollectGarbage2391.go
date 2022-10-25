@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/
 */
-import "log"
 
 func garbageCollection(garbage []string, travel []int) int {
 
@@ -68,12 +67,12 @@ func garbageCollection(garbage []string, travel []int) int {
 	return out
 }
 
-func main() {
-	// garbage := []string{"G", "P", "GP", "GG"}
-	// travel := []int{2, 4, 3}
+// func main() {
+// 	// garbage := []string{"G", "P", "GP", "GG"}
+// 	// travel := []int{2, 4, 3}
 
-	garbage := []string{"MMM", "PGM", "GP"}
-	travel := []int{3, 10}
-	log.Println(garbageCollection(garbage, travel))
+// 	garbage := []string{"MMM", "PGM", "GP"}
+// 	travel := []int{3, 10}
+// 	log.Println(garbageCollection(garbage, travel))
 
-}
+// }

@@ -47,13 +47,13 @@ func maxPoints(points [][]int) int64 {
 	return int64(ans)
 }
 
-func main() {
+// func main() {
 
-	//input := [][]int{{1, 2, 3}, {1, 5, 1}, {3, 1, 1}}
-	//input := [][]int{{1, 5}, {2, 3}, {4, 2}}
+// 	//input := [][]int{{1, 2, 3}, {1, 5, 1}, {3, 1, 1}}
+// 	//input := [][]int{{1, 5}, {2, 3}, {4, 2}}
 
-	input := [][]int{{2, 4, 0, 5, 5}, {0, 5, 4, 2, 5}, {2, 0, 2, 3, 1}, {3, 0, 5, 5, 2}}
-	//input := [][]int{{1, 5}, {3, 2}, {4, 2}} //11
-	log.Println(maxPoints(input))
+// 	input := [][]int{{2, 4, 0, 5, 5}, {0, 5, 4, 2, 5}, {2, 0, 2, 3, 1}, {3, 0, 5, 5, 2}}
+// 	//input := [][]int{{1, 5}, {3, 2}, {4, 2}} //11
+// 	log.Println(maxPoints(input))
 
-}
+// }

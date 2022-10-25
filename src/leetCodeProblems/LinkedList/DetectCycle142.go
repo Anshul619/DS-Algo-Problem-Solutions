@@ -18,7 +18,7 @@ func detectCycle(head *ListNode) *ListNode {
 	fast := head
 	isCycle := false
 
-	for slow != nil && fast != nil && fast.Next != nil {
+	for fast != nil && fast.Next != nil {
 
 		slow = slow.Next
 		fast = fast.Next.Next
