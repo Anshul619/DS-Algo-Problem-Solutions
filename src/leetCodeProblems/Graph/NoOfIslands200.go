@@ -1,5 +1,10 @@
 package main
 
+/*
+- LeetCode - https://leetcode.com/problems/number-of-islands/
+- TimeComplexity - O(m*n)
+- SpaceComplexity - O(1)
+*/
 import (
 	"bytes"
 	"log"
