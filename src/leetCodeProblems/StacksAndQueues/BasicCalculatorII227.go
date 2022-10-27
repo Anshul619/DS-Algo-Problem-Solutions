@@ -1,9 +1,12 @@
 package main
 
+/*
+- LeetCode - https://leetcode.com/problems/basic-calculator-ii/
+*/
 import (
 	"log"
 	"strconv"
-	"strings"
+	"unicode"
 )
 
 type stackNums []int
@@ -22,55 +25,35 @@ func (s stackNums) isEmpty() bool {
 	return len(s) == 0
 }
 
-func isDigit(s string) bool {
-	if s != "/" && s != "*" && s != "+" && s != "-" {
-		return true
-	}
-
-	return false
-}
-
 func calculate(s string) int {
-
-	s = strings.ReplaceAll(s, " ", "")
 
 	stack := new(stackNums)
 	out := 0
-	num := 0
-	sign := string('+')
+	currentNum := 0
+	lastSign := string('+')
 
 	for i := 0; i < len(s); i++ {
 
-		v := string(s[i])
-
-		if isDigit(v) {
-			// log.Println("Digit", v)
-			v3, _ := strconv.Atoi(string(s[i]))
-			num = num*10 + v3
-			// log.Println(num)
+		if unicode.IsDigit(rune(s[i])) {
+			v, _ := strconv.Atoi(string(s[i]))
+			currentNum = currentNum*10 + v
 		}
 
-		if i+1 == len(s) || !isDigit(v) {
-
-			if sign == "/" {
-				stack.push(stack.pop() / num)
-			} else if sign == "*" {
-				stack.push(stack.pop() * num)
-			} else if sign == "-" {
-				stack.push(-num)
-			} else if sign == "+" {
-				stack.push(num)
+		if (!unicode.IsDigit(rune(s[i])) && !unicode.IsSpace(rune(s[i]))) || (i+1 == len(s)) {
+			if lastSign == "/" {
+				stack.push(stack.pop() / currentNum)
+			} else if lastSign == "*" {
+				stack.push(stack.pop() * currentNum)
+			} else if lastSign == "-" {
+				stack.push(-currentNum)
+			} else if lastSign == "+" {
+				stack.push(currentNum)
 			}
 
-			sign = v
-			num = 0
+			lastSign = string(s[i])
+			currentNum = 0
 		}
-		// log.Println("v", v)
-		// log.Println("num", num)
-		// log.Println(stack, "----")
 	}
-
-	//log.Println(stack)
 
 	for !stack.isEmpty() {
 		out += stack.pop()
@@ -83,7 +66,7 @@ func main() {
 
 	//s := "3+2*2"
 	//s := " 3/2 "
-	//s := " 3+5 / 2 "
-	s := "42"
+	s := " 3+5 / 2 "
+	//s := "42"
 	log.Println(calculate(s))
 }
