@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 func productExceptSelf(nums []int) []int {
 
 	product := make([]int, len(nums))
@@ -22,7 +20,7 @@ func productExceptSelf(nums []int) []int {
 	return product
 }
 
-func main() {
-	nums := []int{1, 2, 3, 4}
-	log.Println(productExceptSelf(nums))
-}
+// func main() {
+// 	nums := []int{1, 2, 3, 4}
+// 	log.Println(productExceptSelf(nums))
+// }

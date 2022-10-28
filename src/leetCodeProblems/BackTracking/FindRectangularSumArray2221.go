@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/find-triangular-sum-of-an-array/submissions/
 */
-import "log"
 
 func triangularSum(nums []int) int {
 
@@ -20,9 +19,9 @@ func triangularSum(nums []int) int {
 	return triangularSum(out)
 }
 
-func main() {
+// func main() {
 
-	nums := []int{1, 2, 3, 4, 5}
+// 	nums := []int{1, 2, 3, 4, 5}
 
-	log.Println(triangularSum(nums))
-}
+// 	log.Println(triangularSum(nums))
+// }
