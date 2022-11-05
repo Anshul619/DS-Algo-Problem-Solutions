@@ -43,6 +43,6 @@ func isStrictlyPalindromic(n int) bool {
 	return true
 }
 
-func main() {
-	log.Println(isStrictlyPalindromic(9))
-}
+// func main() {
+// 	log.Println(isStrictlyPalindromic(9))
+// }

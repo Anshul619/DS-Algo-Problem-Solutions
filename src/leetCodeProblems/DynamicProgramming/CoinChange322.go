@@ -38,7 +38,7 @@ func coinChangeUtil(count []int, pending int, coins []int) int {
 	}
 
 	count[pending-1] = minCount
-
+	log.Println(count)
 	return count[pending-1]
 }
 
@@ -48,11 +48,11 @@ func coinChange(coins []int, amount int) int {
 
 func main() {
 
-	// coins := []int{1, 2, 5}
-	// amount := 11
+	coins := []int{1, 2, 5}
+	amount := 11
 
-	coins := []int{2}
-	amount := 3
+	// coins := []int{2}
+	// amount := 3
 
 	// coins := []int{2}
 	// amount := 3
