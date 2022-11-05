@@ -7,7 +7,6 @@ package main
 */
 import (
 	"bytes"
-	"log"
 )
 
 func dfs(grid [][]byte, x int, y int) {
@@ -39,18 +38,18 @@ func numIslands(grid [][]byte) int {
 	return numberOfIslands
 }
 
-func main() {
+// func main() {
 
-	// grid := [][]byte{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'},
-	// 	{'1', '1', '0', '0', '0'},
-	// 	{'0', '0', '0', '0', '0'}}
+// 	// grid := [][]byte{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'},
+// 	// 	{'1', '1', '0', '0', '0'},
+// 	// 	{'0', '0', '0', '0', '0'}}
 
-	// log.Println(numIslands(grid))
+// 	// log.Println(numIslands(grid))
 
-	grid := [][]byte{{'1', '1', '0', '0', '0'},
-		{'1', '1', '0', '0', '0'},
-		{'0', '0', '1', '0', '0'},
-		{'0', '0', '0', '1', '1'}}
+// 	grid := [][]byte{{'1', '1', '0', '0', '0'},
+// 		{'1', '1', '0', '0', '0'},
+// 		{'0', '0', '1', '0', '0'},
+// 		{'0', '0', '0', '1', '1'}}
 
-	log.Println(numIslands(grid))
-}
+// 	log.Println(numIslands(grid))
+// }

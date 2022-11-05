@@ -25,25 +25,25 @@ func change(amount int, coins []int) int {
 	return changeUtils(coins, 0, 0, amount)
 }
 
-func main() {
+// func main() {
 
-	// coins := []int{1, 2, 5}
-	// amount := 11
+// 	// coins := []int{1, 2, 5}
+// 	// amount := 11
 
-	// coins := []int{2}
-	// amount := 3
+// 	// coins := []int{2}
+// 	// amount := 3
 
-	// coins := []int{186, 419, 83, 408}
-	// amount := 6249
+// 	// coins := []int{186, 419, 83, 408}
+// 	// amount := 6249
 
-	// coins := []int{1, 2, 5}
-	// amount := 5
+// 	// coins := []int{1, 2, 5}
+// 	// amount := 5
 
-	coins := []int{3, 5, 7, 8, 9, 10, 11}
-	amount := 500
+// 	coins := []int{3, 5, 7, 8, 9, 10, 11}
+// 	amount := 500
 
-	// coins := []int{2}
-	// amount := 3
+// 	// coins := []int{2}
+// 	// amount := 3
 
-	log.Println(change(amount, coins))
-}
+// 	log.Println(change(amount, coins))
+// }
