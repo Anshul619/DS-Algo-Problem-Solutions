@@ -5,9 +5,6 @@ package main
 - TimeComplexity - O(N)
 - SpaceComplexity - O(1)
 */
-import (
-	"log"
-)
 
 func findMid(head *ListNode) *ListNode {
 	mid := head
@@ -57,59 +54,59 @@ func reorderList(head *ListNode) {
 
 }
 
-func main() {
+// func main() {
 
-	head := new(ListNode)
-	head.Val = 1
-	//head.Next = n
+// 	head := new(ListNode)
+// 	head.Val = 1
+// 	//head.Next = n
 
-	// head := new(ListNode)
-	// head.Val = 1
-	// head.Next = new(ListNode)
-	// head.Next.Val = 2
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 3
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = 4
-	// head.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Val = 5
+// 	// head := new(ListNode)
+// 	// head.Val = 1
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 2
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 3
+// 	// head.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Val = 4
+// 	// head.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Val = 5
 
-	// head := new(ListNode)
-	// head.Val = 1
-	// head.Next = new(ListNode)
-	// head.Next.Val = 2
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 3
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = 4
-	// head.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Val = 5
-	// head.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Val = 6
-	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Val = 7
-	// head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Next.Val = 8
+// 	// head := new(ListNode)
+// 	// head.Val = 1
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 2
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 3
+// 	// head.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Val = 4
+// 	// head.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Val = 5
+// 	// head.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Val = 6
+// 	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Next.Val = 7
+// 	// head.Next.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Next.Next.Val = 8
 
-	reorderList(head)
+// 	reorderList(head)
 
-	/*head := new(ListNode)
-	head.Val = 1
+// 	/*head := new(ListNode)
+// 	head.Val = 1
 
-	output := removeNthFromEnd(head, 1)*/
+// 	output := removeNthFromEnd(head, 1)*/
 
-	/*head := new(ListNode)
-	head.Val = 1
-	head.Next = new(ListNode)
-	head.Next.Val = 2
+// 	/*head := new(ListNode)
+// 	head.Val = 1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = 2
 
-	output := removeNthFromEnd(head, 2)*/
+// 	output := removeNthFromEnd(head, 2)*/
 
-	temp := head
+// 	temp := head
 
-	for temp != nil {
-		log.Println(temp.Val)
-		temp = temp.Next
-	}
+// 	for temp != nil {
+// 		log.Println(temp.Val)
+// 		temp = temp.Next
+// 	}
 
-}
+// }

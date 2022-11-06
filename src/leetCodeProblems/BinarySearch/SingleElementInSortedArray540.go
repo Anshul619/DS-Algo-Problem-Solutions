@@ -5,7 +5,6 @@ package main
 - TimeComplexity - O(logn)
 - SpaceComplexity - O(1)
 */
-import "log"
 
 func util(nums []int, start int, end int) int {
 
@@ -47,8 +46,8 @@ func singleNonDuplicate(nums []int) int {
 	return util(nums, 0, len(nums)-1)
 }
 
-func main() {
-	//nums := []int{1, 1, 2, 3, 3, 4, 4, 8, 8}
-	nums := []int{3, 3, 7, 7, 10, 11, 11}
-	log.Println(singleNonDuplicate(nums))
-}
+// func main() {
+// 	//nums := []int{1, 1, 2, 3, 3, 4, 4, 8, 8}
+// 	nums := []int{3, 3, 7, 7, 10, 11, 11}
+// 	log.Println(singleNonDuplicate(nums))
+// }
