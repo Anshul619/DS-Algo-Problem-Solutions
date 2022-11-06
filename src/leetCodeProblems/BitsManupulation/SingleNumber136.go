@@ -1,5 +1,10 @@
 package main
 
+/*
+- Leetcode - https://leetcode.com/problems/single-number/
+- TimeComplexity - O(n)
+- Space Complexity - O(1)
+*/
 import "log"
 
 func singleNumber(nums []int) int {
