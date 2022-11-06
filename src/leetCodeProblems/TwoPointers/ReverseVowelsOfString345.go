@@ -5,7 +5,6 @@ package main
 - Time Complexity - O(n)
 - Space Complexity - O(n)
 **/
-import "log"
 
 func isVowel(s string) bool {
 
@@ -44,8 +43,8 @@ func reverseVowels(s string) string {
 	return string(output)
 }
 
-func main() {
-	//s := "hello"
-	s := "leetcode"
-	log.Println(reverseVowels(s))
-}
+// func main() {
+// 	//s := "hello"
+// 	s := "leetcode"
+// 	log.Println(reverseVowels(s))
+// }
