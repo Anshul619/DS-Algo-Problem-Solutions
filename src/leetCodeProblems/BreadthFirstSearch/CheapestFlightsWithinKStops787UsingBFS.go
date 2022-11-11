@@ -12,14 +12,14 @@ type Connection struct {
 	cost int
 }
 
-type queue []Connection
+type queue1 []Connection
 
-func (q *queue) push(c Connection) {
+func (q *queue1) push(c Connection) {
 	q1 := []Connection{c}
 	*q = append(*q, q1...)
 }
 
-func (q *queue) pop() (bool, Connection) {
+func (q *queue1) pop() (bool, Connection) {
 
 	if q.isEmpty() {
 		return false, Connection{}
@@ -30,11 +30,11 @@ func (q *queue) pop() (bool, Connection) {
 	}
 }
 
-func (q queue) isEmpty() bool {
+func (q queue1) isEmpty() bool {
 	return q.size() <= 0
 }
 
-func (q queue) size() int {
+func (q queue1) size() int {
 	return len(q)
 }
 
@@ -42,7 +42,7 @@ func findCheapestPrice(n int, flights [][]int, src int, dst int, k int) int {
 
 	minCost := math.MaxInt64
 
-	fQueue := new(queue)
+	fQueue := new(queue1)
 	fQueue.push(Connection{src, 0})
 
 	maxStops := k + 1

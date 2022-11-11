@@ -5,11 +5,11 @@ package main
 */
 // import "log"
 
-// type TreeNode struct {
-// 	Left  *TreeNode
-// 	Right *TreeNode
-// 	Val   int
-// }
+type TreeNode struct {
+	Left  *TreeNode
+	Right *TreeNode
+	Val   int
+}
 
 type TreeNodeIndexed struct {
 	Node  *TreeNode
