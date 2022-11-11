@@ -73,12 +73,12 @@ func isPerfectSquare(num int) bool {
 	return false
 }
 
-func main() {
-	//num := 16
+// func main() {
+// 	//num := 16
 
-	// num := 14
+// 	// num := 14
 
-	num := 104976
+// 	num := 104976
 
-	log.Println(isPerfectSquare(num))
-}
+// 	log.Println(isPerfectSquare(num))
+// }
