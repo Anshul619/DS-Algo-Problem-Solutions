@@ -6,8 +6,6 @@ package main
 - Time - O(n)
 */
 
-import "log"
-
 func floodFillUtil(image [][]int, sr int, sc int, targetColor int, startingPixelColor int) {
 
 	if sr < 0 || sr >= len(image) || sc < 0 || sc >= len(image[0]) || image[sr][sc] != startingPixelColor || image[sr][sc] == targetColor {
@@ -36,16 +34,16 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 
 }
 
-func main() {
-	// image := [][]int{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}
-	// sr := 1
-	// sc := 1
-	// color := 2
+// func main() {
+// 	// image := [][]int{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}
+// 	// sr := 1
+// 	// sc := 1
+// 	// color := 2
 
-	image := [][]int{{0, 0, 0}, {0, 0, 0}}
-	sr := 0
-	sc := 0
-	color := 0
+// 	image := [][]int{{0, 0, 0}, {0, 0, 0}}
+// 	sr := 0
+// 	sc := 0
+// 	color := 0
 
-	log.Println(floodFill(image, sr, sc, color))
-}
+// 	log.Println(floodFill(image, sr, sc, color))
+// }
