@@ -5,7 +5,6 @@ package main
 - Time - O(logn)
 - Space - O(1)
 */
-import "log"
 
 func mySqrt(x int) int {
 
@@ -34,10 +33,10 @@ func mySqrt(x int) int {
 	return ans
 }
 
-func main() {
-	log.Println(mySqrt(4))
-	log.Println(mySqrt(8))
-	log.Println(mySqrt(3))
+// func main() {
+// 	log.Println(mySqrt(4))
+// 	log.Println(mySqrt(8))
+// 	log.Println(mySqrt(3))
 
-	log.Println(mySqrt(5))
-}
+// 	log.Println(mySqrt(5))
+// }
