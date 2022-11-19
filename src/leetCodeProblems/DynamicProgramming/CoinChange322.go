@@ -46,25 +46,25 @@ func coinChange(coins []int, amount int) int {
 	return coinChangeUtil(make([]int, amount), amount, coins)
 }
 
-func main() {
+// func main() {
 
-	coins := []int{1, 2, 5}
-	amount := 11
+// 	coins := []int{1, 2, 5}
+// 	amount := 11
 
-	// coins := []int{2}
-	// amount := 3
+// 	// coins := []int{2}
+// 	// amount := 3
 
-	// coins := []int{2}
-	// amount := 3
+// 	// coins := []int{2}
+// 	// amount := 3
 
-	// coins := []int{186, 419, 83, 408}
-	// amount := 6249
+// 	// coins := []int{186, 419, 83, 408}
+// 	// amount := 6249
 
-	// coins := []int{1, 2, 5}
-	// amount := 5
+// 	// coins := []int{1, 2, 5}
+// 	// amount := 5
 
-	// coins := []int{2}
-	// amount := 3
+// 	// coins := []int{2}
+// 	// amount := 3
 
-	log.Println(coinChange(coins, amount))
-}
+// 	log.Println(coinChange(coins, amount))
+// }
