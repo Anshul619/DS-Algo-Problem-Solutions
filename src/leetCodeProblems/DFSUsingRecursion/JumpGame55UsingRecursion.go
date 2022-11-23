@@ -6,7 +6,6 @@ package main
 Fix needed
 - With the example long UC, it goes infinite loop. This needs fix.
 */
-import "log"
 
 func canJumpUtil(curIndex int, nums []int) bool {
 
@@ -27,9 +26,9 @@ func canJump(nums []int) bool {
 	return canJumpUtil(0, nums)
 }
 
-func main() {
-	//nums := []int{2, 3, 1, 1, 4}
+// func main() {
+// 	//nums := []int{2, 3, 1, 1, 4}
 
-	nums := []int{3, 2, 1, 0, 4}
-	log.Println(canJump(nums))
-}
+// 	nums := []int{3, 2, 1, 0, 4}
+// 	log.Println(canJump(nums))
+// }
