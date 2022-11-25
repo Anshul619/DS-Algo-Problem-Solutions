@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func removeDuplicates(nums []int) int {
 
@@ -35,13 +34,13 @@ func removeDuplicates(nums []int) int {
 	return firstPointer + 1
 }
 
-func main() {
-	//nums := []int{1, 1, 2}
+// func main() {
+// 	//nums := []int{1, 1, 2}
 
-	//nums := []int{1}
+// 	//nums := []int{1}
 
-	//nums := []int{1, 2}
+// 	//nums := []int{1, 2}
 
-	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
-	log.Println(removeDuplicates(nums))
-}
+// 	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+// 	log.Println(removeDuplicates(nums))
+// }
