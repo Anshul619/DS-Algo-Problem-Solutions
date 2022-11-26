@@ -5,7 +5,6 @@ package main
 - Time - O(logn)
 - Space - O(1)
 */
-import "log"
 
 func guess(num int) int {
 
@@ -44,9 +43,9 @@ func guessNumber(n int) int {
 	return mid
 }
 
-func main() {
+// func main() {
 
-	//log.Println(guessNumber(10))
-	//log.Println(guessNumber(1))
-	log.Println(guessNumber(2))
-}
+// 	//log.Println(guessNumber(10))
+// 	//log.Println(guessNumber(1))
+// 	log.Println(guessNumber(2))
+// }

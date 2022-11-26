@@ -8,7 +8,6 @@ Note
 - Time limit exceeding for large test case
 - Optimial solution is through DP
 */
-import "log"
 
 func uniquePathsUtil(x int, y int, m int, n int, out *int) {
 
@@ -36,15 +35,15 @@ func uniquePaths(m int, n int) int {
 	return *out
 }
 
-func main() {
-	// m := 3
-	// n := 2
+// func main() {
+// 	// m := 3
+// 	// n := 2
 
-	// m := 3
-	// n := 7
+// 	// m := 3
+// 	// n := 7
 
-	m := 23
-	n := 12
+// 	m := 23
+// 	n := 12
 
-	log.Println(uniquePaths(m, n))
-}
+// 	log.Println(uniquePaths(m, n))
+// }
