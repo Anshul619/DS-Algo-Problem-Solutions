@@ -100,16 +100,16 @@ func (h *tasksPriorityQueue) Pop() interface{} {
 	return res
 }
 
-func main() {
+// func main() {
 
-	tasks := []byte{'A', 'A', 'A', 'B', 'B', 'B'}
-	n := 2
+// 	tasks := []byte{'A', 'A', 'A', 'B', 'B', 'B'}
+// 	n := 2
 
-	//tasks := []byte{'A', 'A', 'A', 'B', 'B', 'B'}
-	//n := 0
+// 	//tasks := []byte{'A', 'A', 'A', 'B', 'B', 'B'}
+// 	//n := 0
 
-	//tasks := []byte{'A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'}
-	//n := 2
+// 	//tasks := []byte{'A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'}
+// 	//n := 2
 
-	log.Println(leastInterval(tasks, n))
-}
+// 	log.Println(leastInterval(tasks, n))
+// }
