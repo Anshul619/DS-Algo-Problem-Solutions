@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func canJump(nums []int) bool {
 
@@ -27,9 +26,9 @@ func canJump(nums []int) bool {
 	return true
 }
 
-func main() {
-	nums := []int{2, 3, 1, 1, 4}
+// func main() {
+// 	nums := []int{2, 3, 1, 1, 4}
 
-	//nums := []int{3, 2, 1, 0, 4}
-	log.Println(canJump(nums))
-}
+// 	//nums := []int{3, 2, 1, 0, 4}
+// 	log.Println(canJump(nums))
+// }
