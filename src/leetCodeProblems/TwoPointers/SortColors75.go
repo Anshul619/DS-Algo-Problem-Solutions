@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func swap(index1 int, index2 int, nums []int) {
 	temp := nums[index1]
@@ -32,10 +31,10 @@ func sortColors(nums []int) {
 	}
 }
 
-func main() {
-	//nums := []int{2, 0, 2, 1, 1, 0}
+// func main() {
+// 	//nums := []int{2, 0, 2, 1, 1, 0}
 
-	nums := []int{1, 2, 0}
-	sortColors(nums)
-	log.Println(nums)
-}
+// 	nums := []int{1, 2, 0}
+// 	sortColors(nums)
+// 	log.Println(nums)
+// }
