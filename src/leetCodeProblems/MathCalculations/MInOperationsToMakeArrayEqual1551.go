@@ -5,14 +5,13 @@ package main
 - Time - O(1)
 - Space - O(1)
 */
-import "log"
 
 func minOperations(n int) int {
 	return (n * n) / 4
 }
 
-func main() {
-	//log.Println(minOperations(3))
-	log.Println(minOperations(6))
-	//log.Println(minOperations(31))
-}
+// func main() {
+// 	//log.Println(minOperations(3))
+// 	log.Println(minOperations(6))
+// 	//log.Println(minOperations(31))
+// }
