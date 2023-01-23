@@ -5,9 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import (
-	"log"
-)
 
 func finalValueAfterOperations(operations []string) int {
 
@@ -26,8 +23,8 @@ func finalValueAfterOperations(operations []string) int {
 	return X
 }
 
-func main() {
-	op := []string{"--X", "X++", "X++"}
+// func main() {
+// 	op := []string{"--X", "X++", "X++"}
 
-	log.Println(finalValueAfterOperations(op))
-}
+// 	log.Println(finalValueAfterOperations(op))
+// }
