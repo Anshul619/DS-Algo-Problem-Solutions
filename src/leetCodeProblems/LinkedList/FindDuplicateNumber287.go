@@ -7,8 +7,6 @@ package main
 - Remarks - Floyd Algo
 */
 
-import "log"
-
 func findDuplicate(nums []int) int {
 
 	slow := nums[0]
@@ -36,15 +34,15 @@ func findDuplicate(nums []int) int {
 	return fast
 }
 
-func main() {
+// func main() {
 
-	//nums := []int{1, 3, 4, 2, 2}
+// 	//nums := []int{1, 3, 4, 2, 2}
 
-	nums := []int{3, 1, 3, 4, 2}
+// 	nums := []int{3, 1, 3, 4, 2}
 
-	//nums := []int{3, 1, 3, 4, 2}
+// 	//nums := []int{3, 1, 3, 4, 2}
 
-	// nums := []int{2, 2, 2, 2, 2}
+// 	// nums := []int{2, 2, 2, 2, 2}
 
-	log.Println(findDuplicate(nums))
-}
+// 	log.Println(findDuplicate(nums))
+// }
