@@ -57,10 +57,10 @@ func printInOrder(node *TreeNode) {
 	printInOrder(node.Right)
 }
 
-func main() {
-	//nums := []int{3, 2, 1, 6, 0, 5}
-	nums := []int{3, 2, 1}
-	node := constructMaximumBinaryTree(nums)
+// func main() {
+// 	//nums := []int{3, 2, 1, 6, 0, 5}
+// 	nums := []int{3, 2, 1}
+// 	node := constructMaximumBinaryTree(nums)
 
-	printInOrder(node)
-}
+// 	printInOrder(node)
+// }
