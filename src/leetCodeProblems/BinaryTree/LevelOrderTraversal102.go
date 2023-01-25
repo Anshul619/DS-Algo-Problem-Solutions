@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(n)
 */
-import "log"
 
 func levelOrderUtil(node *TreeNode, out *[][]int, level int) {
 	if node == nil {
@@ -30,18 +29,18 @@ func levelOrder(root *TreeNode) [][]int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode)
-	root.Val = 3
-	root.Left = new(TreeNode)
-	root.Left.Val = 9
-	root.Right = new(TreeNode)
-	root.Right.Val = 20
-	root.Right.Left = new(TreeNode)
-	root.Right.Left.Val = 15
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 7
+// 	root := new(TreeNode)
+// 	root.Val = 3
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 9
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 20
+// 	root.Right.Left = new(TreeNode)
+// 	root.Right.Left.Val = 15
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 7
 
-	log.Println(levelOrder(root))
-}
+// 	log.Println(levelOrder(root))
+// }
