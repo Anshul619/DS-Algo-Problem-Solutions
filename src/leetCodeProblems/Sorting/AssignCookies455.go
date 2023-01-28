@@ -6,7 +6,6 @@ package main
 - Space - O(1)
 */
 import (
-	"log"
 	"sort"
 )
 
@@ -34,25 +33,25 @@ func findContentChildren(g []int, s []int) int {
 	return j
 }
 
-func main() {
+// func main() {
 
-	// g := []int{1, 2, 3}
-	// s := []int{1, 1}
+// 	// g := []int{1, 2, 3}
+// 	// s := []int{1, 1}
 
-	// log.Println(findContentChildren(g, s))
+// 	// log.Println(findContentChildren(g, s))
 
-	// g := []int{1, 1}
-	// s := []int{1, 2, 3}
+// 	// g := []int{1, 1}
+// 	// s := []int{1, 2, 3}
 
-	// log.Println(findContentChildren(g, s))
+// 	// log.Println(findContentChildren(g, s))
 
-	// g := []int{1, 2, 3}
-	// s := []int{}
+// 	// g := []int{1, 2, 3}
+// 	// s := []int{}
 
-	// log.Println(findContentChildren(g, s))
+// 	// log.Println(findContentChildren(g, s))
 
-	g := []int{10, 9, 8, 7}
-	s := []int{5, 6, 7, 8}
+// 	g := []int{10, 9, 8, 7}
+// 	s := []int{5, 6, 7, 8}
 
-	log.Println(findContentChildren(g, s))
-}
+// 	log.Println(findContentChildren(g, s))
+// }
