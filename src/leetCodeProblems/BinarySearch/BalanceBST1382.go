@@ -63,17 +63,17 @@ func printTree(node *TreeNode) {
 	printTree(node.Right)
 }
 
-func main() {
+// func main() {
 
-	head := new(TreeNode)
-	head.Val = 1
-	head.Right = new(TreeNode)
-	head.Right.Val = 2
-	head.Right.Right = new(TreeNode)
-	head.Right.Right.Val = 3
-	head.Right.Right.Right = new(TreeNode)
-	head.Right.Right.Right.Val = 4
+// 	head := new(TreeNode)
+// 	head.Val = 1
+// 	head.Right = new(TreeNode)
+// 	head.Right.Val = 2
+// 	head.Right.Right = new(TreeNode)
+// 	head.Right.Right.Val = 3
+// 	head.Right.Right.Right = new(TreeNode)
+// 	head.Right.Right.Right.Val = 4
 
-	printTree(balanceBST(head))
+// 	printTree(balanceBST(head))
 
-}
+// }
