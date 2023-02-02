@@ -6,7 +6,6 @@ package main
 - Space - O(1)
 */
 import (
-	"log"
 	"math"
 )
 
@@ -45,39 +44,39 @@ func maxAncestorDiff(root *TreeNode) int {
 	return *out
 }
 
-func main() {
+// func main() {
 
-	// head := new(TreeNode)
-	// head.Val = 8
+// 	// head := new(TreeNode)
+// 	// head.Val = 8
 
-	// head.Left = new(TreeNode)
-	// head.Left.Val = 3
-	// head.Left.Left = new(TreeNode)
-	// head.Left.Left.Val = 1
-	// head.Left.Right = new(TreeNode)
-	// head.Left.Right.Val = 6
-	// head.Left.Right.Left = new(TreeNode)
-	// head.Left.Right.Left.Val = 4
-	// head.Left.Right.Right = new(TreeNode)
-	// head.Left.Right.Right.Val = 10
+// 	// head.Left = new(TreeNode)
+// 	// head.Left.Val = 3
+// 	// head.Left.Left = new(TreeNode)
+// 	// head.Left.Left.Val = 1
+// 	// head.Left.Right = new(TreeNode)
+// 	// head.Left.Right.Val = 6
+// 	// head.Left.Right.Left = new(TreeNode)
+// 	// head.Left.Right.Left.Val = 4
+// 	// head.Left.Right.Right = new(TreeNode)
+// 	// head.Left.Right.Right.Val = 10
 
-	// head.Right = new(TreeNode)
-	// head.Right.Val = 10
-	// head.Right.Right = new(TreeNode)
-	// head.Right.Right.Val = 14
-	// head.Right.Right.Left = new(TreeNode)
-	// head.Right.Right.Left.Val = 13
+// 	// head.Right = new(TreeNode)
+// 	// head.Right.Val = 10
+// 	// head.Right.Right = new(TreeNode)
+// 	// head.Right.Right.Val = 14
+// 	// head.Right.Right.Left = new(TreeNode)
+// 	// head.Right.Right.Left.Val = 13
 
-	head := new(TreeNode)
-	head.Val = 1
+// 	head := new(TreeNode)
+// 	head.Val = 1
 
-	head.Right = new(TreeNode)
-	head.Right.Val = 2
-	head.Right.Right = new(TreeNode)
-	head.Right.Right.Val = 0
-	head.Right.Right.Left = new(TreeNode)
-	head.Right.Right.Left.Val = 3
+// 	head.Right = new(TreeNode)
+// 	head.Right.Val = 2
+// 	head.Right.Right = new(TreeNode)
+// 	head.Right.Right.Val = 0
+// 	head.Right.Right.Left = new(TreeNode)
+// 	head.Right.Right.Left.Val = 3
 
-	log.Println(maxAncestorDiff(head))
+// 	log.Println(maxAncestorDiff(head))
 
-}
+// }
