@@ -6,8 +6,6 @@ package main
 - Space - O(n)
 */
 
-import "log"
-
 func findingUsersActiveMinutes(logs [][]int, k int) []int {
 
 	m := make(map[int]map[int]bool)
@@ -33,8 +31,8 @@ func findingUsersActiveMinutes(logs [][]int, k int) []int {
 	return out
 }
 
-func main() {
-	logs := [][]int{{0, 5}, {1, 2}, {0, 2}, {0, 5}, {1, 3}}
+// func main() {
+// 	logs := [][]int{{0, 5}, {1, 2}, {0, 2}, {0, 5}, {1, 3}}
 
-	log.Println(findingUsersActiveMinutes(logs, 5))
-}
+// 	log.Println(findingUsersActiveMinutes(logs, 5))
+// }
