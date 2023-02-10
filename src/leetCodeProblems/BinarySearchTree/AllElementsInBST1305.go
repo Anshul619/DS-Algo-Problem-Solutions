@@ -5,7 +5,6 @@ package main
 - Time - O(m) + O(n) = O(n)
 - Space - O(m) + O(n) = O(n)
 */
-import "log"
 
 func inorder(node *TreeNode, out *[]int) {
 
@@ -49,21 +48,21 @@ func getAllElements(root1 *TreeNode, root2 *TreeNode) []int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	root1 := new(TreeNode)
-	root1.Val = 2
-	root1.Left = new(TreeNode)
-	root1.Left.Val = 1
-	root1.Right = new(TreeNode)
-	root1.Right.Val = 4
+// 	root1 := new(TreeNode)
+// 	root1.Val = 2
+// 	root1.Left = new(TreeNode)
+// 	root1.Left.Val = 1
+// 	root1.Right = new(TreeNode)
+// 	root1.Right.Val = 4
 
-	root2 := new(TreeNode)
-	root2.Val = 1
-	root2.Left = new(TreeNode)
-	root2.Left.Val = 0
-	root2.Right = new(TreeNode)
-	root2.Right.Val = 3
+// 	root2 := new(TreeNode)
+// 	root2.Val = 1
+// 	root2.Left = new(TreeNode)
+// 	root2.Left.Val = 0
+// 	root2.Right = new(TreeNode)
+// 	root2.Right.Val = 3
 
-	log.Println(getAllElements(root1, root2))
-}
+// 	log.Println(getAllElements(root1, root2))
+// }
