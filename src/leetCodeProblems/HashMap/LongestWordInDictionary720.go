@@ -3,9 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/longest-word-in-dictionary/
 */
-import (
-	"log"
-)
 
 func longestWord(words []string) string {
 
@@ -44,10 +41,10 @@ func longestWord(words []string) string {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//words := []string{"a", "banana", "app", "appl", "ap", "apply", "apple"}
-	//words := []string{"w", "wo", "wor", "worl", "world"}
-	words := []string{"b", "br", "bre", "brea", "break", "breakf", "breakfa", "breakfas", "breakfast", "l", "lu", "lun", "lunc", "lunch", "d", "di", "din", "dinn", "dinne", "dinner"}
-	log.Println("out =>", longestWord(words))
-}
+// 	//words := []string{"a", "banana", "app", "appl", "ap", "apply", "apple"}
+// 	//words := []string{"w", "wo", "wor", "worl", "world"}
+// 	words := []string{"b", "br", "bre", "brea", "break", "breakf", "breakfa", "breakfas", "breakfast", "l", "lu", "lun", "lunc", "lunch", "d", "di", "din", "dinn", "dinne", "dinner"}
+// 	log.Println("out =>", longestWord(words))
+// }

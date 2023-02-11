@@ -6,7 +6,6 @@ package main
 - Space - O(1)
 */
 import (
-	"log"
 	"math"
 	"sort"
 )
@@ -34,9 +33,9 @@ func minPairSum(nums []int) int {
 	return maxSum
 }
 
-func main() {
-	//nums := []int{3, 5, 2, 3}
-	//nums := []int{3, 5, 4, 2, 4, 6}
-	nums := []int{3, 2, 4, 1, 1, 5, 1, 3, 5, 1}
-	log.Println(minPairSum(nums))
-}
+// func main() {
+// 	//nums := []int{3, 5, 2, 3}
+// 	//nums := []int{3, 5, 4, 2, 4, 6}
+// 	nums := []int{3, 2, 4, 1, 1, 5, 1, 3, 5, 1}
+// 	log.Println(minPairSum(nums))
+// }
