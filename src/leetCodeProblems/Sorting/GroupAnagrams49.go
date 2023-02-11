@@ -2,8 +2,8 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/group-anagrams/description/
-- Time - mO(nlogn)
-- Space - O(m)
+- Time - O(n*mlogm) (where n is length of input array and m is length of the word)
+- Space - O(n)
 */
 
 import (
