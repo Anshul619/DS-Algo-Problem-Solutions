@@ -1,0 +1,43 @@
+package main
+
+/*
+- LeetCode - https://leetcode.com/problems/group-anagrams/description/
+- Time - mO(nlogn)
+- Space - O(m)
+*/
+
+import (
+	"log"
+	"sort"
+)
+
+func groupAnagrams(strs []string) [][]string {
+
+	m := make(map[string][]string)
+	out := [][]string{}
+
+	for _, v := range strs {
+
+		bytesArray := []byte(v)
+
+		sort.Slice(bytesArray, func(i, j int) bool { return bytesArray[i] < bytesArray[j] })
+
+		if _, ok := m[string(bytesArray)]; ok {
+			m[string(bytesArray)] = append(m[string(bytesArray)], v)
+		} else {
+			m[string(bytesArray)] = []string{v}
+		}
+	}
+
+	for _, v := range m {
+		out = append(out, v)
+	}
+
+	return out
+}
+
+func main() {
+	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
+
+	log.Println(groupAnagrams(strs))
+}
