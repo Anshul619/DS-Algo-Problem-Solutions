@@ -6,8 +6,6 @@ package main
 - Space - O(n)+O(n) = O(n)
 **/
 
-import "log"
-
 type stack []*TreeNode
 
 func (s *stack) push(e *TreeNode) {
@@ -77,47 +75,47 @@ func zigzagLevelOrder(root *TreeNode) [][]int {
 	return out
 }
 
-func main() {
-	// s := new(stack)
-	// s.push(1)
-	// s.push(2)
-	// s.push(3)
-	// log.Println(s.pop())
-	// log.Println(s.pop())
+// func main() {
+// 	// s := new(stack)
+// 	// s.push(1)
+// 	// s.push(2)
+// 	// s.push(3)
+// 	// log.Println(s.pop())
+// 	// log.Println(s.pop())
 
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 1
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 2
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 3
-	// root.Left.Left = new(TreeNode)
-	// root.Left.Left.Val = 4
-	// root.Left.Right = new(TreeNode)
-	// root.Left.Right.Val = 5
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 1
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 2
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 3
+// 	// root.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Val = 4
+// 	// root.Left.Right = new(TreeNode)
+// 	// root.Left.Right.Val = 5
 
-	// root.Left.Left.Left = new(TreeNode)
-	// root.Left.Left.Left.Val = 7
+// 	// root.Left.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Left.Val = 7
 
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 6
-	// root.Right.Right.Right = new(TreeNode)
-	// root.Right.Right.Right.Val = 8
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 6
+// 	// root.Right.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Right.Val = 8
 
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 3
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 9
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 20
-	// root.Right.Left = new(TreeNode)
-	// root.Right.Left.Val = 15
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 7
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 3
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 9
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 20
+// 	// root.Right.Left = new(TreeNode)
+// 	// root.Right.Left.Val = 15
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 7
 
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 1
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 1
 
-	log.Println(zigzagLevelOrder(nil))
-	//log.Println(zigzagLevelOrder(root))
-}
+// 	log.Println(zigzagLevelOrder(nil))
+// 	//log.Println(zigzagLevelOrder(root))
+// }
