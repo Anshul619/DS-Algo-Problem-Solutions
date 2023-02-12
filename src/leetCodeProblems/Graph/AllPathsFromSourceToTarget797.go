@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 func util(graph [][]int, temp *[]int, out *[][]int, num int, target int) {
 
 	*temp = append(*temp, num)
@@ -32,10 +30,10 @@ func allPathsSourceTarget(graph [][]int) [][]int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	graph := [][]int{{1, 2}, {3}, {3}, {}}
-	//graph := [][]int{{4, 3, 1}, {3, 2, 4}, {3}, {4}, {}}
+// 	graph := [][]int{{1, 2}, {3}, {3}, {}}
+// 	//graph := [][]int{{4, 3, 1}, {3, 2, 4}, {3}, {4}, {}}
 
-	log.Println(allPathsSourceTarget(graph))
-}
+// 	log.Println(allPathsSourceTarget(graph))
+// }
