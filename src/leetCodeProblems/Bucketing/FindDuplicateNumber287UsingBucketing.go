@@ -5,7 +5,6 @@ package main
 - Time Complexity - O(n)
 - Space Compleixty - O(1)
 */
-import "log"
 
 func findDuplicate(nums []int) int {
 
@@ -18,13 +17,13 @@ func findDuplicate(nums []int) int {
 	return nums[0]
 }
 
-func main() {
+// func main() {
 
-	nums := []int{1, 3, 4, 2, 2}
+// 	nums := []int{1, 3, 4, 2, 2}
 
-	//nums := []int{3, 1, 3, 4, 2}
+// 	//nums := []int{3, 1, 3, 4, 2}
 
-	// nums := []int{2, 2, 2, 2, 2}
+// 	// nums := []int{2, 2, 2, 2, 2}
 
-	log.Println(findDuplicate(nums))
-}
+// 	log.Println(findDuplicate(nums))
+// }

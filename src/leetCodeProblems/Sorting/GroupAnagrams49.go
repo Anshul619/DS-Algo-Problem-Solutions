@@ -7,7 +7,6 @@ package main
 */
 
 import (
-	"log"
 	"sort"
 )
 
@@ -36,8 +35,8 @@ func groupAnagrams(strs []string) [][]string {
 	return out
 }
 
-func main() {
-	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
+// func main() {
+// 	strs := []string{"eat", "tea", "tan", "ate", "nat", "bat"}
 
-	log.Println(groupAnagrams(strs))
-}
+// 	log.Println(groupAnagrams(strs))
+// }
