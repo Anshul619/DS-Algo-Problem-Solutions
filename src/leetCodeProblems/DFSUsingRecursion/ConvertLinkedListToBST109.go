@@ -68,17 +68,17 @@ func printTree(node *TreeNode) {
 	printTree(node.Right)
 }
 
-func main() {
-	head := new(ListNode)
-	head.Val = -10
-	head.Next = new(ListNode)
-	head.Next.Val = -3
-	head.Next.Next = new(ListNode)
-	head.Next.Next.Val = 0
-	head.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Val = 5
-	head.Next.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Next.Val = 9
+// func main() {
+// 	head := new(ListNode)
+// 	head.Val = -10
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = -3
+// 	head.Next.Next = new(ListNode)
+// 	head.Next.Next.Val = 0
+// 	head.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Val = 5
+// 	head.Next.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Next.Val = 9
 
-	printTree(sortedListToBST(head))
-}
+// 	printTree(sortedListToBST(head))
+// }
