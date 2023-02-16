@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(n)
 */
-import "log"
 
 type Node struct {
 	Val    int
@@ -49,30 +48,30 @@ func copyRandomList(head *Node) *Node {
 	return newHead
 }
 
-func main() {
-	head := new(Node)
-	head.Val = 7
-	head.Next = new(Node)
+// func main() {
+// 	head := new(Node)
+// 	head.Val = 7
+// 	head.Next = new(Node)
 
-	head.Next.Val = 13
-	head.Next.Next = new(Node)
-	head.Next.Next.Val = 11
-	head.Next.Next.Next = new(Node)
-	head.Next.Next.Next.Val = 10
-	head.Next.Next.Next.Next = new(Node)
-	head.Next.Next.Next.Next.Val = 1
+// 	head.Next.Val = 13
+// 	head.Next.Next = new(Node)
+// 	head.Next.Next.Val = 11
+// 	head.Next.Next.Next = new(Node)
+// 	head.Next.Next.Next.Val = 10
+// 	head.Next.Next.Next.Next = new(Node)
+// 	head.Next.Next.Next.Next.Val = 1
 
-	head.Random = nil
-	head.Next.Random = head
-	head.Next.Next.Random = head.Next.Next.Next.Next
+// 	head.Random = nil
+// 	head.Next.Random = head
+// 	head.Next.Next.Random = head.Next.Next.Next.Next
 
-	newHead := copyRandomList(head)
+// 	newHead := copyRandomList(head)
 
-	next := newHead
+// 	next := newHead
 
-	for next != nil {
-		log.Println(next.Val)
-		log.Println(next.Random)
-		next = next.Next
-	}
-}
+// 	for next != nil {
+// 		log.Println(next.Val)
+// 		log.Println(next.Random)
+// 		next = next.Next
+// 	}
+// }
