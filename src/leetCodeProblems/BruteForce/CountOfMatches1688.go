@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func numberOfMatches(n int) int {
 
@@ -25,7 +24,7 @@ func numberOfMatches(n int) int {
 	return ans
 }
 
-func main() {
-	log.Println(numberOfMatches(7))
-	log.Println(numberOfMatches(14))
-}
+// func main() {
+// 	log.Println(numberOfMatches(7))
+// 	log.Println(numberOfMatches(14))
+// }
