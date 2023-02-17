@@ -6,7 +6,6 @@ package main
 - Space - O(n)
 */
 import (
-	"log"
 	"sort"
 )
 
@@ -27,10 +26,10 @@ func maxCoins(piles []int) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//piles := []int{2, 4, 1, 2, 7, 8}
+// 	//piles := []int{2, 4, 1, 2, 7, 8}
 
-	piles := []int{9, 8, 7, 6, 5, 1, 2, 3, 4}
-	log.Println(maxCoins(piles))
-}
+// 	piles := []int{9, 8, 7, 6, 5, 1, 2, 3, 4}
+// 	log.Println(maxCoins(piles))
+// }
