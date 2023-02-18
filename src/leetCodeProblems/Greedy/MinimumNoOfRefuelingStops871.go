@@ -76,12 +76,12 @@ func minRefuelStops(target int, startFuel int, stations [][]int) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	// stations := [][]int{{10, 60}, {20, 30}, {30, 30}, {60, 40}}
-	// log.Println(minRefuelStops(100, 10, stations))
+// 	// stations := [][]int{{10, 60}, {20, 30}, {30, 30}, {60, 40}}
+// 	// log.Println(minRefuelStops(100, 10, stations))
 
-	stations := [][]int{{25, 30}}
-	log.Println(minRefuelStops(100, 50, stations))
+// 	stations := [][]int{{25, 30}}
+// 	log.Println(minRefuelStops(100, 50, stations))
 
-}
+// }
