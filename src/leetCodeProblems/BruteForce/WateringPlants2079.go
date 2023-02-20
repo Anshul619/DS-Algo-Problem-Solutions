@@ -5,7 +5,6 @@ package main
 - Space - O(1)
 - Time - O(n)
 */
-import "log"
 
 func wateringPlants(plants []int, capacity int) int {
 	out := 0
@@ -25,12 +24,12 @@ func wateringPlants(plants []int, capacity int) int {
 	return out
 }
 
-func main() {
-	// plants := []int{2, 2, 3, 3}
-	// capacity := 5
+// func main() {
+// 	// plants := []int{2, 2, 3, 3}
+// 	// capacity := 5
 
-	plants := []int{1, 1, 1, 4, 2, 3}
-	capacity := 4
+// 	plants := []int{1, 1, 1, 4, 2, 3}
+// 	capacity := 4
 
-	log.Println(wateringPlants(plants, capacity))
-}
+// 	log.Println(wateringPlants(plants, capacity))
+// }
