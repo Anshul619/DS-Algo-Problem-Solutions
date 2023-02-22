@@ -5,7 +5,6 @@ package main
 - Time - O(N×2N)
 - Space - O(N×2N)
 */
-import "log"
 
 func subsetsCasadingRecursion(nums []int) [][]int {
 
@@ -35,9 +34,9 @@ func subsetUtil(out *[][]int, i int, nums []int) {
 	subsetUtil(out, i+1, nums)
 }
 
-func main() {
-	//nums := []int{1, 2, 3}
-	//nums := []int{0}
-	nums := []int{9, 0, 3, 5, 7}
-	log.Println(subsetsCasadingRecursion(nums))
-}
+// func main() {
+// 	//nums := []int{1, 2, 3}
+// 	//nums := []int{0}
+// 	nums := []int{9, 0, 3, 5, 7}
+// 	log.Println(subsetsCasadingRecursion(nums))
+// }
