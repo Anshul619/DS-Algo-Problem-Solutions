@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func getMax(i, j int) int {
 	if i > j {
@@ -52,12 +51,12 @@ func minimumRefill(plants []int, capacityA int, capacityB int) int {
 	return out
 }
 
-func main() {
-	//plants := []int{2, 2, 3, 3}
+// func main() {
+// 	//plants := []int{2, 2, 3, 3}
 
-	//log.Println(minimumRefill(plants, 5, 5))
-	//log.Println(minimumRefill(plants, 3, 4))
+// 	//log.Println(minimumRefill(plants, 5, 5))
+// 	//log.Println(minimumRefill(plants, 3, 4))
 
-	plants := []int{5}
-	log.Println(minimumRefill(plants, 10, 8))
-}
+// 	plants := []int{5}
+// 	log.Println(minimumRefill(plants, 10, 8))
+// }
