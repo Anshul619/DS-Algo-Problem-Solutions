@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - LeetCode - https://leetcode.com/problems/optimal-partition-of-string/description/
 - Time - O(n)
@@ -29,10 +27,10 @@ func partitionString(s string) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//s := "abacaba"
+// 	//s := "abacaba"
 
-	s := "ssssss"
-	log.Println(partitionString(s))
-}
+// 	s := "ssssss"
+// 	log.Println(partitionString(s))
+// }
