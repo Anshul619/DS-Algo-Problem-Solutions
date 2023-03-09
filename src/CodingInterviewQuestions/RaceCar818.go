@@ -49,9 +49,9 @@ func racecar(target int) int {
 	return len(inst)
 }
 
-func main() {
-	target := 3
-	//target := 25
+// func main() {
+// 	target := 3
+// 	//target := 25
 
-	racecar(target)
-}
+// 	racecar(target)
+// }
