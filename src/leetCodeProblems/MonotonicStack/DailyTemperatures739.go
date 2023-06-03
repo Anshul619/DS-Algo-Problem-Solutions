@@ -4,8 +4,6 @@ package main
 - LeetCode - https://leetcode.com/problems/daily-temperatures
 */
 
-import "log"
-
 type TempWithIndex struct {
 	Val   int
 	Index int
@@ -71,12 +69,12 @@ func dailyTemperatures(temperatures []int) []int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//temperatures := []int{73, 74, 75, 71, 69, 72, 76, 73}
-	//temperatures := []int{30, 40, 50, 60}
-	temperatures := []int{30, 60, 90}
+// 	//temperatures := []int{73, 74, 75, 71, 69, 72, 76, 73}
+// 	//temperatures := []int{30, 40, 50, 60}
+// 	temperatures := []int{30, 60, 90}
 
-	log.Println(dailyTemperatures(temperatures))
+// 	log.Println(dailyTemperatures(temperatures))
 
-}
+// }

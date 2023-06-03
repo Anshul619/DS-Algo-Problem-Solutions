@@ -6,7 +6,6 @@ package main
 - Space - O(n)
 */
 import (
-	"log"
 	"sort"
 )
 
@@ -42,10 +41,10 @@ func findWinners(matches [][]int) [][]int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	matches := [][]int{{1, 3}, {2, 3}, {3, 6}, {5, 6}, {5, 7}, {4, 5}, {4, 8}, {4, 9}, {10, 4}, {10, 9}}
+// 	matches := [][]int{{1, 3}, {2, 3}, {3, 6}, {5, 6}, {5, 7}, {4, 5}, {4, 8}, {4, 9}, {10, 4}, {10, 9}}
 
-	//matches := [][]int{{2, 3}, {1, 3}, {5, 4}, {6, 4}}
-	log.Println(findWinners(matches))
-}
+// 	//matches := [][]int{{2, 3}, {1, 3}, {5, 4}, {6, 4}}
+// 	log.Println(findWinners(matches))
+// }

@@ -33,43 +33,43 @@ func preOrder(node *TreeNode) {
 	preOrder(node.Right)
 }
 
-func main() {
+// func main() {
 
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 1
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 2
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 3
-	// root.Left.Left = new(TreeNode)
-	// root.Left.Left.Val = 2
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 1
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 2
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 3
+// 	// root.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Val = 2
 
-	// root.Right.Left = new(TreeNode)
-	// root.Right.Left.Val = 2
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 4
+// 	// root.Right.Left = new(TreeNode)
+// 	// root.Right.Left.Val = 2
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 4
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 1
-	root.Left = new(TreeNode)
-	root.Left.Val = 3
-	root.Right = new(TreeNode)
-	root.Right.Val = 3
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 3
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 1
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 3
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 3
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 3
 
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 2
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 2
 
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 1
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 1
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 1
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 1
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 1
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 1
 
-	root = removeLeafNodes(root, 3)
+// 	root = removeLeafNodes(root, 3)
 
-	preOrder(root)
+// 	preOrder(root)
 
-}
+// }

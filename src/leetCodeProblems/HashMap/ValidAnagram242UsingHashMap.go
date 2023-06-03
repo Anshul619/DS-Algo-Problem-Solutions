@@ -3,9 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/valid-anagram/description/
 */
-import (
-	"log"
-)
 
 func isAnagram(s string, t string) bool {
 
@@ -32,12 +29,12 @@ func isAnagram(s string, t string) bool {
 	return true
 }
 
-func main() {
-	s := "anagram"
-	t := "nagaram"
+// func main() {
+// 	s := "anagram"
+// 	t := "nagaram"
 
-	// s := "rat"
-	// t := "car"
+// 	// s := "rat"
+// 	// t := "car"
 
-	log.Println(isAnagram(s, t))
-}
+// 	log.Println(isAnagram(s, t))
+// }

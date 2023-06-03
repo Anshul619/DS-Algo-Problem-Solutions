@@ -22,15 +22,15 @@ func uniquePaths(m int, n int) int {
 	return dp[n-1]
 }
 
-func main() {
-	// m := 3
-	// n := 2
+// func main() {
+// 	// m := 3
+// 	// n := 2
 
-	m := 3
-	n := 7
+// 	m := 3
+// 	n := 7
 
-	// m := 23
-	// n := 12
+// 	// m := 23
+// 	// n := 12
 
-	log.Println(uniquePaths(m, n))
-}
+// 	log.Println(uniquePaths(m, n))
+// }

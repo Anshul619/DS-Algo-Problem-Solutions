@@ -5,7 +5,6 @@ package main
 - Time Complexity - O(n)
 - Space Complexity - O(min(n,k))
 */
-import "log"
 
 func checkSubarraySum(nums []int, k int) bool {
 
@@ -30,12 +29,12 @@ func checkSubarraySum(nums []int, k int) bool {
 	return false
 }
 
-func main() {
+// func main() {
 
-	//nums := []int{23, 2, 4, 6, 7}
-	//nums := []int{23, 2, 4, 6, 6}
-	//nums := []int{5, 0, 0, 0}
-	nums := []int{23, 2, 4, 6, 6}
-	log.Println(checkSubarraySum(nums, 7))
+// 	//nums := []int{23, 2, 4, 6, 7}
+// 	//nums := []int{23, 2, 4, 6, 6}
+// 	//nums := []int{5, 0, 0, 0}
+// 	nums := []int{23, 2, 4, 6, 6}
+// 	log.Println(checkSubarraySum(nums, 7))
 
-}
+// }

@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - LeetCode - https://leetcode.com/problems/intersection-of-two-linked-lists/description/
 - Time - O(m+n)
@@ -62,46 +60,46 @@ func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	return nextA
 }
 
-func main() {
+// func main() {
 
-	// intersection := new(ListNode)
-	// intersection.Val = 8
-	// intersection.Next = new(ListNode)
-	// intersection.Next.Val = 4
-	// intersection.Next.Next = new(ListNode)
-	// intersection.Next.Next.Val = 5
+// 	// intersection := new(ListNode)
+// 	// intersection.Val = 8
+// 	// intersection.Next = new(ListNode)
+// 	// intersection.Next.Val = 4
+// 	// intersection.Next.Next = new(ListNode)
+// 	// intersection.Next.Next.Val = 5
 
-	// head := new(ListNode)
-	// head.Val = 4
-	// head.Next = new(ListNode)
-	// head.Next.Val = 1
-	// head.Next.Next = intersection
+// 	// head := new(ListNode)
+// 	// head.Val = 4
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 1
+// 	// head.Next.Next = intersection
 
-	// head1 := new(ListNode)
-	// head1.Val = 5
-	// head1.Next = new(ListNode)
-	// head1.Next.Val = 6
-	// head1.Next.Next = new(ListNode)
-	// head1.Next.Next.Val = 1
-	// head1.Next.Next.Next = intersection
+// 	// head1 := new(ListNode)
+// 	// head1.Val = 5
+// 	// head1.Next = new(ListNode)
+// 	// head1.Next.Val = 6
+// 	// head1.Next.Next = new(ListNode)
+// 	// head1.Next.Next.Val = 1
+// 	// head1.Next.Next.Next = intersection
 
-	// head := new(ListNode)
-	// head.Val = 1
+// 	// head := new(ListNode)
+// 	// head.Val = 1
 
-	// head1 := head
+// 	// head1 := head
 
-	head := new(ListNode)
-	head.Val = 1
+// 	head := new(ListNode)
+// 	head.Val = 1
 
-	head1 := new(ListNode)
-	head1.Val = 2
+// 	head1 := new(ListNode)
+// 	head1.Val = 2
 
-	out := getIntersectionNode(head, head1)
+// 	out := getIntersectionNode(head, head1)
 
-	if out != nil {
-		log.Println("Intersection", out.Val)
-	} else {
-		log.Println("No Intersection")
-	}
+// 	if out != nil {
+// 		log.Println("Intersection", out.Val)
+// 	} else {
+// 		log.Println("No Intersection")
+// 	}
 
-}
+// }

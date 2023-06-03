@@ -52,22 +52,22 @@ func inorder1(node *TreeNode) {
 	inorder1(node.Right)
 }
 
-func main() {
-	// root := new(TreeNode)
-	// root.Val = 4
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 2
-	// root.Left.Left = new(TreeNode)
-	// root.Left.Left.Val = 1
-	// root.Left.Right = new(TreeNode)
-	// root.Left.Right.Val = 3
+// func main() {
+// 	// root := new(TreeNode)
+// 	// root.Val = 4
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 2
+// 	// root.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Val = 1
+// 	// root.Left.Right = new(TreeNode)
+// 	// root.Left.Right.Val = 3
 
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 7
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 7
 
-	// newRoot := insertIntoBST(root, 5)
+// 	// newRoot := insertIntoBST(root, 5)
 
-	newRoot := insertIntoBST(nil, 5)
+// 	newRoot := insertIntoBST(nil, 5)
 
-	inorder1(newRoot)
-}
+// 	inorder1(newRoot)
+// }

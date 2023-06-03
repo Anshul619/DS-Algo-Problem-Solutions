@@ -7,7 +7,6 @@ package main
 */
 import (
 	"container/heap"
-	"log"
 )
 
 type PriorityQueue []int
@@ -62,8 +61,8 @@ func lastStoneWeight(stones []int) int {
 	}
 }
 
-func main() {
-	log.Println(lastStoneWeight([]int{2, 7, 4, 1, 8, 1}))
-	log.Println(lastStoneWeight([]int{1}))
-	log.Println(lastStoneWeight([]int{2, 2}))
-}
+// func main() {
+// 	log.Println(lastStoneWeight([]int{2, 7, 4, 1, 8, 1}))
+// 	log.Println(lastStoneWeight([]int{1}))
+// 	log.Println(lastStoneWeight([]int{2, 2}))
+// }
