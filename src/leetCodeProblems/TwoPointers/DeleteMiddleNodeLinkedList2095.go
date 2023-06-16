@@ -35,42 +35,42 @@ func printList(head *ListNode) {
 	}
 }
 
-func main() {
+// func main() {
 
-	// head := new(ListNode)
-	// head.Val = 1
-	// head.Next = new(ListNode)
-	// head.Next.Val = 3
-	// head.Next.Next = new(ListNode)
-	// head.Next.Next.Val = 4
-	// head.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Val = 7
-	// head.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Val = 1
-	// head.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Val = 2
-	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
-	// head.Next.Next.Next.Next.Next.Next.Val = 6
+// 	// head := new(ListNode)
+// 	// head.Val = 1
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 3
+// 	// head.Next.Next = new(ListNode)
+// 	// head.Next.Next.Val = 4
+// 	// head.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Val = 7
+// 	// head.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Val = 1
+// 	// head.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Val = 2
+// 	// head.Next.Next.Next.Next.Next.Next = new(ListNode)
+// 	// head.Next.Next.Next.Next.Next.Next.Val = 6
 
-	// printList(deleteMiddle(head))
+// 	// printList(deleteMiddle(head))
 
-	head := new(ListNode)
-	head.Val = 1
-	head.Next = new(ListNode)
-	head.Next.Val = 2
-	head.Next.Next = new(ListNode)
-	head.Next.Next.Val = 3
-	head.Next.Next.Next = new(ListNode)
-	head.Next.Next.Next.Val = 4
+// 	head := new(ListNode)
+// 	head.Val = 1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = 2
+// 	head.Next.Next = new(ListNode)
+// 	head.Next.Next.Val = 3
+// 	head.Next.Next.Next = new(ListNode)
+// 	head.Next.Next.Next.Val = 4
 
-	printList(deleteMiddle(head))
+// 	printList(deleteMiddle(head))
 
-	// head := new(ListNode)
-	// head.Val = 2
-	// head.Next = new(ListNode)
-	// head.Next.Val = 1
+// 	// head := new(ListNode)
+// 	// head.Val = 2
+// 	// head.Next = new(ListNode)
+// 	// head.Next.Val = 1
 
-	// //log.Println(deleteMiddle(head))
+// 	// //log.Println(deleteMiddle(head))
 
-	// printList(deleteMiddle(head))
-}
+// 	// printList(deleteMiddle(head))
+// }

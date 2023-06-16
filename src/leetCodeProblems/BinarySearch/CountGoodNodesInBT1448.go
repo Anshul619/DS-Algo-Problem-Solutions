@@ -6,7 +6,6 @@ package main
 - Space - O(1)
 */
 import (
-	"log"
 	"math"
 )
 
@@ -31,21 +30,21 @@ func goodNodes(root *TreeNode) int {
 	return *out
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode)
-	root.Val = 3
-	root.Left = new(TreeNode)
-	root.Left.Val = 1
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 3
+// 	root := new(TreeNode)
+// 	root.Val = 3
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 1
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 3
 
-	root.Right = new(TreeNode)
-	root.Right.Val = 4
-	root.Right.Left = new(TreeNode)
-	root.Right.Left.Val = 1
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 5
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 4
+// 	root.Right.Left = new(TreeNode)
+// 	root.Right.Left.Val = 1
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 5
 
-	log.Println(goodNodes(root))
-}
+// 	log.Println(goodNodes(root))
+// }

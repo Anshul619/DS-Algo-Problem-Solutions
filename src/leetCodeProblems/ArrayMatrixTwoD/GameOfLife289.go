@@ -5,7 +5,6 @@ package main
 - Time - O(m*n)
 - Space - O(1)
 */
-import "log"
 
 func checkExistence(board [][]int, x int, y int) bool {
 
@@ -64,10 +63,10 @@ func gameOfLife(board [][]int) {
 	}
 }
 
-func main() {
-	board := [][]int{{0, 1, 0}, {0, 0, 1}, {1, 1, 1}, {0, 0, 0}}
+// func main() {
+// 	board := [][]int{{0, 1, 0}, {0, 0, 1}, {1, 1, 1}, {0, 0, 0}}
 
-	gameOfLife(board)
+// 	gameOfLife(board)
 
-	log.Println(board)
-}
+// 	log.Println(board)
+// }

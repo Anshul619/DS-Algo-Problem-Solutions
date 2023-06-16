@@ -5,7 +5,6 @@ package main
 - Space - O(n)
 - Time - O(n)
 */
-import "log"
 
 func findThePrefixCommonArray(A []int, B []int) []int {
 
@@ -39,8 +38,8 @@ func findThePrefixCommonArray(A []int, B []int) []int {
 	return out
 }
 
-func main() {
-	log.Println(findThePrefixCommonArray([]int{1, 3, 2, 4}, []int{3, 1, 2, 4}))
-	log.Println(findThePrefixCommonArray([]int{2, 3, 1}, []int{3, 1, 2}))
-	log.Println(findThePrefixCommonArray([]int{1, 2}, []int{1, 2}))
-}
+// func main() {
+// 	log.Println(findThePrefixCommonArray([]int{1, 3, 2, 4}, []int{3, 1, 2, 4}))
+// 	log.Println(findThePrefixCommonArray([]int{2, 3, 1}, []int{3, 1, 2}))
+// 	log.Println(findThePrefixCommonArray([]int{1, 2}, []int{1, 2}))
+// }
