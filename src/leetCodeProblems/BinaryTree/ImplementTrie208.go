@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/implement-trie-prefix-tree/solutions/3577631/go-hash-table-92-faster/
 */
-import "log"
 
 type TrieNode struct {
 	Children [26]*TrieNode
@@ -58,13 +57,13 @@ func (this *Trie) StartsWith(prefix string) bool {
 	return this.find(prefix) != nil
 }
 
-func main() {
-	trie := Constructor()
-	trie.Insert("apple")
-	log.Println(trie.Search("apple"))
+// func main() {
+// 	trie := Constructor()
+// 	trie.Insert("apple")
+// 	log.Println(trie.Search("apple"))
 
-	log.Println(trie.Search("app"))
-	log.Println(trie.StartsWith("app"))
-	trie.Insert("app")
-	log.Println(trie.Search("app"))
-}
+// 	log.Println(trie.Search("app"))
+// 	log.Println(trie.StartsWith("app"))
+// 	trie.Insert("app")
+// 	log.Println(trie.Search("app"))
+// }

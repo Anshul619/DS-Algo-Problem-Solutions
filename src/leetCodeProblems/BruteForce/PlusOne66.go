@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func plusOne(digits []int) []int {
 
@@ -21,8 +20,8 @@ func plusOne(digits []int) []int {
 	return append([]int{1}, digits...)
 }
 
-func main() {
-	log.Println(plusOne([]int{1, 2, 3}))
-	log.Println(plusOne([]int{4, 3, 2, 1}))
-	log.Println(plusOne([]int{9}))
-}
+// func main() {
+// 	log.Println(plusOne([]int{1, 2, 3}))
+// 	log.Println(plusOne([]int{4, 3, 2, 1}))
+// 	log.Println(plusOne([]int{9}))
+// }

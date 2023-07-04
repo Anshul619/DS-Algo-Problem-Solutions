@@ -7,7 +7,6 @@ package main
 */
 import (
 	"container/heap"
-	"log"
 	"sort"
 )
 
@@ -73,12 +72,12 @@ func maxEvents(events [][]int) int {
 	return out
 }
 
-func main() {
-	// log.Println(maxEvents([][]int{{1, 2}, {2, 3}, {3, 4}}))
-	// log.Println(maxEvents([][]int{{1, 2}, {2, 3}, {3, 4}, {1, 2}}))
-	// log.Println(maxEvents([][]int{{1, 1}, {2, 2}, {1, 2}}))
-	// log.Println(maxEvents([][]int{{1, 1}, {1, 2}, {1, 3}, {1, 4}, {1, 5}, {1, 6}, {1, 7}}))
-	// log.Println(maxEvents([][]int{{1, 2}, {1, 2}, {3, 3}, {1, 5}, {1, 5}}))
-	// log.Println(maxEvents([][]int{{1, 5}, {1, 5}, {1, 5}, {2, 3}, {2, 3}}))
-	log.Println(maxEvents([][]int{{1, 2}, {1, 2}, {1, 6}, {1, 2}, {1, 2}}))
-}
+// func main() {
+// 	// log.Println(maxEvents([][]int{{1, 2}, {2, 3}, {3, 4}}))
+// 	// log.Println(maxEvents([][]int{{1, 2}, {2, 3}, {3, 4}, {1, 2}}))
+// 	// log.Println(maxEvents([][]int{{1, 1}, {2, 2}, {1, 2}}))
+// 	// log.Println(maxEvents([][]int{{1, 1}, {1, 2}, {1, 3}, {1, 4}, {1, 5}, {1, 6}, {1, 7}}))
+// 	// log.Println(maxEvents([][]int{{1, 2}, {1, 2}, {3, 3}, {1, 5}, {1, 5}}))
+// 	// log.Println(maxEvents([][]int{{1, 5}, {1, 5}, {1, 5}, {2, 3}, {2, 3}}))
+// 	log.Println(maxEvents([][]int{{1, 2}, {1, 2}, {1, 6}, {1, 2}, {1, 2}}))
+// }

@@ -37,8 +37,8 @@ func bstFromPreorder(preorder []int) *TreeNode {
 	return bstFromPreorderUtil(preorder, 0, len(preorder)-1)
 }
 
-func main() {
-	preorder := []int{8, 5, 1, 7, 10, 12}
-	//preorder := []int{4, 2}
-	printTree(bstFromPreorder(preorder))
-}
+// func main() {
+// 	preorder := []int{8, 5, 1, 7, 10, 12}
+// 	//preorder := []int{4, 2}
+// 	printTree(bstFromPreorder(preorder))
+// }

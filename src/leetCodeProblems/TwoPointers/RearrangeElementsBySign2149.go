@@ -5,7 +5,6 @@ package main
 - Space - O(1)
 - Time - O(n)
 */
-import "log"
 
 func rightRotateArray(nums []int, outOfPlace int, curIndex int) {
 	cur := nums[curIndex]
@@ -50,8 +49,8 @@ func rearrangeArray(nums []int) []int {
 	return nums
 }
 
-func main() {
-	//log.Println(rearrangeArray([]int{3, 1, -2, -5, 2, -4}))
-	//log.Println(rearrangeArray([]int{-1, 1}))
-	log.Println(rearrangeArray([]int{28, -41, 22, -8, -37, 46, 35, -9, 18, -6, 19, -26, -37, -10, -9, 15, 14, 31}))
-}
+// func main() {
+// 	//log.Println(rearrangeArray([]int{3, 1, -2, -5, 2, -4}))
+// 	//log.Println(rearrangeArray([]int{-1, 1}))
+// 	log.Println(rearrangeArray([]int{28, -41, 22, -8, -37, 46, 35, -9, 18, -6, 19, -26, -37, -10, -9, 15, 14, 31}))
+// }

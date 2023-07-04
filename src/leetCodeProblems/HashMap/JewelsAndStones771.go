@@ -5,7 +5,6 @@ package main
 - Time - O(m)
 - Space - O(n)
 */
-import "log"
 
 func numJewelsInStones(jewels string, stones string) int {
 	m := make(map[rune]bool)
@@ -23,7 +22,7 @@ func numJewelsInStones(jewels string, stones string) int {
 	return count
 }
 
-func main() {
-	log.Println(numJewelsInStones("aA", "aAAbbbb"))
-	log.Println(numJewelsInStones("z", "ZZ"))
-}
+// func main() {
+// 	log.Println(numJewelsInStones("aA", "aAAbbbb"))
+// 	log.Println(numJewelsInStones("z", "ZZ"))
+// }
