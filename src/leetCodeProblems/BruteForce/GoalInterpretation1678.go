@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func interpret(command string) string {
 	out := []rune{}
@@ -34,8 +33,8 @@ func interpret(command string) string {
 	return string(out)
 }
 
-func main() {
-	log.Println(interpret("G()(al)"))
-	log.Println(interpret("G()()()()(al)"))
-	log.Println(interpret("(al)G(al)()()G"))
-}
+// func main() {
+// 	log.Println(interpret("G()(al)"))
+// 	log.Println(interpret("G()()()()(al)"))
+// 	log.Println(interpret("(al)G(al)()()G"))
+// }

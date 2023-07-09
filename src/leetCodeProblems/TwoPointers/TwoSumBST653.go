@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(n)
 */
-import "log"
 
 /**
  * Definition for a binary tree node.
@@ -57,36 +56,36 @@ func findTarget(root *TreeNode, k int) bool {
 	return false
 }
 
-func main() {
-	// root := new(TreeNode) //Returns pointer to TreeNode object
-	// root.Val = 5
-	// root.Left = new(TreeNode)
-	// root.Left.Val = 3
-	// root.Right = new(TreeNode)
-	// root.Right.Val = 6
-	// root.Left.Left = new(TreeNode)
-	// root.Left.Left.Val = 2
-	// root.Left.Right = new(TreeNode)
-	// root.Left.Right.Val = 4
-	// root.Right.Right = new(TreeNode)
-	// root.Right.Right.Val = 7
+// func main() {
+// 	// root := new(TreeNode) //Returns pointer to TreeNode object
+// 	// root.Val = 5
+// 	// root.Left = new(TreeNode)
+// 	// root.Left.Val = 3
+// 	// root.Right = new(TreeNode)
+// 	// root.Right.Val = 6
+// 	// root.Left.Left = new(TreeNode)
+// 	// root.Left.Left.Val = 2
+// 	// root.Left.Right = new(TreeNode)
+// 	// root.Left.Right.Val = 4
+// 	// root.Right.Right = new(TreeNode)
+// 	// root.Right.Right.Val = 7
 
-	// log.Println(findTarget(root, 9))
-	// log.Println(findTarget(root, 28))
+// 	// log.Println(findTarget(root, 9))
+// 	// log.Println(findTarget(root, 28))
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 2
-	root.Left = new(TreeNode)
-	root.Left.Val = 1
-	root.Right = new(TreeNode)
-	root.Right.Val = 3
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 2
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 4
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 7
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 2
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 1
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 3
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 2
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 4
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 7
 
-	log.Println(findTarget(root, 1))
+// 	log.Println(findTarget(root, 1))
 
-}
+// }
