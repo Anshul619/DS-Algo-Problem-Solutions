@@ -82,22 +82,22 @@ func replaceValueInTree(root *TreeNode) *TreeNode {
 	return root
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 5
-	root.Left = new(TreeNode)
-	root.Left.Val = 4
-	root.Right = new(TreeNode)
-	root.Right.Val = 9
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 1
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 10
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 7
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 5
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 4
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 9
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 1
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 10
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 7
 
-	replaceValueInTree(root)
+// 	replaceValueInTree(root)
 
-	printInOrder(root)
-}
+// 	printInOrder(root)
+// }

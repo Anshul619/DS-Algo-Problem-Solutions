@@ -9,28 +9,28 @@ type TempWithIndex struct {
 	Index int
 }
 
-type stack []TempWithIndex
+type stack2 []TempWithIndex
 
-func (s *stack) push(e TempWithIndex) {
+func (s *stack2) push(e TempWithIndex) {
 	*s = append(*s, e)
 }
 
-func (s *stack) size() int {
+func (s *stack2) size() int {
 	return len(*s)
 }
 
-func (s *stack) isEmpty() bool {
+func (s *stack2) isEmpty() bool {
 	return s.size() == 0
 }
 
-func (s *stack) peek() (bool, TempWithIndex) {
+func (s *stack2) peek() (bool, TempWithIndex) {
 	if !s.isEmpty() {
 		return true, (*s)[len(*s)-1]
 	}
 	return false, TempWithIndex{}
 }
 
-func (s *stack) pop() (bool, TempWithIndex) {
+func (s *stack2) pop() (bool, TempWithIndex) {
 	if !s.isEmpty() {
 		e := (*s)[len(*s)-1]
 		*s = (*s)[:len(*s)-1]
@@ -42,7 +42,7 @@ func (s *stack) pop() (bool, TempWithIndex) {
 func dailyTemperatures(temperatures []int) []int {
 
 	out := make([]int, len(temperatures))
-	monoStack := new(stack)
+	monoStack := new(stack2)
 
 	for i := len(temperatures) - 1; i > -1; i-- {
 

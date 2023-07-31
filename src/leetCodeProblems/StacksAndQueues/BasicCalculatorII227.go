@@ -4,7 +4,6 @@ package main
 - LeetCode - https://leetcode.com/problems/basic-calculator-ii/
 */
 import (
-	"log"
 	"strconv"
 	"unicode"
 )
@@ -62,11 +61,11 @@ func calculate(s string) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//s := "3+2*2"
-	//s := " 3/2 "
-	s := " 3+5 / 2 "
-	//s := "42"
-	log.Println(calculate(s))
-}
+// 	//s := "3+2*2"
+// 	//s := " 3/2 "
+// 	s := " 3+5 / 2 "
+// 	//s := "42"
+// 	log.Println(calculate(s))
+// }

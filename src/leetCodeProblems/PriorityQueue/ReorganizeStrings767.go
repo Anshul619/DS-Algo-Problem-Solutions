@@ -7,7 +7,6 @@ package main
 */
 import (
 	"container/heap"
-	"log"
 )
 
 type Node struct {
@@ -78,10 +77,10 @@ func reorganizeString(s string) string {
 	return string(out)
 }
 
-func main() {
-	log.Println(reorganizeString("a"))
-	log.Println(reorganizeString("aab"))
-	log.Println(reorganizeString("aaab"))
-	log.Println(reorganizeString("aaabc"))
-	log.Println(reorganizeString("aaabb"))
-}
+// func main() {
+// 	log.Println(reorganizeString("a"))
+// 	log.Println(reorganizeString("aab"))
+// 	log.Println(reorganizeString("aaab"))
+// 	log.Println(reorganizeString("aaabc"))
+// 	log.Println(reorganizeString("aaabb"))
+// }

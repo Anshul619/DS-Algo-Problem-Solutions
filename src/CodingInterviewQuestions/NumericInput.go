@@ -20,7 +20,6 @@ fmt.Println(input.GetValue())
 Reference - https://www.testdome.com/tests/golang-online-test/123
 */
 import (
-	"fmt"
 	"unicode"
 )
 
@@ -43,10 +42,10 @@ func (u NumericInput) GetValue() string {
 	return u.input
 }
 
-func main() {
-	var input UserInput = &NumericInput{}
-	input.Add('1')
-	input.Add('a')
-	input.Add('0')
-	fmt.Println(input.GetValue())
-}
+// func main() {
+// 	var input UserInput = &NumericInput{}
+// 	input.Add('1')
+// 	input.Add('a')
+// 	input.Add('0')
+// 	fmt.Println(input.GetValue())
+// }

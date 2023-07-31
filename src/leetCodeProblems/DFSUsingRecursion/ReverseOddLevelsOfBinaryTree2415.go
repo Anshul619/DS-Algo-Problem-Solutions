@@ -40,26 +40,26 @@ func printInOrder(node *TreeNode) {
 	printInOrder(node.Right)
 }
 
-func main() {
+// func main() {
 
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 2
-	root.Left = new(TreeNode)
-	root.Left.Val = 3
-	root.Left.Left = new(TreeNode)
-	root.Left.Left.Val = 8
-	root.Left.Right = new(TreeNode)
-	root.Left.Right.Val = 13
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 2
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 3
+// 	root.Left.Left = new(TreeNode)
+// 	root.Left.Left.Val = 8
+// 	root.Left.Right = new(TreeNode)
+// 	root.Left.Right.Val = 13
 
-	root.Right = new(TreeNode)
-	root.Right.Val = 5
-	root.Right.Left = new(TreeNode)
-	root.Right.Left.Val = 21
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 34
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 5
+// 	root.Right.Left = new(TreeNode)
+// 	root.Right.Left.Val = 21
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 34
 
-	newRoot := reverseOddLevels(root)
+// 	newRoot := reverseOddLevels(root)
 
-	printInOrder(newRoot)
+// 	printInOrder(newRoot)
 
-}
+// }

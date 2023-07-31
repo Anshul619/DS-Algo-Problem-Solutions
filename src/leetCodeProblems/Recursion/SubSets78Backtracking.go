@@ -38,9 +38,9 @@ func backTrack(nums []int, combinationLength int, start int, cur []int, out *[][
 	}
 }
 
-func main() {
-	//nums := []int{1, 2, 3}
-	//nums := []int{0}
-	nums := []int{9, 0, 3, 5, 7}
-	log.Println(subsets(nums))
-}
+// func main() {
+// 	//nums := []int{1, 2, 3}
+// 	//nums := []int{0}
+// 	nums := []int{9, 0, 3, 5, 7}
+// 	log.Println(subsets(nums))
+// }

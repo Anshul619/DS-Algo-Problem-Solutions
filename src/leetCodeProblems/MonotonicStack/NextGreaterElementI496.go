@@ -5,7 +5,6 @@ package main
 - Time - O(m+n)
 - Space - O(n)
 */
-import "log"
 
 type stack1 []int
 
@@ -56,8 +55,8 @@ func nextGreaterElement(nums1 []int, nums2 []int) []int {
 	return out
 }
 
-func main() {
-	log.Println(nextGreaterElement([]int{4, 1, 2}, []int{1, 3, 4, 2}))
-	log.Println(nextGreaterElement([]int{2, 4}, []int{1, 2, 3, 4}))
-	log.Println(nextGreaterElement([]int{1, 3, 5, 2, 4}, []int{6, 5, 4, 3, 2, 1, 7}))
-}
+// func main() {
+// 	log.Println(nextGreaterElement([]int{4, 1, 2}, []int{1, 3, 4, 2}))
+// 	log.Println(nextGreaterElement([]int{2, 4}, []int{1, 2, 3, 4}))
+// 	log.Println(nextGreaterElement([]int{1, 3, 5, 2, 4}, []int{6, 5, 4, 3, 2, 1, 7}))
+// }

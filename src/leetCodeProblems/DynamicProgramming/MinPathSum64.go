@@ -5,7 +5,6 @@ package main
 - Time - O(m*n)
 - Space - O(1)
 */
-import "log"
 
 func min(i, j int) int {
 	if i < j {
@@ -31,7 +30,7 @@ func minPathSum(grid [][]int) int {
 	return grid[len(grid)-1][len(grid[0])-1]
 }
 
-func main() {
-	log.Println(minPathSum([][]int{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}}))
-	log.Println(minPathSum([][]int{{1, 2, 3}, {4, 5, 6}}))
-}
+// func main() {
+// 	log.Println(minPathSum([][]int{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}}))
+// 	log.Println(minPathSum([][]int{{1, 2, 3}, {4, 5, 6}}))
+// }

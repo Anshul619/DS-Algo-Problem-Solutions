@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Extra Space - O(1)
 */
-import "log"
 
 func diff(a, b int) int {
 	if a < b {
@@ -34,7 +33,7 @@ func leftRightDifference(nums []int) []int {
 	return out
 }
 
-func main() {
-	log.Println(leftRightDifference([]int{10, 4, 8, 3}))
-	log.Println(leftRightDifference([]int{1}))
-}
+// func main() {
+// 	log.Println(leftRightDifference([]int{10, 4, 8, 3}))
+// 	log.Println(leftRightDifference([]int{1}))
+// }

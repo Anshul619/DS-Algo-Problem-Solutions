@@ -3,7 +3,6 @@ package main
 /*
 	LeetCode - https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 */
-import "log"
 
 func subtractProductAndSum(n int) int {
 
@@ -20,6 +19,6 @@ func subtractProductAndSum(n int) int {
 	return product - sum
 }
 
-func main() {
-	log.Println(subtractProductAndSum(234))
-}
+// func main() {
+// 	log.Println(subtractProductAndSum(234))
+// }
