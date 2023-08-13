@@ -6,7 +6,6 @@ package main
 - Space - O(n)
 */
 import (
-	"log"
 	"math"
 )
 
@@ -55,8 +54,8 @@ func findShortestSubArray(nums []int) int {
 	return out + 1
 }
 
-func main() {
-	log.Println(findShortestSubArray([]int{1, 2, 2, 3, 1}))
-	log.Println(findShortestSubArray([]int{1, 2, 2, 3, 1, 4, 2}))
-	log.Println(findShortestSubArray([]int{1}))
-}
+// func main() {
+// 	log.Println(findShortestSubArray([]int{1, 2, 2, 3, 1}))
+// 	log.Println(findShortestSubArray([]int{1, 2, 2, 3, 1, 4, 2}))
+// 	log.Println(findShortestSubArray([]int{1}))
+// }

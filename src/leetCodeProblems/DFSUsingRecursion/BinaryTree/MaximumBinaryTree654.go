@@ -48,6 +48,7 @@ func constructMaximumBinaryTree(nums []int) *TreeNode {
 func printInOrder(node *TreeNode) {
 
 	if node == nil {
+		log.Println("null")
 		return
 	}
 

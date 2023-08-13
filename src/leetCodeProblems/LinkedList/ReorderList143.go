@@ -18,7 +18,7 @@ func findMid(head *ListNode) *ListNode {
 	return mid
 }
 
-func reverseList(mid *ListNode) {
+func reverseList1(mid *ListNode) {
 	cur := mid.Next
 
 	for cur != nil && cur.Next != nil {
@@ -36,7 +36,7 @@ func reorderList(head *ListNode) {
 
 	mid := findMid(head)
 
-	reverseList(mid)
+	reverseList1(mid)
 
 	cur := head
 

@@ -6,7 +6,6 @@ package main
 - Space - O(1)
 */
 import (
-	"log"
 	"math"
 )
 
@@ -28,18 +27,18 @@ func getDecimalValue(head *ListNode) int {
 	return out
 }
 
-func main() {
-	head := new(ListNode)
-	head.Val = 1
-	head.Next = new(ListNode)
-	head.Next.Val = 0
-	head.Next.Next = new(ListNode)
-	head.Next.Next.Val = 1
+// func main() {
+// 	head := new(ListNode)
+// 	head.Val = 1
+// 	head.Next = new(ListNode)
+// 	head.Next.Val = 0
+// 	head.Next.Next = new(ListNode)
+// 	head.Next.Next.Val = 1
 
-	log.Println(getDecimalValue(head))
+// 	log.Println(getDecimalValue(head))
 
-	head = new(ListNode)
-	head.Val = 0
+// 	head = new(ListNode)
+// 	head.Val = 0
 
-	log.Println(getDecimalValue(head))
-}
+// 	log.Println(getDecimalValue(head))
+// }

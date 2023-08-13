@@ -3,7 +3,7 @@ package leetCodeProblems.BinaryTree;
 /**
  * LeetCode - https://leetcode.com/problems/symmetric-tree/
  */
-public class BinaryTreeIsSymmetric101 {
+public class BinaryTreeIsSymmetric {
 
     static class TreeNode {
         int val;
@@ -65,7 +65,7 @@ public class BinaryTreeIsSymmetric101 {
         TreeNode root = new TreeNode(1);
         root.right = new TreeNode(2); // Expected O/P = false
 
-        BinaryTreeIsSymmetric101 obj = new BinaryTreeIsSymmetric101();
+        BinaryTreeIsSymmetric obj = new BinaryTreeIsSymmetric();
         System.out.println(obj.isSymmetric(root));
 
     }

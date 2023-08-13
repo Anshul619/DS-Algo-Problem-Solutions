@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - Leetcode - https://leetcode.com/problems/roman-to-integer/
 - Time - O(n)
@@ -67,8 +65,8 @@ func romanToInt(s string) int {
 	return out
 }
 
-func main() {
-	log.Println(romanToInt("III"))
-	log.Println(romanToInt("LVIII"))
-	log.Println(romanToInt("MCMXCIV"))
-}
+// func main() {
+// 	log.Println(romanToInt("III"))
+// 	log.Println(romanToInt("LVIII"))
+// 	log.Println(romanToInt("MCMXCIV"))
+// }

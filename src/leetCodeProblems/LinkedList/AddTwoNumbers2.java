@@ -6,7 +6,7 @@ package leetCodeProblems.LinkedList;
  * Space Complexity - O(1)
  * */
 
-public class AddTwoNumbers2 {
+public class Numbers2 {
 
     static class ListNode {
         int val;
@@ -18,7 +18,7 @@ public class AddTwoNumbers2 {
 
     private ListNode startPointer = null;
 
-    private void addTwoNumbersUtils(ListNode l1, ListNode l2, ListNode out, int carry) {
+    private void NumbersUtils(ListNode l1, ListNode l2, ListNode out, int carry) {
 
         if (l1 == null && l2 == null) {
 
@@ -76,12 +76,12 @@ public class AddTwoNumbers2 {
             out.next = newNode;
         }
 
-        addTwoNumbersUtils(firstNextNode, secondNextNode, newNode, carry);
+        NumbersUtils(firstNextNode, secondNextNode, newNode, carry);
     }
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode Numbers(ListNode l1, ListNode l2) {
 
-        addTwoNumbersUtils(l1, l2, null, 0);
+        NumbersUtils(l1, l2, null, 0);
 
         return startPointer;
     }
@@ -114,8 +114,8 @@ public class AddTwoNumbers2 {
         l2.next.next = new ListNode(9);
         l2.next.next.next = new ListNode(9);
 
-        AddTwoNumbers2 obj = new AddTwoNumbers2();
-        ListNode output = obj.addTwoNumbers(l1, l2);
+        Numbers2 obj = new Numbers2();
+        ListNode output = obj.Numbers(l1, l2);
 
         obj.printList(output);
 

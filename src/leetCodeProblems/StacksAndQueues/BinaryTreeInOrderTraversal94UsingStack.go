@@ -31,20 +31,20 @@ func inorderTraversal(root *TreeNode) []int {
 	}
 
 	out := []int{}
-	current := root
+	toProcess := root
 
 	s := stackTreeNode{}
 
-	for !s.isEmpty() || current != nil {
+	for !s.isEmpty() || toProcess != nil {
 
-		for current != nil {
-			s.push(current)
-			current = current.Left
+		for toProcess != nil {
+			s.push(toProcess)
+			toProcess = toProcess.Left
 		}
 
-		current = s.pop()
-		out = append(out, current.Val)
-		current = current.Right
+		temp := s.pop()
+		out = append(out, temp.Val)
+		toProcess = temp.Right
 	}
 
 	return out

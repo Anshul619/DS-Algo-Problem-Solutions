@@ -1,18 +1,18 @@
 package leetCodeProblems.BinaryTree;
 
 /**
- * LeetCode - https://leetcode.com/problems/maximum-depth-of-binary-tree/
+ * LeetCode - https://leetcode.com/problems/maximum--of-binary-tree/
  */
-public class BinaryTreeMaxDepth104 {
+public class BinaryTreeMax104 {
 
-    public int maxDepthUtil(TreeNode node) {
+    public int maxUtil(TreeNode node) {
         if (node == null) {
             return 0;
         }
 
         System.out.println("Current node value -> " + node.val);
-        int leftChildHeight = maxDepthUtil(node.left);
-        int rightChildHeight = maxDepthUtil(node.right);
+        int leftChildHeight = maxUtil(node.left);
+        int rightChildHeight = maxUtil(node.right);
 
         System.out.println("LeftChildHeight => " + leftChildHeight);
         System.out.println("RightChildHeight => " + rightChildHeight);
@@ -26,8 +26,8 @@ public class BinaryTreeMaxDepth104 {
         return currentNodeHeight;
     }
 
-    public int maxDepth(TreeNode root) {
-        return maxDepthUtil(root);
+    public int max(TreeNode root) {
+        return maxUtil(root);
     }
 
     static class TreeNode {
@@ -51,11 +51,11 @@ public class BinaryTreeMaxDepth104 {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        BinaryTreeMaxDepth104 ob = new BinaryTreeMaxDepth104();
+        BinaryTreeMax104 ob = new BinaryTreeMax104();
 
-        int maxDepth = ob.maxDepth(root);
+        int max = ob.max(root);
 
-        System.out.println(maxDepth);
+        System.out.println(max);
 
     }
 }

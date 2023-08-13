@@ -7,7 +7,6 @@ package main
 */
 import (
 	"container/heap"
-	"log"
 )
 
 type CharCount struct {
@@ -81,9 +80,9 @@ func minDeletions(s string) int {
 	return out
 }
 
-func main() {
-	// log.Println(minDeletions("ceabaacb"))
-	// log.Println(minDeletions("aab"))
-	// log.Println(minDeletions("aaabbbcc"))
-	log.Println(minDeletions("bbcebab"))
-}
+// func main() {
+// 	// log.Println(minDeletions("ceabaacb"))
+// 	// log.Println(minDeletions("aab"))
+// 	// log.Println(minDeletions("aaabbbcc"))
+// 	log.Println(minDeletions("bbcebab"))
+// }

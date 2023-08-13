@@ -5,7 +5,6 @@ package main
 - Time - O(logn)
 - Space - O(1)
 */
-import "log"
 
 func bsUtil(start, end, k int, arr []int) int {
 
@@ -52,9 +51,9 @@ func findKthPositive(arr []int, k int) int {
 	return bsUtil(0, len(arr)-1, k, arr)
 }
 
-func main() {
-	//log.Println(findKthPositive([]int{2, 3, 4, 7, 11}, 5))
-	log.Println(findKthPositive([]int{1, 2, 3, 4}, 2))
-	//log.Println(findKthPositive([]int{2}, 1))
-	//log.Println(findKthPositive([]int{7, 13, 21, 25, 29, 32, 38, 45}, 4))
-}
+// func main() {
+// 	//log.Println(findKthPositive([]int{2, 3, 4, 7, 11}, 5))
+// 	log.Println(findKthPositive([]int{1, 2, 3, 4}, 2))
+// 	//log.Println(findKthPositive([]int{2}, 1))
+// 	//log.Println(findKthPositive([]int{7, 13, 21, 25, 29, 32, 38, 45}, 4))
+// }

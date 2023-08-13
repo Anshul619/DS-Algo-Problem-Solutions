@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(n)
 */
-import "log"
 
 type keysQueue []int
 
@@ -54,7 +53,7 @@ func canVisitAllRooms(rooms [][]int) bool {
 	return true
 }
 
-func main() {
-	log.Println(canVisitAllRooms([][]int{{1}, {2}, {3}, {}}))
-	log.Println(canVisitAllRooms([][]int{{1, 3}, {3, 0, 1}, {2}, {0}}))
-}
+// func main() {
+// 	log.Println(canVisitAllRooms([][]int{{1}, {2}, {3}, {}}))
+// 	log.Println(canVisitAllRooms([][]int{{1, 3}, {3, 0, 1}, {2}, {0}}))
+// }
