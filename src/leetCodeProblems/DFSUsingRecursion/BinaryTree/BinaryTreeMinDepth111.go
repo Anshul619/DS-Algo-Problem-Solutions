@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"math"
 )
 
@@ -38,18 +37,18 @@ func minDepth(root *TreeNode) int {
 	return out
 }
 
-func main() {
-	root := new(TreeNode) //Returns pointer to TreeNode object
-	root.Val = 3
-	root.Left = new(TreeNode)
-	root.Left.Val = 9
+// func main() {
+// 	root := new(TreeNode) //Returns pointer to TreeNode object
+// 	root.Val = 3
+// 	root.Left = new(TreeNode)
+// 	root.Left.Val = 9
 
-	root.Right = new(TreeNode)
-	root.Right.Val = 20
-	root.Right.Left = new(TreeNode)
-	root.Right.Left.Val = 15
-	root.Right.Right = new(TreeNode)
-	root.Right.Right.Val = 7
+// 	root.Right = new(TreeNode)
+// 	root.Right.Val = 20
+// 	root.Right.Left = new(TreeNode)
+// 	root.Right.Left.Val = 15
+// 	root.Right.Right = new(TreeNode)
+// 	root.Right.Right.Val = 7
 
-	log.Println(minDepth(root))
-}
+// 	log.Println(minDepth(root))
+// }

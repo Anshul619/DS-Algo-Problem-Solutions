@@ -27,7 +27,7 @@ func insertAtEnd(node *Node1, nodeToInsert *Node1) {
 	next.Next = nodeToInsert
 	nodeToInsert.Prev = next
 }
-func flatten(root *Node1) *Node1 {
+func flatten1(root *Node1) *Node1 {
 	if root == nil {
 		return nil
 	}
@@ -37,7 +37,7 @@ func flatten(root *Node1) *Node1 {
 	for next != nil {
 		if next.Child != nil {
 			temp := next.Next
-			next.Next = flatten(next.Child)
+			next.Next = flatten1(next.Child)
 			next.Next.Prev = next
 			next.Child = nil
 			insertAtEnd(next.Next, temp)

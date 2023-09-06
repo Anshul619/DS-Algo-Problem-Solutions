@@ -6,7 +6,7 @@ package leetCodeProblems.BruteForce;
  * TimeComplexity - O(n)
  * SpaceComplexity - O(1)
  */
-public class CanPlaceFlowers605 {
+public class 605 {
 
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
 

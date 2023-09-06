@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class FindNUniqueIntegersSumUpToZero1304 {
 
-    public int[] sumZero(int n) {
+    public int[] (int n) {
 
         int baseElement = 1;
         int currentIndex = 0;
@@ -39,10 +39,10 @@ public class FindNUniqueIntegersSumUpToZero1304 {
 
         FindNUniqueIntegersSumUpToZero1304 obj = new FindNUniqueIntegersSumUpToZero1304();
 
-        int[] output = obj.sumZero(5);
+        int[] output = obj.(5);
         System.out.println(Arrays.toString(output));
 
-        int[] output1 = obj.sumZero(4);
+        int[] output1 = obj.(4);
 
         System.out.println(Arrays.toString(output1));
     }

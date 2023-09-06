@@ -4,8 +4,8 @@ import "log"
 
 /*
 - LeetCode - https://leetcode.com/problems/search-in-a-binary-search-tree/
-- Time - O(n)
-- Space - O(1)
+- Time - O(logn)
+- Space - O(logn) (considering the stack used in recursion)
 */
 
 func searchBST(root *TreeNode, val int) *TreeNode {

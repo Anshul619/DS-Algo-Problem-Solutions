@@ -1,7 +1,7 @@
 package leetCodeProblems.BruteForce;
 
 /**
- * LeetCode - https://www.interviewbit.com/problems/implement-strstr/
+ * LeetCode - https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
  * InterviewBit - https://www.interviewbit.com/problems/implement-strstr/
  * 
  * @author anshul.agrawal

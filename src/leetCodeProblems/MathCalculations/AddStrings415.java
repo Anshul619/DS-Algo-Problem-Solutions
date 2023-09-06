@@ -5,9 +5,9 @@ package leetCodeProblems.MathCalculations;
  * Time Complexity - O(n)
  * Space Complexity - O(1)
  */
-public class AddStrings415 {
+public class 415 {
 
-    public String addStrings(String num1, String num2) {
+    public String (String num1, String num2) {
 
         int num1Pointer = num1.length()-1;
         int num2Pointer = num2.length()-1;
@@ -52,18 +52,18 @@ public class AddStrings415 {
 
         String num1 = "11";
         String num2 = "123";
-        AddStrings415 obj = new AddStrings415();
-        //System.out.println(obj.addStrings(num1, num2)); // expected o/p = 134
+        415 obj = new 415();
+        //System.out.println(obj.(num1, num2)); // expected o/p = 134
 
         num1 = "456";
         num2 = "77";
 
-        System.out.println(obj.addStrings(num1, num2)); // expected o/p = 533
+        System.out.println(obj.(num1, num2)); // expected o/p = 533
 
         //num1 = "0";
         //num2 = "0";
 
-        //System.out.println(obj.addStrings(num1, num2)); // expected o/p = 0
+        //System.out.println(obj.(num1, num2)); // expected o/p = 0
 
     }
 }

@@ -5,7 +5,6 @@ package main
 - Time - O(mn)
 - Space - O(mn)
 */
-import "log"
 
 func onesMinusZeros(grid [][]int) [][]int {
 
@@ -37,6 +36,6 @@ func onesMinusZeros(grid [][]int) [][]int {
 	return out
 }
 
-func main() {
-	log.Println(onesMinusZeros([][]int{{0, 1, 1}, {1, 0, 1}, {0, 0, 1}}))
-}
+// func main() {
+// 	log.Println(onesMinusZeros([][]int{{0, 1, 1}, {1, 0, 1}, {0, 0, 1}}))
+// }

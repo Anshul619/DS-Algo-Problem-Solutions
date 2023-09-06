@@ -9,7 +9,7 @@ package leetCodeProblems.MathCalculations;
 
 import java.util.HashSet;
 
-public class HappyNumber202 {
+public class 202 {
 
     private int getDigitsSum(int n) {
 
@@ -44,7 +44,7 @@ public class HappyNumber202 {
 
     public static void main(String[] args) {
 
-        HappyNumber202 obj = new HappyNumber202();
+        202 obj = new HappyNumber202();
 
         System.out.println(obj.isHappy(2));
     }

@@ -2,9 +2,10 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/strictly-palindromic-number/
+- Time - O(n)
+- Space - O(1)
 */
 import (
-	"log"
 	"strconv"
 )
 
@@ -18,7 +19,7 @@ func calculateBase(base int, n int) string {
 	return out
 }
 
-func isPalindrome(s string) bool {
+func isPalindrome1(s string) bool {
 
 	for i := 0; i < len(s)/2; i++ {
 		if s[i] != s[len(s)-1-i] {
@@ -33,8 +34,7 @@ func isStrictlyPalindromic(n int) bool {
 
 	for i := 2; i <= n-2; i++ {
 		base := calculateBase(i, n)
-		log.Println(base)
-		if !isPalindrome(base) {
+		if !isPalindrome1(base) {
 			return false
 		}
 

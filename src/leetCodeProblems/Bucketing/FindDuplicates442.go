@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 func findDuplicates(nums []int) []int {
 	n := len(nums) + 1
@@ -25,9 +24,9 @@ func findDuplicates(nums []int) []int {
 	return out
 }
 
-func main() {
-	log.Println(findDuplicates([]int{4, 3, 2, 7, 8, 2, 3, 1}))
-	log.Println(findDuplicates([]int{1, 1, 2}))
-	log.Println(findDuplicates([]int{1}))
-	log.Println(findDuplicates([]int{10, 2, 5, 10, 9, 1, 1, 4, 3, 7}))
-}
+// func main() {
+// 	log.Println(findDuplicates([]int{4, 3, 2, 7, 8, 2, 3, 1}))
+// 	log.Println(findDuplicates([]int{1, 1, 2}))
+// 	log.Println(findDuplicates([]int{1}))
+// 	log.Println(findDuplicates([]int{10, 2, 5, 10, 9, 1, 1, 4, 3, 7}))
+// }

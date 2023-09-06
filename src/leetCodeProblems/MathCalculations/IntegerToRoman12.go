@@ -6,8 +6,6 @@ package main
 - Space - O(1)
 */
 
-import "log"
-
 func getRomainFromFraction(fraction int) string {
 	switch fraction {
 	case 1000:
@@ -57,8 +55,8 @@ func intToRoman(num int) string {
 	return out
 }
 
-func main() {
-	log.Println(intToRoman(3))
-	log.Println(intToRoman(58))
-	log.Println(intToRoman(1994))
-}
+// func main() {
+// 	log.Println(intToRoman(3))
+// 	log.Println(intToRoman(58))
+// 	log.Println(intToRoman(1994))
+// }

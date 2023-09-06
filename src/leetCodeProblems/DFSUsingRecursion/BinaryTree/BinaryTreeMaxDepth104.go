@@ -6,7 +6,7 @@ package main
 - Space - O(1)
 */
 
-func maxDepthUtil(node *TreeNode, height int, maxHeight *int) {
+func calculateHeight(node *TreeNode, height int, maxHeight *int) {
 	if node == nil {
 		return
 	}
@@ -14,8 +14,8 @@ func maxDepthUtil(node *TreeNode, height int, maxHeight *int) {
 		*maxHeight = height
 	}
 
-	maxDepthUtil(node.Left, height+1, maxHeight)
-	maxDepthUtil(node.Right, height+1, maxHeight)
+	calculateHeight(node.Left, height+1, maxHeight)
+	calculateHeight(node.Right, height+1, maxHeight)
 }
 
 func maxDepth(root *TreeNode) int {
@@ -24,7 +24,7 @@ func maxDepth(root *TreeNode) int {
 	}
 
 	out := 0
-	maxDepthUtil(root, 0, &out)
+	calculateHeight(root, 0, &out)
 	return out + 1
 }
 
