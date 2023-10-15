@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - Leetcode - https://leetcode.com/problems/happy-number/
 - Time - O(nlogn)
@@ -33,8 +31,8 @@ func isHappy(n int) bool {
 	return n == 1
 }
 
-func main() {
-	log.Println(isHappy(19))
-	log.Println(isHappy(2))
-	//log.Println(intToRoman(1994))
-}
+// func main() {
+// 	log.Println(isHappy(19))
+// 	log.Println(isHappy(2))
+// 	//log.Println(intToRoman(1994))
+// }

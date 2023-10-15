@@ -3,14 +3,14 @@ package leetCodeProblems.BinarySearch;
 /**
  * LeetCode - https://leetcode.com/problems/first-bad-version
  *
- * TimeComplexity - O(nlogn)
+ * TimeComplexity - O(logn)
  * SpaceComplexity - O(1)
  */
-public class FirstBadVersion278{
+public class Version278{
 
     int badVersion;
 
-    FirstBadVersion278(int badVersion) {
+    Version278(int badVersion) {
         this.badVersion = badVersion;
     }
 
@@ -22,7 +22,7 @@ public class FirstBadVersion278{
         return false;
     }
 
-    public int firstBadVersion(int n) {
+    public int Version(int n) {
 
         int left = 1;
         int right = n;
@@ -46,8 +46,8 @@ public class FirstBadVersion278{
 
     public static void main(String[] args) {
 
-        FirstBadVersion278 obj = new FirstBadVersion278(2);
+        Version278 obj = new Version278(2);
 
-        System.out.println(obj.firstBadVersion(5));
+        System.out.println(obj.Version(5));
     }
 }

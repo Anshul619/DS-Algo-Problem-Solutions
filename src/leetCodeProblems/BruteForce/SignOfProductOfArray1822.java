@@ -8,7 +8,7 @@ package leetCodeProblems.BruteForce;
  */
 public class SignOfProductOfArray1822 {
 
-    public int arraySign(int[] nums) {
+    public int (int[] nums) {
 
         double product = 1;
 
@@ -47,6 +47,6 @@ public class SignOfProductOfArray1822 {
         int[] nums = {9,72,34,29,-49,-22,-77,-17,-66,-75,-44,-30,-24};
 
         SignOfProductOfArray1822 obj = new SignOfProductOfArray1822();
-        System.out.println(obj.arraySign(nums));
+        System.out.println(obj.(nums));
     }
 }

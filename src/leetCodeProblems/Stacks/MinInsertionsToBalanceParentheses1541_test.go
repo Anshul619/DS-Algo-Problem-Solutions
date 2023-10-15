@@ -22,3 +22,18 @@ func Test_minInsertions3(t *testing.T) {
 		t.Fatalf("Test_minInsertions3 fail")
 	}
 }
+
+func Test_minInsertions4(t *testing.T) {
+	t.Run("test41", func(t *testing.T) {
+		if !reflect.DeepEqual(minInsertions("(()))(()))()())))"), 4) {
+			t.Fatalf("Test_minInsertions4 fail")
+		}
+	})
+
+	t.Run("test42", func(t *testing.T) {
+		if !reflect.DeepEqual(minInsertions("(((()(()((())))(((()())))()())))(((()(()()((()()))"), 31) {
+			t.Fatalf("Test_minInsertions4 fail")
+		}
+	})
+
+}

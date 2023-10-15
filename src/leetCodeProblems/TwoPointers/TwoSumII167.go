@@ -6,7 +6,7 @@ package main
 - Space - O(1)
 */
 
-func twoSum(numbers []int, target int) []int {
+func twoSum1(numbers []int, target int) []int {
 
 	out := []int{}
 

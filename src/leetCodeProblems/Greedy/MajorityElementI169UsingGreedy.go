@@ -1,9 +1,5 @@
 package main
 
-import (
-	"log"
-)
-
 /*
 - LeetCode - https://leetcode.com/problems/majority-element/
 - Time - O(nlogn)
@@ -48,7 +44,7 @@ func majorityElement(nums []int) int {
 	return -1
 }
 
-func main() {
-	log.Println(majorityElement([]int{3, 2, 3}))
-	log.Println(majorityElement([]int{2, 2, 1, 1, 1, 2, 2}))
-}
+// func main() {
+// 	log.Println(majorityElement([]int{3, 2, 3}))
+// 	log.Println(majorityElement([]int{2, 2, 1, 1, 1, 2, 2}))
+// }

@@ -1,7 +1,7 @@
 package leetCodeProblems.ArrayMatrixTwoD;
 
 /**
- * LeetCode - https://leetcode.com/problems/transpose-matrix/solution/
+ * LeetCode - https://leetcode.com/problems/-matrix/solution/
  *
  * TimeComplexity - O(R*C)
  * SpaceComplexity - O(R*C) where R denotes number of rows, C denotes number of columns
@@ -9,7 +9,7 @@ package leetCodeProblems.ArrayMatrixTwoD;
 
 import java.util.Arrays;
 
-public class TransposeMatrix867 {
+public class Matrix867 {
 
     private void printMatrix(int[][] matrix) {
 
@@ -20,7 +20,7 @@ public class TransposeMatrix867 {
         }
     }
 
-    public int[][] transpose(int[][] matrix) {
+    public int[][] (int[][] matrix) {
 
         int rowsCount = matrix.length;
         int columnsCount = matrix[0].length;
@@ -42,8 +42,8 @@ public class TransposeMatrix867 {
         int[][] input = {{1,2,3}, {4,5,6}};
         //int[][] input = {{1,2,3}, {4,5,6}, {7,8,9}};
 
-        TransposeMatrix867 obj = new TransposeMatrix867();
-        int[][] output = obj.transpose(input);
+        Matrix867 obj = new Matrix867();
+        int[][] output = obj.(input);
 
         obj.printMatrix(output);
     }

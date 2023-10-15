@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"sort"
 )
 
@@ -44,8 +43,8 @@ func countKDifference(nums []int, k int) int {
 	return out
 }
 
-func main() {
+// func main() {
 
-	//log.Println(countKDifference([]int{1, 2, 2, 1}, 1))
-	log.Println(countKDifference([]int{10, 2, 10, 9, 1, 6, 8, 9, 2, 8}, 5))
-}
+// 	//log.Println(countKDifference([]int{1, 2, 2, 1}, 1))
+// 	log.Println(countKDifference([]int{10, 2, 10, 9, 1, 6, 8, 9, 2, 8}, 5))
+// }

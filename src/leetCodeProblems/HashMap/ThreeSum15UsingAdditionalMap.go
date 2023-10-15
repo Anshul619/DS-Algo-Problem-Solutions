@@ -2,6 +2,8 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/3sum/
+- Time - O(n^2)
+- Space - O(n)
 */
 import (
 	//"log"
@@ -10,7 +12,7 @@ import (
 	"strconv"
 )
 
-func threeSum(nums []int) [][]int {
+func threeSum1(nums []int) [][]int {
 
 	hashMap := make(map[int]int)
 	targetSum := 0

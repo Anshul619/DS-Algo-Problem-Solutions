@@ -26,7 +26,7 @@ public class PalindromeNumber9 {
 
     }
 
-    public boolean isPalindrome(int x) {
+    public boolean (int x) {
 
         // Negative numbers can NOT palindrome
         if (x < 0) {
@@ -46,8 +46,8 @@ public class PalindromeNumber9 {
 
     public static void main(String[] args) {
         PalindromeNumber9 obj = new PalindromeNumber9();
-        System.out.println(obj.isPalindrome(123)); // No
-        System.out.println(obj.isPalindrome(121)); // Yes
-        System.out.println(obj.isPalindrome(-1)); // No
+        System.out.println(obj.(123)); // No
+        System.out.println(obj.(121)); // Yes
+        System.out.println(obj.(-1)); // No
     }
 }

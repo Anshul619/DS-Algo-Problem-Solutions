@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - LeetCode - https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/
 - Time - O(n)
@@ -22,9 +20,9 @@ func sumZero(n int) []int {
 	return out
 }
 
-func main() {
-	log.Println(sumZero(5))
-	log.Println(sumZero(3))
-	log.Println(sumZero(1))
-	log.Println(sumZero(4))
-}
+// func main() {
+// 	log.Println(sumZero(5))
+// 	log.Println(sumZero(3))
+// 	log.Println(sumZero(1))
+// 	log.Println(sumZero(4))
+// }
