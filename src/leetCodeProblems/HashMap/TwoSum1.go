@@ -1,7 +1,7 @@
 package main
 
 /*
-- LeetCode - https://leetcode.com/problems/two-sum/solutions/3723755/go-hash-map-100-faster/
+- LeetCode - https://leetcode.com/problems/two-sum/description/
 - Time - O(n)
 - Space - O(n)
 */

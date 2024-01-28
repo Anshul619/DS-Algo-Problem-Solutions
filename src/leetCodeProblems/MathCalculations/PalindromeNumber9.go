@@ -8,9 +8,3 @@ package main
 func isPalindrome(x int) bool {
 
 }
-
-// func main() {
-// 	log.Println(romanToInt("III"))
-// 	log.Println(romanToInt("LVIII"))
-// 	log.Println(romanToInt("MCMXCIV"))
-// }
