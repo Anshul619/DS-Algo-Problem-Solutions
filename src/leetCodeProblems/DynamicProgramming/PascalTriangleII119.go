@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 - LeetCode - https://leetcode.com/problems/pascals-triangle-ii/
 - Time - O(n)
@@ -21,9 +19,9 @@ func getRow(rowIndex int) []int {
 	return out
 }
 
-func main() {
-	log.Println(getRow(3))
-	log.Println(getRow(0))
-	log.Println(getRow(5))
-	log.Println(getRow(1))
-}
+// func main() {
+// 	log.Println(getRow(3))
+// 	log.Println(getRow(0))
+// 	log.Println(getRow(5))
+// 	log.Println(getRow(1))
+// }
