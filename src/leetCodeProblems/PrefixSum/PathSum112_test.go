@@ -51,4 +51,26 @@ func TestBinaryTreeHasPathSum112(t *testing.T) {
 			t.Fail()
 		}
 	})
+
+	t.Run("test4", func(t *testing.T) {
+		root := new(TreeNode) //Returns pointer to TreeNode object
+		root.Val = 1
+		root.Left = new(TreeNode)
+		root.Left.Val = 2
+
+		if hasPathSum(root, 1) {
+			t.Fail()
+		}
+	})
+
+	t.Run("test5", func(t *testing.T) {
+		root := new(TreeNode) //Returns pointer to TreeNode object
+		root.Val = -2
+		root.Right = new(TreeNode)
+		root.Right.Val = -3
+
+		if !hasPathSum(root, -5) {
+			t.Fail()
+		}
+	})
 }

@@ -44,6 +44,31 @@ func isPalindrome(s string) bool {
 	return true
 }
 
+// Alternative solution
+func isPalindrome2(s string) bool {
+	s = strings.ToLower(s)
+	f, l := 0, len(s)-1
+
+	for f <= l {
+		switch {
+
+		case !unicode.IsLetter(rune(s[f])) && !unicode.IsDigit(rune(s[f])):
+			f++
+		case !unicode.IsLetter(rune(s[l])) && !unicode.IsDigit(rune(s[l])):
+			l--
+		default:
+			if s[f] != s[l] {
+				return false
+			} else {
+				f++
+				l--
+			}
+		}
+	}
+
+	return true
+}
+
 // func main() {
 // 	//plants := []int{2, 2, 3, 3}
 
