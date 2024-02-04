@@ -3,7 +3,6 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/maximum-binary-tree/discuss/2674931/Go-Recursion-or-DFS-or-2-Pointers-or-85-Faster-or-85-Less-Memory
 */
-import "log"
 
 func maximumBTUtil(nums []int, start int, end int, isLeftChild bool, parent *TreeNode) *TreeNode {
 
@@ -43,19 +42,6 @@ func maximumBTUtil(nums []int, start int, end int, isLeftChild bool, parent *Tre
 
 func constructMaximumBinaryTree(nums []int) *TreeNode {
 	return maximumBTUtil(nums, 0, len(nums)-1, true, nil)
-}
-
-func printInOrder(node *TreeNode) {
-
-	if node == nil {
-		log.Println("null")
-		return
-	}
-
-	log.Println(node.Val)
-	printInOrder(node.Left)
-
-	printInOrder(node.Right)
 }
 
 // func main() {

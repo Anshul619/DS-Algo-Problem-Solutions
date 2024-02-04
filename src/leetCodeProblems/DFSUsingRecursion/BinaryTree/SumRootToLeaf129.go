@@ -8,12 +8,6 @@ import (
 	"strconv"
 )
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func sumNumbersUtil(node *TreeNode, pathVal int) int {
 
 	if node == nil {

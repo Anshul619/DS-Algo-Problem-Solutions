@@ -26,3 +26,5 @@ hs_err_pid*
 out/
 .idea
 DS-Algo1.iml
+
+src/leetCodeProblems/1_Practice

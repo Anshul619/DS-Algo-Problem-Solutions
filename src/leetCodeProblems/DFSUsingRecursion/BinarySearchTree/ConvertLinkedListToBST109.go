@@ -5,17 +5,10 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
-}
-
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
 }
 
 var listNode *ListNode
@@ -55,17 +48,6 @@ func sortedListToBSTUtil(n int) *TreeNode {
 func sortedListToBST(head *ListNode) *TreeNode {
 	listNode = head
 	return sortedListToBSTUtil(countNodes(head))
-}
-
-func printTree(node *TreeNode) {
-
-	if node == nil {
-		return
-	}
-
-	printTree(node.Left)
-	log.Println(node.Val)
-	printTree(node.Right)
 }
 
 // func main() {

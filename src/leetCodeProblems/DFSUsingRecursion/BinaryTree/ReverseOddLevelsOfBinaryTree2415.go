@@ -5,7 +5,6 @@ package main
 - Time - O(n)
 - Space - O(logn) // recursive call stack
 */
-import "log"
 
 func reverseOddLevelUtil(node *TreeNode, reverseNode *TreeNode, level int) {
 
@@ -28,16 +27,6 @@ func reverseOddLevelUtil(node *TreeNode, reverseNode *TreeNode, level int) {
 func reverseOddLevels(root *TreeNode) *TreeNode {
 	reverseOddLevelUtil(root.Left, root.Right, 1)
 	return root
-}
-
-func printInOrder(node *TreeNode) {
-	if node == nil {
-		return
-	}
-
-	log.Println(node.Val)
-	printInOrder(node.Left)
-	printInOrder(node.Right)
 }
 
 // func main() {
