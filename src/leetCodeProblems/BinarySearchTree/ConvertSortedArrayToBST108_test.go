@@ -8,13 +8,13 @@ import (
 	"testing"
 )
 
-func inOrderTraversal(node *TreeNode, out *[]int) {
+func inOrderTraversal1(node *TreeNode, out *[]int) {
 	if node == nil {
 		return
 	}
-	inOrderTraversal(node.Left, out)
+	inOrderTraversal1(node.Left, out)
 	*out = append(*out, node.Val)
-	inOrderTraversal(node.Right, out)
+	inOrderTraversal1(node.Right, out)
 }
 
 func TestSortedArrayToBST(t *testing.T) {
@@ -22,7 +22,7 @@ func TestSortedArrayToBST(t *testing.T) {
 		node := sortedArrayToBST([]int{-10, -3, 0, 5, 9})
 
 		out := []int{}
-		inOrderTraversal(node, &out)
+		inOrderTraversal1(node, &out)
 		if node.Val != 0 {
 			t.Fail()
 		}

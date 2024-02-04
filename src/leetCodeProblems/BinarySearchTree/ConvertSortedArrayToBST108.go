@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/submissions/
-- Time - O(n)
+- Time - O(nlogn)
 - Space - O(1)
 */
 

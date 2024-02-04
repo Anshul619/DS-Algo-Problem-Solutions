@@ -4,12 +4,6 @@ package main
 - LeetCode - https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 */
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func inOrderTraversal(node *TreeNode, k int) (int, int) {
 	if node == nil || k <= 0 {
 		return -1, k
