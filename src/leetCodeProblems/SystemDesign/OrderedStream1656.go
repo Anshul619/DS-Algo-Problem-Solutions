@@ -13,7 +13,7 @@ type OrderedStream struct {
 	ptr    int
 }
 
-func Constructor(n int) OrderedStream {
+func Constructor3(n int) OrderedStream {
 	return OrderedStream{make([]string, n), 0}
 }
 
@@ -29,7 +29,7 @@ func (this *OrderedStream) Insert(idKey int, value string) []string {
 }
 
 func main() {
-	obj := Constructor(5)
+	obj := Constructor3(5)
 
 	log.Println(obj.Insert(3, "ccccc"))
 	log.Println(obj.Insert(1, "aaaaa"))

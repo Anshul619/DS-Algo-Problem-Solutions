@@ -2,10 +2,9 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/lru-cache/
+- Time - O(n)
+- Space - O(n)
 */
-// import (
-// 	"log"
-// )
 
 type Queue []int
 
@@ -49,21 +48,21 @@ func (s *Queue) RemoveKey(num int) {
 	}
 }
 
-type LRUCache struct {
+type LRUCache2 struct {
 	lruMap   map[int]int
 	lruQueue *Queue
 	size     int
 }
 
-// func Constructor(capacity int) LRUCache {
-// 	cache := new(LRUCache)
-// 	cache.size = capacity
-// 	cache.lruMap = make(map[int]int)
-// 	cache.lruQueue = new(Queue)
-// 	return *cache
-// }
+func Constructor2(capacity int) LRUCache2 {
+	cache := new(LRUCache2)
+	cache.size = capacity
+	cache.lruMap = make(map[int]int)
+	cache.lruQueue = new(Queue)
+	return *cache
+}
 
-func (this *LRUCache) addToQueue(key int) {
+func (this *LRUCache2) addToQueue(key int) {
 
 	if _, ok := this.lruMap[key]; ok {
 		this.lruQueue.RemoveKey(key)
@@ -72,7 +71,7 @@ func (this *LRUCache) addToQueue(key int) {
 	this.lruQueue.Add(key)
 }
 
-func (this *LRUCache) Get(key int) int {
+func (this *LRUCache2) Get2(key int) int {
 
 	if v, ok := this.lruMap[key]; ok {
 		this.addToQueue(key)
@@ -82,8 +81,7 @@ func (this *LRUCache) Get(key int) int {
 	}
 }
 
-func (this *LRUCache) Put(key int, value int) {
-
+func (this *LRUCache2) Put2(key int, value int) {
 	if _, ok := this.lruMap[key]; ok {
 		this.addToQueue(key)
 		this.lruMap[key] = value
