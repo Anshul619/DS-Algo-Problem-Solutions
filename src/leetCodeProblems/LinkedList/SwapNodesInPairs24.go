@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/swap-nodes-in-pairs/submissions/
-- TimeCompelxity - O(n)
+- Time Complexity - O(n)
 */
 
 // type ListNode struct {
