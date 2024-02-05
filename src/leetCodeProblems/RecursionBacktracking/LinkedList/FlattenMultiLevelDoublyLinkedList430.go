@@ -5,76 +5,45 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "log"
-
-type Node1 struct {
+type Node struct {
 	Val   int
-	Prev  *Node1
-	Next  *Node1
-	Child *Node1
+	Prev  *Node
+	Next  *Node
+	Child *Node
 }
 
-func insertAtEnd(node *Node1, nodeToInsert *Node1) {
-	if nodeToInsert == nil {
-		return
+// Insert nodeToInsert between root and its next. And return the tail/last node of the list
+func insertNode(root, nodeToInsert *Node) *Node {
+	nodeToInsertTail := nodeToInsert
+
+	for nodeToInsertTail.Next != nil {
+		nodeToInsertTail = nodeToInsertTail.Next
 	}
 
-	next := node
-	for next.Next != nil {
-		next = next.Next
+	rootNext := root.Next
+
+	root.Next = nodeToInsert
+	nodeToInsert.Prev = root // Doubly list
+
+	nodeToInsertTail.Next = rootNext
+	if rootNext != nil {
+		rootNext.Prev = nodeToInsertTail // Doubly list
 	}
 
-	next.Next = nodeToInsert
-	nodeToInsert.Prev = next
+	return rootNext
 }
-func flatten1(root *Node1) *Node1 {
-	if root == nil {
-		return nil
-	}
 
+func flatten(root *Node) *Node {
 	next := root
 
 	for next != nil {
 		if next.Child != nil {
-			temp := next.Next
-			next.Next = flatten1(next.Child)
-			next.Next.Prev = next
-			next.Child = nil
-			insertAtEnd(next.Next, temp)
+			t := next // Save next as its going to be changed
+			next = insertNode(next, flatten(next.Child))
+			t.Child = nil
+		} else {
+			next = next.Next
 		}
-		next = next.Next
 	}
 	return root
 }
-
-func printLinkedList1(node *Node1) {
-
-	next := node
-	for next != nil {
-		log.Println(next.Val)
-		if next.Prev != nil {
-			log.Println("Prev", next.Prev.Val)
-		}
-		next = next.Next
-	}
-}
-
-// func main() {
-// 	head := new(Node1)
-// 	head.Val = 8
-// 	head.Next = new(Node1)
-// 	head.Next.Val = 9
-// 	head.Next.Prev = head
-// 	head.Next.Next = new(Node1)
-// 	head.Next.Next.Val = 10
-// 	head.Next.Next.Prev = head.Next
-
-// 	child := new(Node1)
-// 	child.Val = 11
-// 	child.Next = new(Node1)
-// 	child.Next.Val = 12
-// 	head.Child = child
-// 	flatten(head)
-
-// 	printLinkedList1(head)
-// }
