@@ -1,46 +1,26 @@
 package main
 
-/*
-- LeetCode - https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-- Time - O(n)
-- Space - O(1)
-*/
-
 func removeDuplicates(nums []int) int {
-
 	if len(nums) == 0 {
 		return 0
 	}
 
-	firstPointer := 0
-	secondPointer := 1
-	lastElement := nums[firstPointer]
+	unique := 0
 
-	for secondPointer < len(nums) {
+	for i := 1; i < len(nums); i++ {
 
-		if nums[secondPointer] != lastElement {
-			firstPointer++
+		// if numbers are same, increase i counter
+		// otherwise, swap elements
+		if nums[unique] != nums[i] {
+			unique++
 
-			temp := nums[secondPointer]
-			nums[secondPointer] = nums[firstPointer]
-			nums[firstPointer] = temp
-
-			lastElement = nums[firstPointer]
+			// swap elements
+			if i != unique {
+				t := nums[i]
+				nums[i] = nums[unique]
+				nums[unique] = t
+			}
 		}
-
-		secondPointer++
 	}
-
-	return firstPointer + 1
+	return unique + 1
 }
-
-// func main() {
-// 	//nums := []int{1, 1, 2}
-
-// 	//nums := []int{1}
-
-// 	//nums := []int{1, 2}
-
-// 	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
-// 	log.Println(removeDuplicates(nums))
-// }
