@@ -4,21 +4,9 @@ package main
 - Leetcode - https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
 */
 import (
-	"log"
 	"reflect"
 	"testing"
 )
-
-func getSlice(list *ListNode) []int {
-	out := []int{}
-
-	for list != nil {
-		out = append(out, list.Val)
-		list = list.Next
-	}
-	log.Println(out)
-	return out
-}
 
 func TestDeleteDuplicates(t *testing.T) {
 	t.Run("test1", func(t *testing.T) {

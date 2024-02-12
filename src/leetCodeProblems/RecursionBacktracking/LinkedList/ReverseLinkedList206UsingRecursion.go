@@ -1,9 +1,11 @@
 package main
 
+import "log"
+
 /*
 - LeetCode - https://leetcode.com/problems/reverse-linked-list/
-- TimeComplexity - O(N)
-- SpaceComplexity - O(1)
+- TimeComplexity - O(n)
+- SpaceComplexity - O(n)
 */
 
 func reverseListUsingRecursion(head *ListNode) *ListNode {
@@ -12,6 +14,7 @@ func reverseListUsingRecursion(head *ListNode) *ListNode {
 	}
 
 	new := reverseListUsingRecursion(head.Next)
+	log.Println(head, "new", new.Val, "head.Next.Next", head.Next.Next)
 	head.Next.Next = head
 	head.Next = nil
 	return new
