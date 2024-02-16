@@ -6,11 +6,6 @@ package main
 - Space - O(1)
 */
 
-type ListNode struct {
-	Next *ListNode
-	Val  int
-}
-
 func countNodes(head *ListNode) int {
 
 	next, count := head, 0
