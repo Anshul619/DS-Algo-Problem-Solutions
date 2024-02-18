@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/single-element-in-a-sorted-array/
-- TimeComplexity - O(logn)
+- TimeComplexity - O(log n)
 - SpaceComplexity - O(1)
 */
 
