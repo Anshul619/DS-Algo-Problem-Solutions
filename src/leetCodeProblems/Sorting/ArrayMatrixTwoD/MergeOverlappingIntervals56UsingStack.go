@@ -30,7 +30,7 @@ func (s stack) isEmpty() bool {
 	return len(s) == 0
 }
 
-func max(a, b int) int {
+func max1(a, b int) int {
 	if a > b {
 		return a
 	}

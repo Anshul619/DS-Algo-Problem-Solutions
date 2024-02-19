@@ -7,7 +7,6 @@ package main
 */
 import (
 	"container/heap"
-	"log"
 )
 
 type ListNode struct {
@@ -43,7 +42,7 @@ func (h *nodesPQ) Pop() interface{} {
 func mergeKLists(lists []*ListNode) *ListNode {
 	pq := new(nodesPQ)
 
-	log.Println(lists)
+	//log.Println(lists)
 	var head *ListNode
 	var cur *ListNode
 
