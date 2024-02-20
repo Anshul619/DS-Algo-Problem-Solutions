@@ -7,28 +7,16 @@ package main
 */
 
 func canJump(nums []int) bool {
-
 	max := 0
-	newJump := 0
 
 	for i, v := range nums {
-
 		if i > max {
 			return false
 		}
 
-		newJump = i + v
-		if max < newJump {
-			max = newJump
+		if max < i+v {
+			max = i + v
 		}
 	}
-
 	return true
 }
-
-// func main() {
-// 	nums := []int{2, 3, 1, 1, 4}
-
-// 	//nums := []int{3, 2, 1, 0, 4}
-// 	log.Println(canJump(nums))
-// }
