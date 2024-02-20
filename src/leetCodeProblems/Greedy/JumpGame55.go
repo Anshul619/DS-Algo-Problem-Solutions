@@ -6,7 +6,7 @@ package main
 - Space - O(1)
 */
 
-func canJump(nums []int) bool {
+func canJump1(nums []int) bool {
 	max := 0
 
 	for i, v := range nums {

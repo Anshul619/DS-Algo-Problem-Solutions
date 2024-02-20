@@ -15,7 +15,7 @@ func TestCanJump(t *testing.T) {
 	}
 
 	for i, v := range tests {
-		if canJump(v.nums) != v.expected {
+		if canJump1(v.nums) != v.expected {
 			t.Errorf("test failed - %v", i)
 		}
 	}
