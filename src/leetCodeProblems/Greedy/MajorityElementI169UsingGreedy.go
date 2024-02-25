@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/majority-element/
-- Time - O(nlogn)
+- Time - O(n)
 - Space - O(1)
 */
 
@@ -23,7 +23,7 @@ func findCandidate(nums []int) int {
 	return nums[majorIndex]
 }
 
-func isMajority(nums []int, candidate int) bool {
+func isMajority1(nums []int, candidate int) bool {
 	count := 0
 
 	for _, v := range nums {
@@ -34,7 +34,7 @@ func isMajority(nums []int, candidate int) bool {
 
 	return count > len(nums)/2
 }
-func majorityElement(nums []int) int {
+func majorityElement1(nums []int) int {
 
 	c := findCandidate(nums)
 
