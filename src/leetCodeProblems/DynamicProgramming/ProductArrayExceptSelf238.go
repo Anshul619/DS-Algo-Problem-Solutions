@@ -1,5 +1,10 @@
 package main
 
+/*
+- Leetcode - https://leetcode.com/problems/product-of-array-except-self/description/
+- Time - O(n)
+- Space - O(n)
+*/
 func productExceptSelf(nums []int) []int {
 
 	product := make([]int, len(nums))
