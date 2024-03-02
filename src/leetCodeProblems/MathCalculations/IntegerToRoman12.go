@@ -54,9 +54,3 @@ func intToRoman(num int) string {
 	}
 	return out
 }
-
-// func main() {
-// 	log.Println(intToRoman(3))
-// 	log.Println(intToRoman(58))
-// 	log.Println(intToRoman(1994))
-// }
