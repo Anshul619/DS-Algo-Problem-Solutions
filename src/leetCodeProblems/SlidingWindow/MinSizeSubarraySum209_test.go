@@ -14,15 +14,15 @@ func TestMinSubArrayLen(t *testing.T) {
 		nums     []int
 		expected int
 	}{
-		// {7, []int{2, 3, 1, 2, 4, 3}, 2},
-		// {4, []int{1, 4, 4}, 1},
-		// {11, []int{1, 1, 1, 1, 1, 1, 1, 1}, 0},
+		{7, []int{2, 3, 1, 2, 4, 3}, 2},
+		{4, []int{1, 4, 4}, 1},
+		{11, []int{1, 1, 1, 1, 1, 1, 1, 1}, 0},
 		{4, []int{2, 1, 2, 1}, 3},
 	}
 
-	for _, v := range tests {
+	for i, v := range tests {
 		if minSubArrayLen(v.target, v.nums) != v.expected {
-			t.Fail()
+			t.Errorf("failed %v", i)
 		}
 	}
 }

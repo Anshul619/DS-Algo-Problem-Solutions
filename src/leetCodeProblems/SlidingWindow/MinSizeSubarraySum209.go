@@ -5,15 +5,9 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-import "math"
 
 func minSubArrayLen(target int, nums []int) int {
-
-	if len(nums) == 0 {
-		return 0
-	}
-
-	out := math.MaxInt
+	out := 0
 
 	start, sum := 0, 0
 
@@ -21,17 +15,13 @@ func minSubArrayLen(target int, nums []int) int {
 		sum += nums[i]
 
 		for sum >= target {
-			if (i - start + 1) < out {
+			if out == 0 || (i-start+1) < out {
 				out = i - start + 1
 			}
 
 			sum -= nums[start]
 			start++
 		}
-	}
-
-	if out == math.MaxInt {
-		return 0
 	}
 	return out
 }

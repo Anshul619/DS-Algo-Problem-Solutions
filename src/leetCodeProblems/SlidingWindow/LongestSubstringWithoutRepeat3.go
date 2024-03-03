@@ -5,7 +5,6 @@ package main
 - Space - O(n)
 - Time - O(n)
 */
-import "log"
 
 func lengthOfLongestSubstring(s string) int {
 	m := make(map[rune]int)
@@ -28,12 +27,4 @@ func lengthOfLongestSubstring(s string) int {
 	}
 
 	return out
-}
-
-func main() {
-	//log.Println(lengthOfLongestSubstring("abcabcbb"))
-	// log.Println(lengthOfLongestSubstring("bbbbb"))
-	//log.Println(lengthOfLongestSubstring("abba"))
-
-	log.Println(lengthOfLongestSubstring(" "))
 }
