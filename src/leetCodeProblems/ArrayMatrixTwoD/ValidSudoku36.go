@@ -1,99 +1,68 @@
 package main
 
 /*
-- LeetCode - https://leetcode.com/problems/valid-sudoku/submissions/
+- LeetCode - https://leetcode.com/problems/valid-sudoku/description/
+- Time - O(9*9)
+- Space - O(9)
 */
-import (
-	"log"
-	"strconv"
-)
-
-func isValidNum(num byte) bool {
-	byteToInt, _ := strconv.Atoi(string(num))
-
-	if 0 > byteToInt || byteToInt > 9 {
-		log.Println("false")
-		return false
-	}
-
-	return true
-}
-
 func isValidSudoku(board [][]byte) bool {
 
-	mapDigits := make(map[byte]bool)
-
-	rowsLength := len(board)
-	colsLength := len(board[0])
-
-	// Check all rows
-	for i := 0; i < rowsLength; i++ {
-
-		mapDigits = make(map[byte]bool)
-
-		for j := 0; j < colsLength; j++ {
-
+	// Rows traversal
+	for i := 0; i < 9; i++ {
+		m := make([]bool, 9)
+		for j := 0; j < 9; j++ {
 			if board[i][j] != '.' {
-				if ok := mapDigits[board[i][j]]; ok || !isValidNum(board[i][j]) {
+				if ok := m[board[i][j]-byte('0')-1]; ok {
 					return false
 				}
-
-				mapDigits[board[i][j]] = true
+				m[board[i][j]-byte('0')-1] = true
 			}
 		}
 	}
 
-	// Check all columns
-	for i := 0; i < colsLength; i++ {
-
-		mapDigits = make(map[byte]bool)
-
-		for j := 0; j < rowsLength; j++ {
-
-			if board[j][i] != '.' {
-				//log.Println(i, j, board[i][j])
-				if ok := mapDigits[board[j][i]]; ok || !isValidNum(board[j][i]) {
+	// Columns traversal
+	for j := 0; j < 9; j++ {
+		m := make([]bool, 9)
+		for i := 0; i < 9; i++ {
+			if board[i][j] != '.' {
+				if ok := m[board[i][j]-byte('0')-1]; ok {
 					return false
 				}
-
-				mapDigits[board[j][i]] = true
+				m[board[i][j]-byte('0')-1] = true
 			}
 		}
 	}
 
-	// Check subboxes 3 x 3
-	for i := 0; i < rowsLength; i = i + 3 {
+	// Diagonal traversal
+	rowStart := 0
+	rowEnd := 2
 
-		for j := 0; j < colsLength; j = j + 3 {
+	for l := 0; l < 3; l++ {
 
-			mapDigits = make(map[byte]bool)
+		colStart := 0
+		colEnd := 2
 
-			for k := 0; k < 3; k++ {
+		for k := 0; k < 3; k++ {
+			m := make([]bool, 9)
 
-				for l := 0; l < 3; l++ {
-
-					elem := board[i+k][j+l]
-
-					if elem != '.' {
-						if ok := mapDigits[elem]; ok || !isValidNum(elem) {
+			for i := rowStart; i <= rowEnd; i++ {
+				for j := colStart; j <= colEnd; j++ {
+					if board[i][j] != '.' {
+						if ok := m[board[i][j]-byte('0')-1]; ok {
 							return false
 						}
 
-						mapDigits[elem] = true
+						m[board[i][j]-byte('0')-1] = true
 					}
 				}
 			}
-		}
-	}
+			colStart += 3
+			colEnd += 3
 
+		}
+
+		rowStart += 3
+		rowEnd += 3
+	}
 	return true
 }
-
-// func main() {
-
-// 	//board := [][]byte{{'5', '3', '.', '.', '7', '.', '.', '.', '.'}, {'6', '.', '.', '1', '9', '5', '.', '.', '.'}, {'.', '9', '8', '.', '.', '.', '.', '6', '.'}, {'8', '.', '.', '.', '6', '.', '.', '.', '3'}, {'4', '.', '.', '8', '.', '3', '.', '.', '1'}, {'7', '.', '.', '.', '2', '.', '.', '.', '6'}, {'.', '6', '.', '.', '.', '.', '2', '8', '.'}, {'.', '.', '.', '4', '1', '9', '.', '.', '5'}, {'.', '.', '.', '.', '8', '.', '.', '7', '9'}}
-
-// 	board := [][]byte{{'.', '.', '4', '.', '.', '.', '6', '3', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.', '.'}, {'5', '.', '.', '.', '.', '.', '.', '9', '.'}, {'.', '.', '.', '5', '6', '.', '.', '.', '.'}, {'4', '.', '3', '.', '.', '.', '.', '.', '1'}, {'.', '.', '.', '7', '.', '.', '.', '.', '.'}, {'.', '.', '.', '5', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.', '.'}, {'.', '.', '.', '.', '.', '.', '.', '.', '.'}}
-
-// 	log.Println(isValidSudoku(board))
-// }

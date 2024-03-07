@@ -2,8 +2,8 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/merge-k-sorted-lists/submissions/
-- Time - O(n*k*logk)
-- Space - O(k)
+- Time - O(N * K * logK)
+- Space - O(K)
 */
 import (
 	"container/heap"
@@ -68,43 +68,3 @@ func mergeKLists(lists []*ListNode) *ListNode {
 
 	return head
 }
-
-// func main() {
-
-// 	input := []*ListNode{}
-
-// 	// list1 := new(ListNode)
-// 	// list1.Val = 1
-// 	// list1.Next = new(ListNode)
-// 	// list1.Next.Val = 4
-// 	// list1.Next.Next = new(ListNode)
-// 	// list1.Next.Next.Val = 5
-
-// 	// input = append(input, list1)
-
-// 	// list2 := new(ListNode)
-// 	// list2.Val = 1
-// 	// list2.Next = new(ListNode)
-// 	// list2.Next.Val = 3
-// 	// list2.Next.Next = new(ListNode)
-// 	// list2.Next.Next.Val = 4
-
-// 	// input = append(input, list2)
-
-// 	// list3 := new(ListNode)
-// 	// list3.Val = 2
-// 	// list3.Next = new(ListNode)
-// 	// list3.Next.Val = 6
-
-// 	// input = append(input, list3)
-
-// 	// list4 := new(ListNode)
-// 	// input = append(input, list4)
-
-// 	out := mergeKLists(input)
-
-// 	for out != nil {
-// 		log.Println(out.Val)
-// 		out = out.Next
-// 	}
-// }
