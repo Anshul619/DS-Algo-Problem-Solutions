@@ -6,8 +6,6 @@ package main
 - Space - O(n)
 */
 import (
-	//"log"
-
 	"sort"
 	"strconv"
 )
@@ -32,8 +30,7 @@ func threeSum(nums []int) [][]int {
 			if sum == targetSum {
 				pairKey := strconv.Itoa(nums[left]) + "_" + strconv.Itoa(nums[right]) + "_" + strconv.Itoa(v)
 				if _, uOk := uniqueOutMap[pairKey]; !uOk {
-					temp := append([]int{}, nums[left], nums[right], v)
-					out = append(out, temp)
+					out = append(out, []int{v, nums[left], nums[right]})
 					uniqueOutMap[pairKey] = true
 				}
 			}
@@ -45,14 +42,5 @@ func threeSum(nums []int) [][]int {
 			}
 		}
 	}
-
 	return out
 }
-
-// func main() {
-
-// 	//nums := []int{-1, 0, 1, 2, -1, -4}
-// 	log.Println(threeSum([]int{-1, 0, 1, 2, -1, -4}))
-// 	log.Println(threeSum([]int{0, 1, 1}))
-// 	log.Println(threeSum([]int{0, 0, 0}))
-// }

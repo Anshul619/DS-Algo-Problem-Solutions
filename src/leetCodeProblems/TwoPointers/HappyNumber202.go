@@ -3,7 +3,7 @@ package main
 /*
 - Leetcode - https://leetcode.com/problems/happy-number/
 - Time - O(nlogn)
-- Space - O(n)
+- Space - O(1)
 */
 
 func calculateSquaresSum(n int) int {
@@ -18,15 +18,19 @@ func calculateSquaresSum(n int) int {
 	return sum
 }
 func isHappy(n int) bool {
-	m := make(map[int]struct{})
 
-	for n != 1 {
-		if _, ok := m[n]; ok {
-			return false
+	slow, fast := n, n
+
+	for {
+		slow = calculateSquaresSum(slow)
+		fast = calculateSquaresSum(calculateSquaresSum(fast))
+
+		if slow == 1 {
+			return true
 		}
 
-		m[n] = struct{}{}
-		n = calculateSquaresSum(n)
+		if slow == fast {
+			return false
+		}
 	}
-	return n == 1
 }

@@ -2,8 +2,9 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/isomorphic-strings/
+- Time - O(n)
+- Space - O(n)
 */
-//import "log"
 
 func isIsomorphic(s string, t string) bool {
 
