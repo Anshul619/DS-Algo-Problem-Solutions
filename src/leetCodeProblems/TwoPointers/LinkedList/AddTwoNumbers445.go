@@ -48,7 +48,7 @@ func addTwoNumbersUtil(l1, l2 *ListNode, diff int) (*ListNode, int) {
 
 }
 
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+func addTwoNumbers1(l1 *ListNode, l2 *ListNode) *ListNode {
 	size1 := getSize(l1)
 	size2 := getSize(l2)
 

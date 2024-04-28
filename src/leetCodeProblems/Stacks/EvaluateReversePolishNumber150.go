@@ -2,6 +2,8 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/evaluate-reverse-polish-notation
+- Time - O(n)
+- Space - O(n)
 */
 import (
 	"strconv"
@@ -57,11 +59,3 @@ func evalRPN(tokens []string) int {
 
 	return out
 }
-
-// func main() {
-
-// 	//tokens := []string{"2", "1", "+", "3", "*"}
-// 	//tokens := []string{"4", "13", "5", "/", "+"}
-// 	tokens := []string{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}
-// 	log.Println(evalRPN(tokens))
-// }

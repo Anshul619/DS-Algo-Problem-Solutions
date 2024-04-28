@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func TestRemoveNthFromEnd(t *testing.T) {
+func TestRotateRight(t *testing.T) {
 	t.Run("test1", func(t *testing.T) {
 		list := new(ListNode)
 		list.Val = 1
@@ -21,27 +21,26 @@ func TestRemoveNthFromEnd(t *testing.T) {
 		list.Next.Next.Next.Next = new(ListNode)
 		list.Next.Next.Next.Next.Val = 5
 
-		if !reflect.DeepEqual(getSlice(removeNthFromEnd(list, 2)), []int{1, 2, 3, 5}) {
+		if !reflect.DeepEqual(getSlice(rotateRight(list, 2)), []int{4, 5, 1, 2, 3}) {
 			t.Fail()
 		}
 	})
 
 	t.Run("test2", func(t *testing.T) {
 		list := new(ListNode)
-		list.Val = 1
+		list.Val = 0
+		list.Next = new(ListNode)
+		list.Next.Val = 1
+		list.Next.Next = new(ListNode)
+		list.Next.Next.Val = 2
 
-		if !reflect.DeepEqual(getSlice(removeNthFromEnd(list, 1)), []int{}) {
+		if !reflect.DeepEqual(getSlice(rotateRight(list, 4)), []int{2, 0, 1}) {
 			t.Fail()
 		}
 	})
 
 	t.Run("test3", func(t *testing.T) {
-		list := new(ListNode)
-		list.Val = 1
-		list.Next = new(ListNode)
-		list.Next.Val = 2
-
-		if !reflect.DeepEqual(getSlice(removeNthFromEnd(list, 1)), []int{1}) {
+		if !reflect.DeepEqual(getSlice(rotateRight(nil, 0)), []int{}) {
 			t.Fail()
 		}
 	})
@@ -52,7 +51,27 @@ func TestRemoveNthFromEnd(t *testing.T) {
 		list.Next = new(ListNode)
 		list.Next.Val = 2
 
-		if !reflect.DeepEqual(getSlice(removeNthFromEnd(list, 2)), []int{2}) {
+		if !reflect.DeepEqual(getSlice(rotateRight(list, 0)), []int{1, 2}) {
+			t.Fail()
+		}
+	})
+
+	t.Run("test5", func(t *testing.T) {
+		list := new(ListNode)
+		list.Val = 1
+		list.Next = new(ListNode)
+		list.Next.Val = 2
+
+		if !reflect.DeepEqual(getSlice(rotateRight(list, 1)), []int{2, 1}) {
+			t.Fail()
+		}
+	})
+
+	t.Run("test6", func(t *testing.T) {
+		list := new(ListNode)
+		list.Val = 1
+
+		if !reflect.DeepEqual(getSlice(rotateRight(list, 1)), []int{1}) {
 			t.Fail()
 		}
 	})
