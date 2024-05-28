@@ -11,6 +11,7 @@ func addNode(head *ListNode, next *ListNode, val int) (*ListNode, *ListNode) {
 	temp.Val = val
 
 	if next == nil {
+		head = temp
 		return temp, temp
 	} else {
 		next.Next = temp
@@ -75,51 +76,3 @@ func sortList(head *ListNode) *ListNode {
 
 	return merge(head, list2)
 }
-
-// func main() {
-// 	// head := new(ListNode)
-// 	// head.Val = 4
-// 	// head.Next = new(ListNode)
-// 	// head.Next.Val = 2
-// 	// head.Next.Next = new(ListNode)
-// 	// head.Next.Next.Val = 1
-// 	// head.Next.Next.Next = new(ListNode)
-// 	// head.Next.Next.Next.Val = 3
-
-// 	// print(sortList(head))
-
-// 	// head := new(ListNode)
-// 	// head.Val = -1
-// 	// head.Next = new(ListNode)
-// 	// head.Next.Val = 5
-// 	// head.Next.Next = new(ListNode)
-// 	// head.Next.Next.Val = 3
-// 	// head.Next.Next.Next = new(ListNode)
-// 	// head.Next.Next.Next.Val = 4
-// 	// head.Next.Next.Next.Next = new(ListNode)
-// 	// head.Next.Next.Next.Next.Val = 0
-
-// 	// print(sortList(head))
-
-// 	// head := new(ListNode)
-// 	// head.Val = -1
-// 	// head.Next = new(ListNode)
-// 	// head.Next.Val = 5
-
-// 	// print(sortList(head))
-
-// 	head := new(ListNode)
-// 	head.Val = 1
-// 	head.Next = new(ListNode)
-// 	head.Next.Val = 3
-// 	head.Next.Next = new(ListNode)
-// 	head.Next.Next.Val = 3
-// 	head.Next.Next.Next = new(ListNode)
-// 	head.Next.Next.Next.Val = 1
-// 	head.Next.Next.Next.Next = new(ListNode)
-// 	head.Next.Next.Next.Next.Val = 3
-
-// 	print(sortList(head))
-
-// 	//print(sortList(nil))
-// }

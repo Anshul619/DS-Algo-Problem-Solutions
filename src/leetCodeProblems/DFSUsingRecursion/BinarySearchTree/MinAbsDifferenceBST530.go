@@ -10,12 +10,12 @@ import (
 	"math"
 )
 
-func checkNode(node *TreeNode, lastVal, minDiff *int) {
+func checkMinDiff(node *TreeNode, lastVal, minDiff *int) {
 	if node == nil {
 		return
 	}
 
-	checkNode(node.Left, lastVal, minDiff)
+	checkMinDiff(node.Left, lastVal, minDiff)
 
 	if *lastVal != -1 && node.Val-*lastVal < *minDiff {
 		*minDiff = node.Val - *lastVal
@@ -24,12 +24,12 @@ func checkNode(node *TreeNode, lastVal, minDiff *int) {
 
 	*lastVal = node.Val
 
-	checkNode(node.Right, lastVal, minDiff)
+	checkMinDiff(node.Right, lastVal, minDiff)
 }
 
 func getMinimumDifference(root *TreeNode) int {
 	out, lastVal := math.MaxInt, -1
 
-	checkNode(root, &lastVal, &out)
+	checkMinDiff(root, &lastVal, &out)
 	return out
 }

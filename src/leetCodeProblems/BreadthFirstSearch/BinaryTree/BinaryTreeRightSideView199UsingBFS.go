@@ -5,11 +5,6 @@ package main
 - Time - O(h*w)
 - Space - O(w)
 */
-// type TreeNode struct {
-// 	Val   int
-// 	Left  *TreeNode
-// 	Right *TreeNode
-// }
 
 type queue2 []*TreeNode
 
@@ -18,9 +13,13 @@ func (q *queue2) push(n *TreeNode) {
 }
 
 func (q *queue2) pop() *TreeNode {
-	t := (*q)[0]
+	n := (*q)[0]
 	*q = (*q)[1:]
-	return t
+	return n
+}
+
+func (q queue2) peek() *TreeNode {
+	return q[0]
 }
 
 func (q queue2) isEmpty() bool {
@@ -32,38 +31,28 @@ func rightSideView(root *TreeNode) []int {
 		return []int{}
 	}
 
-	out := []int{}
-
 	q := new(queue2)
 	q.push(root)
+	out := []int{}
 
-	isInserted := false
 	for !q.isEmpty() {
-
 		q1 := new(queue2)
-		isInserted = false
+
+		out = append(out, q.peek().Val)
 
 		for !q.isEmpty() {
-			t := q.pop()
+			n := q.pop()
 
-			if !isInserted {
-				out = append(out, t.Val)
-				isInserted = true
+			if n.Right != nil {
+				q1.push(n.Right)
 			}
 
-			if t.Right != nil {
-				q1.push(t.Right)
-			}
-
-			if t.Left != nil {
-				q1.push(t.Left)
+			if n.Left != nil {
+				q1.push(n.Left)
 			}
 		}
 
-		for !q1.isEmpty() {
-			q.push(q1.pop())
-		}
+		q = q1
 	}
-
 	return out
 }
