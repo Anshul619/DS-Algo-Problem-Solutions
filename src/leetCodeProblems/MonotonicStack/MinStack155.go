@@ -27,41 +27,40 @@ func (s stack3) peek() int {
 }
 
 type MinStack struct {
-	stack  *stack3
-	mStack *stack3
+	s  *stack3
+	ms *stack3
 }
 
 func Constructor1() MinStack {
 	return MinStack{
-		stack:  new(stack3),
-		mStack: new(stack3),
+		s:  new(stack3),
+		ms: new(stack3),
 	}
 }
 
 func (this *MinStack) Push(val int) {
-
-	if this.mStack.isEmpty() {
-		this.mStack.push(val)
-	} else if this.mStack.peek() >= val {
-		this.mStack.push(val)
+	if this.ms.isEmpty() || this.ms.peek() >= val {
+		this.ms.push(val)
 	}
 
-	this.stack.push(val)
+	this.s.push(val)
 }
 
 func (this *MinStack) Pop() {
-
-	if this.stack.pop() == this.mStack.peek() {
-		this.mStack.pop()
+	if !this.ms.isEmpty() &&
+		this.s.peek() == this.ms.peek() {
+		this.ms.pop()
 	}
+
+	this.s.pop()
 }
 
 func (this *MinStack) Top() int {
-	return this.stack.peek()
+	return this.s.peek()
 }
 
 func (this *MinStack) GetMin() int {
-	return this.mStack.peek()
+	return this.ms.peek()
 }
 
 // func main() {
