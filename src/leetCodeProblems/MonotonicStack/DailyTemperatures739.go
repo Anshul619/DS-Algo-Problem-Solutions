@@ -2,79 +2,54 @@ package main
 
 /**
 - LeetCode - https://leetcode.com/problems/daily-temperatures
+- Time - O(n)
+- Space - O(n)
 */
 
-type TempWithIndex struct {
-	Val   int
-	Index int
+type Temp struct {
+	Val int
+	Day int
 }
 
-type stack2 []TempWithIndex
+type tStack []Temp
 
-func (s *stack2) push(e TempWithIndex) {
-	*s = append(*s, e)
+func (s *tStack) push(t Temp) {
+	*s = append(*s, t)
 }
 
-func (s *stack2) size() int {
-	return len(*s)
+func (s *tStack) pop() Temp {
+	t := (*s)[len(*s)-1]
+	*s = (*s)[:len(*s)-1]
+	return t
 }
 
-func (s *stack2) isEmpty() bool {
-	return s.size() == 0
+func (s tStack) isEmpty() bool {
+	return len(s) == 0
 }
 
-func (s *stack2) peek() (bool, TempWithIndex) {
-	if !s.isEmpty() {
-		return true, (*s)[len(*s)-1]
-	}
-	return false, TempWithIndex{}
-}
-
-func (s *stack2) pop() (bool, TempWithIndex) {
-	if !s.isEmpty() {
-		e := (*s)[len(*s)-1]
-		*s = (*s)[:len(*s)-1]
-		return true, e
-	}
-	return false, TempWithIndex{}
+func (s tStack) peek() Temp {
+	return s[len(s)-1]
 }
 
 func dailyTemperatures(temperatures []int) []int {
-
 	out := make([]int, len(temperatures))
-	monoStack := new(stack2)
 
-	for i := len(temperatures) - 1; i > -1; i-- {
+	s := new(tStack)
 
-		for !monoStack.isEmpty() {
-			_, elem := monoStack.peek()
-
-			if elem.Val > temperatures[i] {
-				break
-			}
-
-			monoStack.pop()
+	for i := len(temperatures) - 1; i >= 0; i-- {
+		for !s.isEmpty() &&
+			s.peek().Val <= temperatures[i] {
+			s.pop()
 		}
 
-		if monoStack.isEmpty() {
-			out[i] = 0
-		} else {
-			_, elem := monoStack.peek()
-			out[i] = elem.Index - i
+		if !s.isEmpty() {
+			out[i] = s.peek().Day - i
 		}
 
-		monoStack.push(TempWithIndex{temperatures[i], i})
+		s.push(Temp{
+			Val: temperatures[i],
+			Day: i,
+		})
 	}
-
 	return out
 }
-
-// func main() {
-
-// 	//temperatures := []int{73, 74, 75, 71, 69, 72, 76, 73}
-// 	//temperatures := []int{30, 40, 50, 60}
-// 	temperatures := []int{30, 60, 90}
-
-// 	log.Println(dailyTemperatures(temperatures))
-
-// }
