@@ -2,7 +2,6 @@ package main
 
 import (
 	"container/heap"
-	"log"
 )
 
 /*
@@ -24,9 +23,4 @@ func findKthLargest(nums []int, k int) int {
 		heap.Push(pq, v)
 	}
 	return pq.Peek().(int)
-}
-
-func main() {
-	log.Println(findKthLargest([]int{3, 2, 1, 5, 6, 4}, 2))
-	log.Println(findKthLargest([]int{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4))
 }

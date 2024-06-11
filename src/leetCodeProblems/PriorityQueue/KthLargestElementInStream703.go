@@ -33,6 +33,7 @@ func (pq *elementsQueue) Push(num interface{}) {
 	*pq = append(*pq, num.(int))
 }
 
+// This is how PQ works - same way as stack
 func (pq *elementsQueue) Pop() interface{} {
 	len := len(*pq)
 	num := (*pq)[len-1]
@@ -40,6 +41,7 @@ func (pq *elementsQueue) Pop() interface{} {
 	return num
 }
 
+// This is again special case of PQ peek - peek from start
 func (pq elementsQueue) Peek() interface{} {
 	return pq[0]
 }
@@ -75,19 +77,3 @@ func (this *KthLargest) Add(val int) int {
 	heap.Push(this.pq, val)
 	return this.pq.Peek().(int)
 }
-
-// func main() {
-// 	// obj := Constructor(3, []int{4, 5, 8, 2})
-// 	// log.Println(obj.Add(3))
-// 	// log.Println(obj.Add(5))
-// 	// log.Println(obj.Add(10))
-// 	// log.Println(obj.Add(9))
-// 	// log.Println(obj.Add(4))
-
-// 	obj := Constructor(2, []int{0})
-// 	log.Println(obj.Add(-1))
-// 	log.Println(obj.Add(1))
-// 	log.Println(obj.Add(-2))
-// 	log.Println(obj.Add(-4))
-// 	log.Println(obj.Add(3))
-// }
