@@ -37,8 +37,3 @@ func tribonacci(n int) int {
 	dp := make([]int, n+1)
 	return tribonacciUtil(dp, n)
 }
-
-// func main() {
-// 	log.Println(tribonacci(4))
-// 	log.Println(tribonacci(25))
-// }

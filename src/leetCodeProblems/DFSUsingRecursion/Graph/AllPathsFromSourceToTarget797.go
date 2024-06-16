@@ -3,40 +3,31 @@ package main
 /*
 - Leetcode - https://leetcode.com/problems/all-paths-from-source-to-target/
 */
-func util(graph [][]int, temp *[]int, out *[][]int, num int, target int) {
+func recurPath(graph [][]int, path *[]int, out *[][]int, node int) {
 
-	*temp = append(*temp, num)
+	*path = append(*path, node)
 
-	if num == target {
-		*out = append(*out, *temp)
+	// reached target
+	if node == len(graph)-1 {
+		*out = append(*out, *path)
 		return
 	}
 
-	for _, v := range graph[num] {
+	for _, v := range graph[node] {
+		newPath := []int{}
+		newPath = append(newPath, *path...)
 
-		temp1 := []int{}
-		temp1 = append(temp1, *temp...)
-		util(graph, &temp1, out, v, target)
+		recurPath(graph, &newPath, out, v)
 	}
-
 }
+
 func allPathsSourceTarget(graph [][]int) [][]int {
-
 	out := [][]int{}
-	target := len(graph) - 1
 
+	// 0 is the source
 	for _, v := range graph[0] {
-		temp := []int{0}
-		util(graph, &temp, &out, v, target)
+		path := []int{0}
+		recurPath(graph, &path, &out, v)
 	}
-
 	return out
 }
-
-// func main() {
-
-// 	graph := [][]int{{1, 2}, {3}, {3}, {}}
-// 	//graph := [][]int{{4, 3, 1}, {3, 2, 4}, {3}, {4}, {}}
-
-// 	log.Println(allPathsSourceTarget(graph))
-// }

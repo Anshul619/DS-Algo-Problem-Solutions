@@ -2,10 +2,9 @@ package main
 
 /*
 - Leetcode - https://leetcode.com/problems/find-if-path-exists-in-graph/description/
-- Time - O(n+m)
-- Space - O(n+m)
+- Time - O(V+E)
+- Space - O(V+E)
 */
-import "log"
 
 type vQueue []int
 
@@ -64,10 +63,4 @@ func validPath(n int, edges [][]int, source int, destination int) bool {
 		visited[v] = true
 	}
 	return false
-}
-
-func main() {
-	log.Println(validPath(3, [][]int{{0, 1}, {1, 2}, {2, 0}}, 0, 2))
-	log.Println(validPath(6, [][]int{{0, 1}, {0, 2}, {3, 5}, {5, 4}, {4, 3}}, 0, 5))
-	//log.Println(canVisitAllRooms([][]int{{1, 3}, {3, 0, 1}, {2}, {0}}))
 }
