@@ -2,54 +2,39 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/house-robber/
+- Time - O(n)
+- Space - O(1)
 */
-//import "log"
-
-// func max(num1 int, num2 int) int {
-
-// 	if num1 > num2 {
-// 		return num1
+// func max(a, b int) int {
+// 	if a > b {
+// 		return a
 // 	}
-// 	return num2
+// 	return b
 // }
 
 func rob(nums []int) int {
-
-	length := len(nums)
-
-	if length == 0 {
-		return 0
+	if len(nums) == 0 {
+		return -1
 	}
 
 	value1 := nums[0]
 
-	if length == 1 {
+	if len(nums) == 1 {
 		return value1
 	}
 
 	value2 := max(value1, nums[1])
 
-	if length == 2 {
+	if len(nums) == 2 {
 		return value2
 	}
 
-	out := 0
+	var out int
 
-	for i := 2; i < length; i++ {
+	for i := 2; i < len(nums); i++ {
 		out = max(nums[i]+value1, value2)
 		value1 = value2
 		value2 = out
 	}
-
 	return out
 }
-
-// func main() {
-
-// 	//input := []int{1, 2, 3, 1}
-// 	//input := []int{2, 7, 9, 3, 1}
-
-// 	input := []int{2, 1, 1, 2}
-
-// 	log.Println(rob(input))
-// }

@@ -24,16 +24,9 @@ func leftRightDifference(nums []int) []int {
 	leftSum := 0
 
 	for i, v := range nums {
-		rightSum := totalSum - v - leftSum
-
-		out[i] = diff(leftSum, rightSum)
+		out[i] = diff(leftSum, totalSum-v-leftSum)
 		leftSum += v
 	}
 
 	return out
 }
-
-// func main() {
-// 	log.Println(leftRightDifference([]int{10, 4, 8, 3}))
-// 	log.Println(leftRightDifference([]int{1}))
-// }
