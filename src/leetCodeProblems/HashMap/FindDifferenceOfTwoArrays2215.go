@@ -34,10 +34,3 @@ func findDifference(nums1 []int, nums2 []int) [][]int {
 
 	return out
 }
-
-// func main() {
-// 	log.Println(findDifference([]int{1, 2, 3}, []int{2, 4, 6}))
-// 	log.Println(findDifference([]int{1, 2, 3, 3}, []int{1, 1, 2, 2}))
-// 	// log.Println(findShortestSubArray([]int{1, 2, 2, 3, 1, 4, 2}))
-// 	// log.Println(findShortestSubArray([]int{1}))
-// }

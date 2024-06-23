@@ -6,7 +6,7 @@ import (
 
 /*
 - LeetCode - https://leetcode.com/problems/kth-largest-element-in-an-array/
-- Time - O(n + klogn)
+- Time - O(N*LogK)
 - Space - O(k)
 */
 func findKthLargest(nums []int, k int) int {
