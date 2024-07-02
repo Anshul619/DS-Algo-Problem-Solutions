@@ -19,9 +19,3 @@ func containsDuplicate(nums []int) bool {
 
 	return false
 }
-
-// func main() {
-// 	log.Println(twoSum([]int{2, 7, 11, 15}, 9))
-// 	log.Println(twoSum([]int{3, 2, 4}, 6))
-// 	log.Println(twoSum([]int{3, 3}, 6))
-// }

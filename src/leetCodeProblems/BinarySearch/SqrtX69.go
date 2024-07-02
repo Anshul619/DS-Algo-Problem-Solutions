@@ -32,11 +32,3 @@ func mySqrt(x int) int {
 
 	return ans
 }
-
-// func main() {
-// 	log.Println(mySqrt(4))
-// 	log.Println(mySqrt(8))
-// 	log.Println(mySqrt(3))
-
-// 	log.Println(mySqrt(5))
-// }

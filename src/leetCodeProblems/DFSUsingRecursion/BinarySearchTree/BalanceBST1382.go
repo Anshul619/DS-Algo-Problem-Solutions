@@ -7,12 +7,6 @@ package main
 */
 import "log"
 
-// type TreeNode struct {
-// 	Val   int
-// 	Left  *TreeNode
-// 	Right *TreeNode
-// }
-
 func bstToSortedArray(node *TreeNode, sortedArray *[]int) {
 
 	if node == nil {
