@@ -26,7 +26,7 @@ func longestConsecutive(nums []int) int {
 				}
 			}
 
-			out = max(out, j)
+			//out = max(out, j)
 
 			if j > len(nums)/2 {
 				break
