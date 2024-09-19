@@ -32,18 +32,15 @@ func isValid(s string) bool {
 	for _, v := range s {
 		switch string(v) {
 		case ")":
-			e := st.pop()
-			if string(e) != "(" {
+			if string(st.pop()) != "(" {
 				return false
 			}
 		case "}":
-			e := st.pop()
-			if string(e) != "{" {
+			if string(st.pop()) != "{" {
 				return false
 			}
 		case "]":
-			e := st.pop()
-			if string(e) != "[" {
+			if string(st.pop()) != "[" {
 				return false
 			}
 		default:
