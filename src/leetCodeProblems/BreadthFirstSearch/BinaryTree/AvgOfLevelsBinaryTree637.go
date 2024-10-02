@@ -2,8 +2,8 @@ package main
 
 /*
 - Leetcode - https://leetcode.com/problems/average-of-levels-in-binary-tree
-- Time - O(n)
-- Space - O(n)
+- Time - O(h*w)
+- Space - O(w)
 */
 
 func averageOfLevels(root *TreeNode) []float64 {
