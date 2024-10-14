@@ -38,9 +38,3 @@ func intersect(nums1 []int, nums2 []int) []int {
 		return checkMap(nums1, m)
 	}
 }
-
-// func main() {
-// 	log.Println(intersect([]int{1, 2, 2, 1}, []int{2, 2}))
-// 	log.Println(intersect([]int{4, 9, 5}, []int{9, 4, 9, 8, 4}))
-// 	log.Println(intersect([]int{3, 1, 2}, []int{1, 1}))
-// }

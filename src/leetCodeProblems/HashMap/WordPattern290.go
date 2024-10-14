@@ -3,21 +3,24 @@ package main
 /*
 - Leetcode - https://leetcode.com/problems/word-pattern/description
 - Time - O(n)
-- Space - O(n)
+- Space - O(m+n) // (where m is length of pattern and n is length of string)
 */
-func findNextWord(s string, i int) (string, int) {
-	out := ""
+func findNextWord(i *int, s string) string {
+	old := *i
 
-	for i < len(s) && s[i] != byte(' ') {
-		out += string(s[i])
-		i++
+	for *i < len(s) && s[*i] != byte(' ') {
+		*i++
+	}
 
+	if old == *i {
+		return ""
 	}
 
 	// one more increase fo space
-	i++
-	return out, i
+	*i++
+	return string(s[old : *i-1])
 }
+
 func wordPattern(pattern string, s string) bool {
 	m := make(map[rune]string)
 	mr := make(map[string]rune)
@@ -25,19 +28,20 @@ func wordPattern(pattern string, s string) bool {
 	i := 0
 
 	for _, v := range pattern {
-		var w string
-		w, i = findNextWord(s, i)
+		w := findNextWord(&i, s)
 
 		if w == "" {
 			return false
 		}
 
-		if p1, ok := mr[w]; ok && p1 != v {
+		if _, ok := m[v]; ok && m[v] != w {
 			return false
 		}
-		if p, ok := m[v]; ok && p != w {
+
+		if _, ok := mr[w]; ok && mr[w] != v {
 			return false
 		}
+
 		m[v] = w
 		mr[w] = v
 	}
