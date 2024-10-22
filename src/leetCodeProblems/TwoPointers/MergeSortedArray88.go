@@ -21,12 +21,6 @@ func MergeArray(nums1 []int, m int, nums2 []int, n int) {
 		out--
 	}
 
-	for m > -1 {
-		nums1[out] = nums1[m]
-		m--
-		out--
-	}
-
 	for n > -1 {
 		nums1[out] = nums2[n]
 		n--

@@ -22,5 +22,6 @@ func removeElement(nums []int, val int) int {
 		}
 		start++
 	}
+	// or end+1 - +1 as we need to 1-based-index in array
 	return start
 }
