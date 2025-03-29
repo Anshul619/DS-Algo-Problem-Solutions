@@ -5,36 +5,13 @@ package main
 */
 
 func isSubsequence(s string, t string) bool {
+	sp, tp := 0, 0
 
-	sIndex := 0
-
-	if len(s) == 0 {
-		return true
-	}
-
-	for i, _ := range t {
-
-		if s[sIndex] == t[i] {
-			sIndex++
+	for sp < len(s) && tp < len(t) {
+		if s[sp] == t[tp] {
+			sp++
 		}
-
-		if sIndex == len(s) {
-			return true
-		}
+		tp++
 	}
-
-	return false
+	return sp == len(s)
 }
-
-// func main() {
-// 	//s := "abc"
-// 	//t := "ahbgdc"
-
-// 	// s := "axc"
-// 	// t := "ahbgdc"
-
-// 	s := "ahb"
-// 	t := "ahbgdc"
-
-// 	log.Println(isSubsequence(s, t))
-// }

@@ -66,8 +66,3 @@ func mergeUsingStack(intervals [][]int) [][]int {
 	}
 	return out
 }
-
-// func main() {
-// 	//log.Println(merge([][]int{{1, 3}, {15, 18}, {2, 6}, {8, 10}}))
-// 	log.Println(merge([][]int{{1, 4}, {4, 5}}))
-// }

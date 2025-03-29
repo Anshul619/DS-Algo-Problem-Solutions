@@ -1,10 +1,11 @@
 package main
 
-// type TreeNode struct {
-// 	Val   int
-// 	Left  *TreeNode
-// 	Right *TreeNode
-// }
+/*
+- Leetcode - https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/
+- Time - O(n)
+- Exta Space - O(1)
+- Aux Space - O(n)
+*/
 
 func flatten(root *TreeNode) {
 	if root == nil {

@@ -7,22 +7,23 @@ package main
  *
  */
 
-func isValidBSTUtil(root *TreeNode, lower, upper *int) bool {
-	if root == nil {
+// for valid BST, node should be greater than lower and smaller than upper
+func isValidBSTRecur(node *TreeNode, lower, upper *int) bool {
+	if node == nil {
 		return true
 	}
 
-	if lower != nil && root.Val <= *lower {
+	if lower != nil && *lower >= node.Val {
 		return false
 	}
 
-	if upper != nil && root.Val >= *upper {
+	if upper != nil && *upper <= node.Val {
 		return false
 	}
 
-	return isValidBSTUtil(root.Left, lower, &root.Val) && isValidBSTUtil(root.Right, &root.Val, upper)
+	return isValidBSTRecur(node.Left, lower, &node.Val) && isValidBSTRecur(node.Right, &node.Val, upper)
 }
 
 func isValidBST(root *TreeNode) bool {
-	return isValidBSTUtil(root, nil, nil)
+	return isValidBSTRecur(root, nil, nil)
 }
