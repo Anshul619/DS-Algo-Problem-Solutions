@@ -9,22 +9,23 @@ package main
 func lengthOfLongestSubstring(s string) int {
 	m := make(map[rune]int)
 	out := 0
-	startIndex := 0
+
+	// Tracks the beginning of the current window of unique characters.
+	start := 0
 
 	for i, v := range s {
-		if k, ok := m[v]; ok && k >= startIndex {
-			if (i - startIndex) > out {
-				out = i - startIndex
-			}
 
-			startIndex = k + 1
+		if _, ok := m[v]; ok &&
+			m[v] >= start { // Ensures you don’t move the window backward when seeing old duplicates.
+			start = m[v] + 1
 		}
+
+		if i-start+1 > out {
+			out = i - start + 1
+		}
+
+		// Keeps the latest index of each character.
 		m[v] = i
 	}
-
-	if (len(s) - startIndex) > out {
-		out = len(s) - startIndex
-	}
-
 	return out
 }
