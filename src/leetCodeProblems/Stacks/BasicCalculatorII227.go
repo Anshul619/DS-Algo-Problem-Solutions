@@ -60,12 +60,3 @@ func calculate(s string) int {
 
 	return out
 }
-
-// func main() {
-
-// 	//s := "3+2*2"
-// 	//s := " 3/2 "
-// 	s := " 3+5 / 2 "
-// 	//s := "42"
-// 	log.Println(calculate(s))
-// }
