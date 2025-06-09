@@ -3,7 +3,7 @@ package main
 /*
 - Leetcode - https://leetcode.com/problems/product-of-array-except-self/description/
 - Time - O(n)
-- Space - O(n)
+- Space - O(1)
 */
 func productExceptSelf(nums []int) []int {
 
@@ -24,8 +24,3 @@ func productExceptSelf(nums []int) []int {
 
 	return product
 }
-
-// func main() {
-// 	nums := []int{1, 2, 3, 4}
-// 	log.Println(productExceptSelf(nums))
-// }
