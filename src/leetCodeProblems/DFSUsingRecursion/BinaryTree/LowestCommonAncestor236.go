@@ -3,27 +3,31 @@ package main
 /*
 - Leetcode - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
 - Time - O(n)
-- Space - O(1)
+- Space - O(h)
 */
 func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	if root == nil {
 		return nil
 	}
 
+	// If the current node is p or q, return it (this node could be the LCA).
 	if root.Val == p.Val || root.Val == q.Val {
 		return root
 	}
 
-	lcaLeft := lowestCommonAncestor(root.Left, p, q)
+	// Explore both sides.
+	leftLCA := lowestCommonAncestor(root.Left, p, q)
+	rightLCA := lowestCommonAncestor(root.Right, p, q)
 
-	lcaRight := lowestCommonAncestor(root.Right, p, q)
-
-	if lcaLeft != nil && lcaRight != nil {
+	// Both p and q found in different branches → this node is their LCA.
+	if leftLCA != nil && rightLCA != nil {
 		return root
 	}
 
-	if lcaLeft != nil {
-		return lcaLeft
+	// Either both are in the same subtree, or not found at all.
+	if leftLCA != nil {
+		return leftLCA
 	}
-	return lcaRight
+
+	return rightLCA
 }
