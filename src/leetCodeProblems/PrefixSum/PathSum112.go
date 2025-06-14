@@ -9,7 +9,7 @@ type TreeNode struct {
 /*
 - Leetcode - https://leetcode.com/problems/path-sum/description/
 - Time - O(n)
-- Space - O(1)
+- Space - O(h)
 */
 func hasPathSum(root *TreeNode, targetSum int) bool {
 	if root == nil {

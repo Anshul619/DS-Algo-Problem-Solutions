@@ -2,6 +2,8 @@ package main
 
 /**
  * https://leetcode.com/problems/validate-binary-search-tree/
+ * - Time Complexity - O(n)
+ * - Space Complexity - O(h)
  *
  * @author anshul.agrawal
  *
