@@ -3,7 +3,7 @@ package main
 /*
 - Leetcode - https://leetcode.com/problems/same-tree/description/
 - Time - O(n)
-- Space - O(1)
+- Space - O(h)
 */
 func isSameTree(p *TreeNode, q *TreeNode) bool {
 	if p == nil && q == nil {
