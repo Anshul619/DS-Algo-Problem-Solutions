@@ -26,6 +26,7 @@ func wordBreak(s string, wordDict []string) bool {
 			// alreadyChecked[j] true means s[:j] already checked and present in dictionary
 			// m[s[j:i]] means s[j:i] is present in dictionary
 			// hence alreadyChecked[i]=true i.e. s[:i] is found in dictionary
+			// Note - here i is 0-indexed string+1. Hence has to loop through len(s)+1
 			if alreadyChecked[j] && m[s[j:i]] {
 				alreadyChecked[i] = true
 				break
