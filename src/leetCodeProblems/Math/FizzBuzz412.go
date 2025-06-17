@@ -27,9 +27,3 @@ func fizzBuzz(n int) []string {
 	}
 	return out
 }
-
-// func main() {
-// 	log.Println(fizzBuzz(3))
-// 	log.Println(fizzBuzz(5))
-// 	log.Println(fizzBuzz(15))
-// }
