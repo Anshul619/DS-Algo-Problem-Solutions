@@ -9,37 +9,42 @@ import (
 	"math"
 )
 
-func findMinUtil(nums []int, start, end int, min *int) {
-	if start < 0 || end < 0 || end > len(nums)-1 {
-		return
-	}
-
-	if start == end {
-		if nums[start] < *min {
-			*min = nums[start]
-		}
-		return
-	}
-
-	mid := start + (end-start)/2
-
-	// left part is sorted
-	if nums[start] <= nums[mid] {
-		if nums[start] < *min {
-			*min = nums[start]
-		}
-		start = mid + 1
-	} else { // right part is sorted
-		if nums[mid] < *min {
-			*min = nums[mid]
-		}
-		end = mid - 1
-	}
-	findMinUtil(nums, start, end, min)
-}
-
+// Another option
+// - Cleaner & simple version where we keep tracking of sorted array and return nums[start] in the end
 func findMin(nums []int) int {
+
 	min := math.MaxInt
-	findMinUtil(nums, 0, len(nums)-1, &min)
+	start := 0
+	end := len(nums) - 1
+
+	for start <= end {
+
+		// sorted array found
+		if nums[start] < nums[end] {
+			if min > nums[start] {
+				return nums[start]
+			}
+		}
+
+		mid := start + (end-start)/2
+
+		if min > nums[mid] {
+			min = nums[mid]
+		}
+
+		// left is sorted
+		if nums[start] <= nums[mid] {
+			if min > nums[start] {
+				min = nums[start]
+			}
+			start = mid + 1
+		} else { // right is sorted
+			if min > nums[mid+1] {
+				min = nums[mid+1]
+			}
+			end = mid - 1
+		}
+	}
+
 	return min
 }
