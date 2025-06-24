@@ -44,7 +44,3 @@ func threeSumClosest(nums []int, target int) int {
 	}
 	return closest
 }
-
-// func main() {
-// 	log.Println(threeSumClosest([]{}))
-// }

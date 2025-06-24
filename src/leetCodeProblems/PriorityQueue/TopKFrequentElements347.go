@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/top-k-frequent-words/submissions/
-- Time - O(N) + O(N log K) + O(K log K) = O(N log K)
+- Time - O(N) + O(N log K) = O(N log K)
 - Space - O(N + K)
 */
 import (
@@ -10,24 +10,27 @@ import (
 )
 
 type Element struct {
-	num  int
-	freq int
+	Num  int
+	Freq int
 }
 
 type minHeap []Element
 
-// Sort interface implementation
+// Min Heap
+func (h minHeap) Less(i, j int) bool {
+	return h[i].Freq < h[j].Freq
+}
+
+func (h minHeap) Swap(i, j int) {
+	h[i], h[j] = h[j], h[i]
+}
 
 func (h minHeap) Len() int {
 	return len(h)
 }
 
-func (h minHeap) Less(i, j int) bool {
-	return h[i].freq < h[j].freq
-}
-
-func (h minHeap) Swap(i, j int) {
-	h[i], h[j] = h[j], h[i]
+func (h *minHeap) Push(i interface{}) {
+	*h = append(*h, i.(Element))
 }
 
 func (h *minHeap) Pop() interface{} {
@@ -36,31 +39,32 @@ func (h *minHeap) Pop() interface{} {
 	return t
 }
 
-func (h *minHeap) Push(t interface{}) {
-	*h = append(*h, t.(Element))
-}
-
 func topKFrequent1(nums []int, k int) []int {
-	pq := new(minHeap)
 	m := make(map[int]int)
+	h := new(minHeap)
+	heap.Init(h)
 
 	for _, v := range nums {
 		m[v]++
 	}
 
-	for num, freq := range m {
-		if pq.Len() < k {
-			heap.Push(pq, Element{num, freq})
-		} else if (*pq)[0].freq < freq {
-			heap.Pop(pq)
-			heap.Push(pq, Element{num, freq})
+	for n, f := range m {
+		if h.Len() >= k {
+			e := heap.Pop(h).(Element)
+			if e.Freq < f {
+				heap.Push(h, Element{n, f})
+			} else {
+				heap.Push(h, e)
+			}
+		} else {
+			heap.Push(h, Element{n, f})
 		}
 	}
 
-	out := make([]int, k)
+	out := []int{}
 
 	for i := 0; i < k; i++ {
-		out[i] = heap.Pop(pq).(Element).num
+		out = append(out, heap.Pop(h).(Element).Num)
 	}
 	return out
 }
