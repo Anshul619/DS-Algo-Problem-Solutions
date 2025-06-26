@@ -4,21 +4,15 @@ package main
 - LeetCode - https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 */
 
-func util(digits string, index int, m map[string][]string, out *[]string, combination string) {
+func dfs1(m map[string][]string, digits string, out *[]string, combination string, index int) {
 
 	if index == len(digits) {
 		*out = append(*out, combination)
 		return
 	}
 
-	sv := string(digits[index])
-
-	if _, ok := m[sv]; ok {
-		for _, letter := range m[sv] {
-			util(digits, index+1, m, out, combination+letter)
-		}
-	} else {
-		util(digits, index+1, m, out, combination)
+	for _, l := range m[string(digits[index])] {
+		dfs1(m, digits, out, combination+l, index+1)
 	}
 }
 
@@ -40,7 +34,7 @@ func letterCombinations(digits string) []string {
 
 	out := []string{}
 
-	util(digits, 0, m, &out, "")
+	dfs1(m, digits, &out, "", 0)
 
 	return out
 }
