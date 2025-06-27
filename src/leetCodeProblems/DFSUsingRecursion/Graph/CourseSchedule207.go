@@ -6,52 +6,55 @@ package main
 - Space - O(V + E)
 */
 
-func buildDependenciesMap(prerequisites [][]int) map[int][]int {
+func buildGraph(prerequisites [][]int) map[int][]int {
+	m := map[int][]int{}
 
-	dep := map[int][]int{}
-
-	for _, val := range prerequisites {
-
-		if _, ok := dep[val[1]]; !ok {
-			dep[val[1]] = []int{}
-		}
-		dep[val[1]] = append(dep[val[1]], val[0])
+	for _, v := range prerequisites {
+		m[v[1]] = append(m[v[1]], v[0])
 	}
-
-	return dep
+	return m
 }
 
-func isDFSCycleExists(dep map[int][]int, visitedOnPath []bool, alreadyVisited []bool, course int) bool {
-
-	if alreadyVisited[course] {
+// fullyExplored - keeps track of courses that are already fully explored/globally visited
+// visited - keeps track of courses that are visited in the current path
+// m - adjacency list representation of the graph
+// course - the current course being explored
+func isCycleExists(fullyExplored []bool, visited []bool, m map[int][]int, course int) bool {
+	// this course is already fully explored, so no cycle detected, return false
+	if fullyExplored[course] {
 		return false
 	}
 
-	alreadyVisited[course] = true
-	visitedOnPath[course] = true
+	// mark this course as visited in the current path.
+	visited[course] = true
 
-	for _, v := range dep[course] {
-		if visitedOnPath[v] || isDFSCycleExists(dep, visitedOnPath, alreadyVisited, v) {
+	for _, v := range m[course] {
+
+		// if this course is already visited in the current path, then cycle exists
+		// or if cycle exists in the subgraph, then return true
+		if visited[v] || isCycleExists(fullyExplored, visited, m, v) {
 			return true
 		}
 	}
 
-	visitedOnPath[course] = false
-
+	visited[course] = false
+	fullyExplored[course] = true
 	return false
 }
 
 func canFinish(numCourses int, prerequisites [][]int) bool {
-	dep := buildDependenciesMap(prerequisites)
+	m := buildGraph(prerequisites)
 
-	alreadyVisited := make([]bool, numCourses)
-	visitedOnPath := make([]bool, numCourses)
+	// fullyExplored keeps track of courses that are already fully explored/globally visited
+	// this is not to detect cycles, but like DP memorization to avoid re-exploring the same course again
+	// Without this, the code would still work but with more time complexity
+	fullyExplored := make([]bool, numCourses)
 
-	for i := 0; i < numCourses; i++ {
-		if !alreadyVisited[i] && isDFSCycleExists(dep, visitedOnPath, alreadyVisited, i) {
+	for i := range numCourses {
+		// if this course is already fully explored, no need to check again
+		if !fullyExplored[i] && isCycleExists(fullyExplored, make([]bool, numCourses), m, i) {
 			return false
 		}
 	}
-
 	return true
 }
