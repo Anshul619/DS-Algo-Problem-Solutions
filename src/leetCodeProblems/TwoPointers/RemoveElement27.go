@@ -7,21 +7,13 @@ package main
 */
 
 func removeElement(nums []int, val int) int {
-	start, end := 0, len(nums)-1
+	out := 0
 
-	for start <= end {
-
-		if nums[end] == val {
-			end--
-			continue
+	for i := 0; i < len(nums); i++ {
+		if nums[i] != val {
+			nums[out] = nums[i]
+			out++
 		}
-
-		if nums[start] == val {
-			nums[start] = nums[end]
-			end--
-		}
-		start++
 	}
-	// or end+1 - +1 as we need to 1-based-index in array
-	return start
+	return out
 }
