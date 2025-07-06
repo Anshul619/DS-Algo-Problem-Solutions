@@ -13,12 +13,14 @@ func reverseWords(s string) string {
 	for i := len(s) - 1; i >= 0; i-- {
 		if s[i] != ' ' {
 
+			// Found a character, start of a word
 			if lastIndex == -1 {
 				lastIndex = i
 			}
 			continue
 		}
 
+		// Found space after a word
 		if lastIndex != -1 {
 
 			if len(out) != 0 {
@@ -29,6 +31,7 @@ func reverseWords(s string) string {
 		}
 	}
 
+	// Add the first word (if there is one)
 	if lastIndex != -1 {
 
 		if len(out) != 0 {

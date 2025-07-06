@@ -5,44 +5,32 @@ package main
 - Time - O(n)
 - Space - O(1)
 */
-func deleteNode(p, prev, head *ListNode) *ListNode {
-	if prev != nil {
-		prev.Next = p.Next
-	} else {
-		head = p.Next
-	}
-	return head
-}
-
 func deleteDuplicatesII(head *ListNode) *ListNode {
-	if head == nil {
-		return nil
-	}
+	// This dummy head is helpful, to handle null head
+	dummy := &ListNode{Next: head} // Dummy node to simplify head deletion
+	prev := dummy
+	cur := head
 
-	var prev *ListNode
-	removedVal := 101
+	for cur != nil && cur.Next != nil {
 
-	p := head
+		// Detect the start of duplicates
+		if cur.Val == cur.Next.Val {
 
-	for p != nil {
+			// Move to the last node in this duplicate group
+			for cur.Next != nil && cur.Val == cur.Next.Val {
+				cur = cur.Next
+			}
 
-		if p.Next != nil && p.Val == p.Next.Val {
-			head = deleteNode(p.Next, prev, head)
-			removedVal = p.Val
-			p = p.Next.Next
+			// Skip the entire duplicate group
+			prev.Next = cur.Next
+		} else {
 
-			continue
+			// No duplication, move prev forward
+			prev = cur
 		}
 
-		if p.Val == removedVal {
-			head = deleteNode(p, prev, head)
-			p = p.Next
+		cur = cur.Next
 
-			continue
-		}
-
-		prev = p
-		p = p.Next
 	}
-	return head
+	return dummy.Next
 }
