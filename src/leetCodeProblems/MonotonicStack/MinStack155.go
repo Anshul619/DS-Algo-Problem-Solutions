@@ -27,8 +27,8 @@ func (s stack3) peek() int {
 }
 
 type MinStack struct {
-	s  *stack3
-	ms *stack3
+	s  *stack3 // main stack to store all values
+	ms *stack3 // auxiliary stack to store minimum values
 }
 
 func Constructor1() MinStack {
@@ -38,6 +38,9 @@ func Constructor1() MinStack {
 	}
 }
 
+// Push adds a new value to the MinStack
+// If the value is smaller than or equal to the current minimum,
+// it is also pushed onto the ms (min stack)
 func (this *MinStack) Push(val int) {
 	if this.ms.isEmpty() || this.ms.peek() >= val {
 		this.ms.push(val)
@@ -46,6 +49,8 @@ func (this *MinStack) Push(val int) {
 	this.s.push(val)
 }
 
+// Pop removes the top element from the main stack,
+// and also removes it from the min stack if it was the minimum
 func (this *MinStack) Pop() {
 	if !this.ms.isEmpty() &&
 		this.s.peek() == this.ms.peek() {

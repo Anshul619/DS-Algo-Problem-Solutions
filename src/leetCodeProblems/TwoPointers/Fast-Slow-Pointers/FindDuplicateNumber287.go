@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/find-the-duplicate-number/
-- Time Complexity - O(logn)
+- Time Complexity - O(n)
 - Space Complexity - O(1)
 - Remarks - Floyd Algo
 */
