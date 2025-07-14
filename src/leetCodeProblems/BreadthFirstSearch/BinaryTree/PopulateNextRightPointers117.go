@@ -1,16 +1,10 @@
 package main
 
 /*
-- LeetCode - https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
-- Time - O(h * w)
+- LeetCode - https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/?envType=study-plan-v2&envId=top-interview-150
+- Time - O(n)
 - Space - O(w)
 */
-type Node struct {
-	Val   int
-	Left  *Node
-	Right *Node
-	Next  *Node
-}
 
 type queue1 []*Node
 
@@ -28,7 +22,7 @@ func (q queue1) isEmpty() bool {
 	return len(q) == 0
 }
 
-func connect(root *Node) *Node {
+func connect1(root *Node) *Node {
 	if root == nil {
 		return nil
 	}

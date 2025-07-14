@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestConnect(t *testing.T) {
+func TestConnect1(t *testing.T) {
 	t.Run("test1", func(t *testing.T) {
 		root := new(Node) //Returns pointer to TreeNode object
 		root.Val = 1
@@ -20,6 +20,6 @@ func TestConnect(t *testing.T) {
 		root.Right.Right = new(Node)
 		root.Right.Right.Val = 7
 
-		connect(root)
+		connect1(root)
 	})
 }

@@ -7,9 +7,10 @@ package main
 */
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	carry := 0
+	var head *ListNode
+	var tail *ListNode
 
-	var outHead, outNext *ListNode
+	carry := 0
 
 	for l1 != nil || l2 != nil || carry > 0 {
 		sum := carry
@@ -24,17 +25,18 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 			l2 = l2.Next
 		}
 
-		temp := &ListNode{nil, sum % 10}
 		carry = sum / 10
 
-		if outHead == nil {
-			outHead = temp
-			outNext = temp
+		newNode := &ListNode{}
+		newNode.Val = sum % 10
+
+		if head != nil {
+			tail.Next = newNode
 		} else {
-			outNext.Next = temp
-			outNext = temp
+			head = newNode
 		}
+		tail = newNode
 	}
 
-	return outHead
+	return head
 }

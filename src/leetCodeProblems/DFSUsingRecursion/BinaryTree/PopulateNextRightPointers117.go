@@ -1,10 +1,11 @@
 package main
 
 /*
-- LeetCode - https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/
-- Time - O(n)
+- Leetcode - https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/
+- Time - O(N)
 - Space - O(1)
 */
+
 type Node struct {
 	Val   int
 	Left  *Node
@@ -45,6 +46,7 @@ func connect(root *Node) *Node {
 
 	if root.Right != nil {
 		root.Right.Next = getNext(root)
+
 	}
 
 	connect(root.Right)

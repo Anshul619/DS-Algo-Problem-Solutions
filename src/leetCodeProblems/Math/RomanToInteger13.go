@@ -8,49 +8,35 @@ package main
 func romanToInt(s string) int {
 	out := 0
 
+	m := map[string]int{
+		"M":  1000,
+		"CM": 900,
+		"D":  500,
+		"CD": 400,
+		"C":  100,
+		"XC": 90,
+		"L":  50,
+		"XL": 40,
+		"X":  10,
+		"IX": 9,
+		"V":  5,
+		"IV": 4,
+		"I":  1,
+	}
+
 	for i := 0; i < len(s); i++ {
+		// compare pair
 		if i+1 < len(s) {
-			t := string(s[i]) + string(s[i+1])
-			n := 0
+			p := s[i : i+2]
 
-			switch t {
-			case "IV":
-				n = 4
-			case "IX":
-				n = 9
-			case "XL":
-				n = 40
-			case "XC":
-				n = 90
-			case "CD":
-				n = 400
-			case "CM":
-				n = 900
-			}
-
-			if n != 0 {
-				out += n
+			if v, ok := m[p]; ok {
+				out += v
 				i++
 				continue
 			}
 		}
 
-		switch string(s[i]) {
-		case "I":
-			out += 1
-		case "V":
-			out += 5
-		case "X":
-			out += 10
-		case "L":
-			out += 50
-		case "C":
-			out += 100
-		case "D":
-			out += 500
-		case "M":
-			out += 1000
-		}
+		out += m[string(s[i])]
 	}
 	return out
 }
