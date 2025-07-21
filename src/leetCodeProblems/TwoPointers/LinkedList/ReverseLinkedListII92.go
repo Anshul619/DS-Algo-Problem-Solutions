@@ -6,34 +6,32 @@ package main
 - Space - O(1)
 */
 
+// Note - Both left, right are 1-indexed
 func reverseBetween(head *ListNode, left int, right int) *ListNode {
-	if left == right {
+	if head == nil || left == right {
 		return head
 	}
 
-	if head == nil {
-		return head
-	}
+	// dummy prev node
+	dummy := &ListNode{}
+	dummy.Next = head
+	prev := dummy
 
-	// This dummy head is helpful, to handle null head
-	dummyHead := new(ListNode)
-	prev := dummyHead
-
-	prev.Next = head
-
-	// Go to left pointer
-	for i := 0; i < left-1; i++ {
+	// Move `prev` to the node before reversal starts
+	for i := 1; i < left; i++ {
 		prev = prev.Next
 	}
 
-	cur := prev.Next
+	start := prev.Next // start of the reversal list
+	move := start.Next // node to be moved
 
+	// move then (for right-left times)
 	for i := 0; i < right-left; i++ {
-		t := prev.Next
-		prev.Next = cur.Next
-		cur.Next = cur.Next.Next
-		prev.Next.Next = t
+		start.Next = move.Next
+		move.Next = prev.Next
+		prev.Next = move
+		move = start.Next
 	}
 
-	return dummyHead.Next
+	return dummy.Next
 }
