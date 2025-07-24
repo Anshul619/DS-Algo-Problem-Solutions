@@ -5,7 +5,7 @@ package main
 - Time - O(n)
 - Space - O(n)
 */
-func buildTreeRecur(preorder []int, m map[int]int, inStart, inEnd int, preIndex *int) *TreeNode {
+func dfs(preorder []int, m map[int]int, preIndex *int, inStart int, inEnd int) *TreeNode {
 	if inStart > inEnd || *preIndex >= len(preorder) {
 		return nil
 	}
@@ -14,16 +14,12 @@ func buildTreeRecur(preorder []int, m map[int]int, inStart, inEnd int, preIndex 
 	node.Val = preorder[*preIndex]
 	*preIndex++
 
-	if inStart == inEnd {
-		return node
-	}
-
 	inIndex := m[node.Val]
-	node.Left = buildTreeRecur(preorder, m, inStart, inIndex-1, preIndex)
-	node.Right = buildTreeRecur(preorder, m, inIndex+1, inEnd, preIndex)
+
+	node.Left = dfs(preorder, m, preIndex, inStart, inIndex-1)
+	node.Right = dfs(preorder, m, preIndex, inIndex+1, inEnd)
 	return node
 }
-
 func buildTree(preorder []int, inorder []int) *TreeNode {
 	m := make(map[int]int)
 
@@ -33,5 +29,5 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 
 	preIndex := 0
 
-	return buildTreeRecur(preorder, m, 0, len(inorder), &preIndex)
+	return dfs(preorder, m, &preIndex, 0, len(inorder)-1)
 }

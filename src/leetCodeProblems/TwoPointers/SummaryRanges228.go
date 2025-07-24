@@ -15,24 +15,22 @@ func formatOut(nums []int, start, end int) string {
 	}
 	return strconv.Itoa(nums[start]) + "->" + strconv.Itoa(nums[end])
 }
-func summaryRanges(nums []int) []string {
-	if len(nums) == 0 {
-		return []string{}
-	}
 
+func summaryRanges(nums []int) []string {
 	out := []string{}
 
 	start, end := 0, 0
 
-	for i := 1; i < len(nums); i++ {
-		if nums[i] == nums[end]+1 {
-			end = i
+	for end < len(nums) {
+
+		if end < len(nums)-1 && nums[end]+1 == nums[end+1] {
+			end++
 			continue
-		} else {
-			out = append(out, formatOut(nums, start, end))
-			start, end = i, i
 		}
+
+		out = append(out, formatOut(nums, start, end))
+		end++
+		start = end
 	}
-	out = append(out, formatOut(nums, start, end))
 	return out
 }

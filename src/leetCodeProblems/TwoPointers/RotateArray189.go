@@ -6,6 +6,8 @@ package main
 - Time - O(n)
 */
 
+// Standard Euclidean algorithm to compute the greatest common divisor (GCD) of two integers a and b
+// GCD - the largest positive integer that divides each of the integers without leaving a remainder.
 func gcd(a, b int) int {
 	if b == 0 {
 		return a
@@ -13,19 +15,19 @@ func gcd(a, b int) int {
 	return gcd(b, a%b)
 }
 
-// Rotate array by left k
 func leftRotate(nums []int, k int) {
-	gcd := gcd(k, len(nums))
+	gcd := gcd(k, len(nums)) // example - k=4, len=7, gcd=1
 
-	for i := 0; i < gcd; i++ {
-		temp := nums[i]
+	// Creates gcd number of cycles and moves elements within each cycle.
+	for i := range gcd {
+		t := nums[i]
 		j := i
 
-		// update values
+		// Move each element k steps ahead (left rotation)
 		for {
 			k1 := j + k
 			if k1 >= len(nums) {
-				k1 = k1 - len(nums)
+				k1 = k1 - len(nums) // wrap around
 			}
 
 			if k1 == i {
@@ -36,14 +38,12 @@ func leftRotate(nums []int, k int) {
 			j = k1
 		}
 
-		// update last element of ith set to temp
-		nums[j] = temp
+		nums[j] = t
 	}
 }
 
 func rotate(nums []int, k int) {
-	k = k % len(nums)
-	k = len(nums) - k
-
+	k = k % len(nums) // reduce unnecessary full rotations
+	k = len(nums) - k // convert right rotation to equivalent left rotation
 	leftRotate(nums, k)
 }

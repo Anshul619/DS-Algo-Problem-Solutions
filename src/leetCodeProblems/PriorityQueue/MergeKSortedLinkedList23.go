@@ -2,7 +2,7 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/merge-k-sorted-lists/submissions/
-- Time - O(N * K * logK)
+- Time - O(N * LogK)
 - Space - O(K)
 */
 import (
@@ -14,57 +14,50 @@ type ListNode struct {
 	Next *ListNode
 }
 
-type nodesPQ []*ListNode
+type minHeap2 []*ListNode
 
-func (h nodesPQ) Len() int {
-	return len(h)
-}
-
-func (h nodesPQ) Less(i int, j int) bool {
+func (h minHeap2) Less(i, j int) bool {
 	return h[i].Val < h[j].Val
 }
 
-func (h nodesPQ) Swap(i int, j int) {
+func (h minHeap2) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *nodesPQ) Push(a interface{}) {
-	*h = append(*h, a.(*ListNode))
+func (h *minHeap2) Pop() interface{} {
+	t := (*h)[len(*h)-1]
+	*h = (*h)[:len(*h)-1]
+	return t
 }
 
-func (h *nodesPQ) Pop() interface{} {
-	l := len(*h)
-	res := (*h)[l-1]
-	*h = (*h)[:l-1]
-	return res
+func (h *minHeap2) Push(i interface{}) {
+	*h = append(*h, i.(*ListNode))
+}
+
+func (h minHeap2) Len() int {
+	return len(h)
 }
 
 func mergeKLists(lists []*ListNode) *ListNode {
-	pq := new(nodesPQ)
+	h := new(minHeap2)
+	heap.Init(h)
 
-	//log.Println(lists)
-	var head *ListNode
-	var cur *ListNode
+	dummy := &ListNode{}
+	cur := dummy
 
-	for i := 0; i < len(lists); i++ {
-		heap.Push(pq, lists[i])
-	}
-
-	for pq.Len() != 0 {
-		node := heap.Pop(pq).(*ListNode)
-
-		if head == nil {
-			head = node
-			cur = node
-		} else {
-			cur.Next = node
-			cur = cur.Next
-		}
-
-		if node.Next != nil {
-			heap.Push(pq, node.Next)
+	for _, v := range lists {
+		if v != nil {
+			heap.Push(h, v)
 		}
 	}
 
-	return head
+	for h.Len() > 0 {
+		e := heap.Pop(h).(*ListNode)
+		cur.Next = e
+		cur = cur.Next
+		if e.Next != nil {
+			heap.Push(h, e.Next)
+		}
+	}
+	return dummy.Next
 }
