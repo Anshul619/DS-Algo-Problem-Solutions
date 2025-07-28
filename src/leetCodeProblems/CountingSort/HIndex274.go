@@ -25,7 +25,7 @@ func hIndex(citations []int) int {
 
 	// papersWithAtLeastH keeps track of the total number of papers with at least `h` citations
 	// Initially, it's the number of papers with >= n citations
-	papersWithAtLeastH := counter[len(citations)]
+	papersWithAtLeastH := counter[h]
 
 	// Step 3: Decrease `h` until we find a valid H-index
 	// We want to find the largest `h` where there are at least `h` papers with >= h citations
