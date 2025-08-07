@@ -7,40 +7,25 @@ package main
 */
 
 func rotateRight(head *ListNode, k int) *ListNode {
-	if head == nil {
-		return nil
-	}
-
-	if k == 0 {
+	if k == 0 || head == nil {
 		return head
 	}
-
 	total := 0
-	temp := head
+	next := head
 
-	// count list
-	for temp != nil {
+	for next != nil {
 		total++
-		temp = temp.Next
+		next = next.Next
 	}
 
-	if k > total {
-		k = k % total
-	}
+	k = k % total
 
 	slow, fast := head, head
 
-	// Move fast by leftK
-	for i := 0; i < k; i++ {
-		if fast.Next != nil {
-			fast = fast.Next
-		} else {
-			return head
-		}
-
+	for range k {
+		fast = fast.Next
 	}
 
-	// Move fast and slow till end of list
 	for fast.Next != nil {
 		slow = slow.Next
 		fast = fast.Next
