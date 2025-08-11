@@ -5,6 +5,16 @@ import (
 	"testing"
 )
 
+func getSlice(head *ListNode) []int {
+	out := []int{}
+
+	for head != nil {
+		out = append(out, head.Val)
+		head = head.Next
+	}
+	return out
+}
+
 func TestSortList(t *testing.T) {
 	t.Run("test1", func(t *testing.T) {
 		list := new(ListNode)
