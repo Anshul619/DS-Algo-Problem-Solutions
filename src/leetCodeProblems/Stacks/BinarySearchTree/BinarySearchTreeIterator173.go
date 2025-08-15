@@ -5,50 +5,48 @@ package main
 - Time - O(1)
 - Space - O(h)
 */
-type stack2 []*TreeNode
+type stack []*TreeNode
 
-func (s *stack2) push(t *TreeNode) {
-	*s = append(*s, t)
-}
-
-func (s *stack2) pop() *TreeNode {
+func (s *stack) pop() *TreeNode {
 	t := (*s)[len(*s)-1]
 	*s = (*s)[:len(*s)-1]
 	return t
 }
 
-func (s stack2) isEmpty() bool {
-	return len(s) == 0
+func (s *stack) push(i *TreeNode) {
+	*s = append(*s, i)
+}
+
+func (s *stack) isEmpty() bool {
+	return len(*s) == 0
 }
 
 type BSTIterator struct {
-	s *stack2
+	st *stack
 }
 
-func pushAllLeftNodes(node *TreeNode, s *stack2) {
-	for node != nil {
-		s.push(node)
-		node = node.Left
+func (this *BSTIterator) pushLeftNodes(root *TreeNode) {
+	for root != nil {
+		this.st.push(root)
+		root = root.Left
 	}
 }
 
 func Constructor(root *TreeNode) BSTIterator {
 	bst := BSTIterator{}
-	bst.s = new(stack2)
+	bst.st = new(stack)
 
-	pushAllLeftNodes(root, bst.s)
+	bst.pushLeftNodes(root)
 	return bst
 }
 
 func (this *BSTIterator) Next() int {
-	node := this.s.pop()
+	i := this.st.pop()
 
-	if node.Right != nil {
-		pushAllLeftNodes(node.Right, this.s)
-	}
-	return node.Val
+	this.pushLeftNodes(i.Right)
+	return i.Val
 }
 
 func (this *BSTIterator) HasNext() bool {
-	return !this.s.isEmpty()
+	return !this.st.isEmpty()
 }
