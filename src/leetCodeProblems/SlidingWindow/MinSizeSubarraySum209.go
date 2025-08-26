@@ -7,21 +7,21 @@ package main
 */
 
 func minSubArrayLen(target int, nums []int) int {
+	start := 0
 	out := 0
+	cur := 0
 
-	start, sum := 0, 0
+	for i, v := range nums {
+		cur += v
 
-	for i := 0; i < len(nums); i++ {
-		sum += nums[i]
-
-		for sum >= target {
-			if out == 0 || (i-start+1) < out {
+		for cur >= target {
+			if out == 0 || i-start+1 < out {
 				out = i - start + 1
 			}
-
-			sum -= nums[start]
+			cur -= nums[start]
 			start++
 		}
 	}
+
 	return out
 }

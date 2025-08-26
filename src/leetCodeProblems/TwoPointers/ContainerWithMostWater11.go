@@ -6,33 +6,20 @@ package main
 - Time - O(n)
 */
 
-func minH(x, y int) int {
-	if x < y {
-		return x
-	}
-
-	return y
-}
-
 func maxArea(height []int) int {
+	out := 0
+	left := 0
+	right := len(height) - 1
 
-	max := 0
-	first := 0
-	last := len(height) - 1
+	for left < right {
+		area := min(height[left], height[right]) * (right - left)
+		out = max(out, area)
 
-	for first < last {
-		temp := (last - first) * minH(height[first], height[last])
-
-		if temp > max {
-			max = temp
-		}
-
-		if height[first] < height[last] {
-			first++
+		if height[left] < height[right] {
+			left++
 		} else {
-			last--
+			right--
 		}
 	}
-
-	return max
+	return out
 }

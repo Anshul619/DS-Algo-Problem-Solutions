@@ -18,6 +18,7 @@ func TestMinSubArrayLen(t *testing.T) {
 		{4, []int{1, 4, 4}, 1},
 		{11, []int{1, 1, 1, 1, 1, 1, 1, 1}, 0},
 		{4, []int{2, 1, 2, 1}, 3},
+		{15, []int{1, 2, 3, 4, 5}, 5},
 	}
 
 	for i, v := range tests {
