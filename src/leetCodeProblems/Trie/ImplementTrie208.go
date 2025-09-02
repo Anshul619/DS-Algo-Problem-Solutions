@@ -2,59 +2,61 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/implement-trie-prefix-tree/solutions/3577631/go-hash-table-92-faster/
-- Time - O(n)
-- Space - O(n)
+- Time - O(L) (where L = length of word)
+- Space - O(N*L) (where N = number of words, L = length of word)
 */
 
 type TrieNode struct {
-	Children [26]*TrieNode
+	children [26]*TrieNode
 	isWord   bool
 }
-
 type Trie struct {
 	root *TrieNode
 }
 
 func Constructor() Trie {
-	trie := new(Trie)
-	trie.root = new(TrieNode)
-	return *trie
+	t := Trie{}
+	t.root = new(TrieNode)
+	return t
 }
 
 func (this *Trie) Insert(word string) {
-
 	node := this.root
 
 	for _, v := range word {
 		v -= 'a'
-		if node.Children[v] == nil {
-			node.Children[v] = new(TrieNode)
+		if node.children[v] == nil {
+			node.children[v] = new(TrieNode)
 		}
-		node = node.Children[v]
+		node = node.children[v]
 	}
-
 	node.isWord = true
 }
 
-func (this Trie) find(word string) *TrieNode {
+func (this *Trie) Search(word string) bool {
 	node := this.root
 
 	for _, v := range word {
 		v -= 'a'
-		if node.Children[v] == nil {
-			return nil
+		if node.children[v] == nil {
+			return false
 		}
-		node = node.Children[v]
+		node = node.children[v]
 	}
 
-	return node
-}
-
-func (this *Trie) Search(word string) bool {
-	node := this.find(word)
-	return node != nil && node.isWord
+	return node.isWord
 }
 
 func (this *Trie) StartsWith(prefix string) bool {
-	return this.find(prefix) != nil
+	node := this.root
+
+	for _, v := range prefix {
+		v -= 'a'
+		if node.children[v] == nil {
+			return false
+		}
+		node = node.children[v]
+	}
+
+	return true
 }
