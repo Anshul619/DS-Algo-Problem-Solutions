@@ -6,16 +6,22 @@ package main
 - Space - O(1)
 */
 
-func isSymmetricUtil(node1, node2 *TreeNode) bool {
+func dfs(node1, node2 *TreeNode) bool {
 	if node1 == nil && node2 == nil {
 		return true
 	}
-
-	if node1 == nil || node2 == nil || node1.Val != node2.Val {
+	if node1 == nil {
+		return false
+	}
+	if node2 == nil {
 		return false
 	}
 
-	return isSymmetricUtil(node1.Left, node2.Right) && isSymmetricUtil(node1.Right, node2.Left)
+	if node1.Val != node2.Val {
+		return false
+	}
+
+	return dfs(node1.Left, node2.Right) && dfs(node1.Right, node2.Left)
 }
 
 func isSymmetric(root *TreeNode) bool {
@@ -23,5 +29,5 @@ func isSymmetric(root *TreeNode) bool {
 		return true
 	}
 
-	return isSymmetricUtil(root.Left, root.Right)
+	return dfs(root.Left, root.Right)
 }
