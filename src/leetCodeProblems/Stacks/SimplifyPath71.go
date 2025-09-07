@@ -13,62 +13,51 @@ func (s *stackDir) pop() string {
 	return t
 }
 
-func (s *stackDir) push(r string) {
-	*s = append(*s, r)
+func (s *stackDir) push(t string) {
+	*s = append(*s, t)
 }
 
-func (s stackDir) isEmpty() bool {
-	return len(s) == 0
+func (s *stackDir) isEmpty() bool {
+	return len(*s) == 0
 }
 
-func parseDir(dir string, s *stackDir) {
+func parseDir(dir string, st *stackDir) {
 	switch dir {
-	case ".": // do nothing
+	case ".", "":
+		// do nothing
 	case "..":
-		if !s.isEmpty() {
-			s.pop()
+		if !st.isEmpty() {
+			st.pop()
 		}
 	default:
-		s.push(dir)
+		st.push(dir)
 	}
 }
-
 func simplifyPath(path string) string {
-	s := new(stackDir)
-	start, i := 0, 1
+	st := new(stackDir)
 
-	for i < len(path) {
+	start := -1
 
-		if string(path[i]) == "/" {
-
-			if i-start > 1 {
-				parseDir(path[start+1:i], s)
+	for i, v := range path {
+		if string(v) == "/" {
+			if start != -1 {
+				parseDir(path[start+1:i], st)
 			}
-
 			start = i
 		}
-
-		i++
 	}
 
-	if i-start > 1 {
-		parseDir(path[start+1:i], s)
+	if start != -1 && start < len(path)-1 {
+		parseDir(path[start+1:], st)
 	}
 
-	if s.isEmpty() {
+	if st.isEmpty() {
 		return "/"
 	}
 
-	rs := new(stackDir)
-
-	for !s.isEmpty() {
-		rs.push(s.pop())
-	}
-
 	out := ""
-
-	for !rs.isEmpty() {
-		out += "/" + rs.pop()
+	for !st.isEmpty() {
+		out = "/" + st.pop() + out
 	}
 
 	return out
