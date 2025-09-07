@@ -17,6 +17,7 @@ func TestWordPattern(t *testing.T) {
 		{"abba", "dog dog dog dog", false},
 		{"aaa", "aa aa aa aa", false},
 		{"he", "unit", false},
+		{"abab", "dog cat cat dog", false},
 	}
 
 	for i, v := range tests {

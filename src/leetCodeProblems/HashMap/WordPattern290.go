@@ -1,50 +1,32 @@
 package main
 
+import "strings"
+
 /*
 - Leetcode - https://leetcode.com/problems/word-pattern/description
 - Time - O(n)
 - Space - O(m+n) // (where m is length of pattern and n is length of string)
 */
-func findNextWord(i *int, s string) string {
-	old := *i
-
-	for *i < len(s) && s[*i] != byte(' ') {
-		*i++
-	}
-
-	if old == *i {
-		return ""
-	}
-
-	// one more increase fo space
-	*i++
-	return string(s[old : *i-1])
-}
-
 func wordPattern(pattern string, s string) bool {
-	m := make(map[rune]string)
-	mr := make(map[string]rune)
+	m1 := make(map[byte]string)
+	m2 := make(map[string]byte)
 
-	i := 0
+	stringSlice := strings.Split(s, " ")
 
-	for _, v := range pattern {
-		w := findNextWord(&i, s)
-
-		if w == "" {
-			return false
-		}
-
-		if _, ok := m[v]; ok && m[v] != w {
-			return false
-		}
-
-		if _, ok := mr[w]; ok && mr[w] != v {
-			return false
-		}
-
-		m[v] = w
-		mr[w] = v
+	if len(pattern) != len(stringSlice) {
+		return false
 	}
 
-	return i >= len(s)
+	for i, v := range pattern {
+		m1[byte(v)] = stringSlice[i]
+		m2[stringSlice[i]] = byte(v)
+	}
+
+	for i, v := range stringSlice {
+		if m2[v] != pattern[i] || m1[pattern[i]] != v {
+			return false
+		}
+	}
+
+	return true
 }
