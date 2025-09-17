@@ -6,31 +6,34 @@ package main
 - Space - O(1)
 */
 func deleteDuplicatesII(head *ListNode) *ListNode {
-	// This dummy head is helpful, to handle null head
-	dummy := &ListNode{Next: head} // Dummy node to simplify head deletion
+	// Dummy node simplifies removal at head
+	dummy := &ListNode{}
+	dummy.Next = head
+
 	prev := dummy
+
 	cur := head
 
-	for cur != nil && cur.Next != nil {
+	// Iterate through the list
+	for cur != nil {
 
-		// Detect the start of duplicates
-		if cur.Val == cur.Next.Val {
+		// Check if current has duplicates by comparing with next node
+		if cur.Next != nil && cur.Val == cur.Next.Val {
 
-			// Move to the last node in this duplicate group
+			// Skip all nodes with the same value
 			for cur.Next != nil && cur.Val == cur.Next.Val {
 				cur = cur.Next
 			}
 
-			// Skip the entire duplicate group
+			// Link prev to the first node after duplicates. No need to move prev
 			prev.Next = cur.Next
 		} else {
-
-			// No duplication, move prev forward
-			prev = cur
+			// Move prev to its next node
+			prev = prev.Next
 		}
 
+		// Move cur to its next current
 		cur = cur.Next
-
 	}
 	return dummy.Next
 }

@@ -9,33 +9,23 @@ import (
 	"sort"
 )
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
 func findMinArrowShots(points [][]int) int {
 	if len(points) == 0 {
 		return 0
 	}
 
 	sort.SliceStable(points, func(i, j int) bool {
-		return points[i][0] < points[j][0]
+		return points[i][1] < points[j][1]
 	})
 
-	out := 0
-
-	overlappingEnd := points[0][1]
+	out := 1
+	end := points[0][1]
 
 	for i := 1; i < len(points); i++ {
-		if points[i][0] <= overlappingEnd {
-			overlappingEnd = min(overlappingEnd, points[i][1])
-		} else {
+		if points[i][0] > end {
 			out++
-			overlappingEnd = points[i][1]
+			end = points[i][1]
 		}
 	}
-	return out + 1
+	return out
 }

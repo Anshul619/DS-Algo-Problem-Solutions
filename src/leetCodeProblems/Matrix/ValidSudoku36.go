@@ -33,16 +33,16 @@ func isValidSudoku(board [][]byte) bool {
 		}
 	}
 
-	// Diagonal traversal
+	// Sub-boxes traversal
 	rowStart := 0
 	rowEnd := 2
 
-	for l := 0; l < 3; l++ {
-
+	// first row boxes, then next
+	for boxRow := 0; boxRow < 3; boxRow++ {
 		colStart := 0
 		colEnd := 2
 
-		for k := 0; k < 3; k++ {
+		for boxCol := 0; boxCol < 3; boxCol++ {
 			m := make([]bool, 9)
 
 			for i := rowStart; i <= rowEnd; i++ {
@@ -51,14 +51,13 @@ func isValidSudoku(board [][]byte) bool {
 						if ok := m[board[i][j]-byte('0')-1]; ok {
 							return false
 						}
-
 						m[board[i][j]-byte('0')-1] = true
 					}
 				}
 			}
+
 			colStart += 3
 			colEnd += 3
-
 		}
 
 		rowStart += 3
