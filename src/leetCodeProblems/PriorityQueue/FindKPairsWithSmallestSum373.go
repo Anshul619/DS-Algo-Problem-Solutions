@@ -1,74 +1,63 @@
 package main
 
+import "container/heap"
+
 /*
 - Leetcode - https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/
-- Time - O(min(k*logk),m * n * log(m * n))
-- Space - O(min(k, m * n))
+- Time - O(min(n,k)+klog(min(n,k))) = O(klog(min(n,k)))
+- Space - O(min(n, k))
 */
-import (
-	"container/heap"
-)
-
 type Pair struct {
-	index1, index2 int
+	i   int // index in Num1
+	j   int // index in Num2
+	sum int
 }
 
-type PairSum struct {
-	sum, index1, index2 int
+type minHeap3 []Pair
+
+func (h minHeap3) Len() int {
+	return len(h)
 }
 
-type pairQueue []PairSum
-
-// Min-Heap
-func (pq pairQueue) Less(i, j int) bool {
-	return pq[i].sum < pq[j].sum
+func (h minHeap3) Less(i, j int) bool {
+	return h[i].sum < h[j].sum
 }
 
-func (pq pairQueue) Swap(i, j int) {
-	pq[i], pq[j] = pq[j], pq[i]
+func (h minHeap3) Swap(i, j int) {
+	h[i], h[j] = h[j], h[i]
 }
 
-func (pq *pairQueue) Push(p interface{}) {
-	(*pq) = append((*pq), p.(PairSum))
+func (h *minHeap3) Push(x any) {
+	*h = append(*h, x.(Pair))
 }
 
-func (pq *pairQueue) Pop() interface{} {
-	t := (*pq)[pq.Len()-1]
-	*pq = (*pq)[:pq.Len()-1]
+func (h *minHeap3) Pop() any {
+	t := (*h)[len(*h)-1]
+	*h = (*h)[:len(*h)-1]
 	return t
 }
 
-func (pq pairQueue) isEmpty() bool {
-	return len(pq) == 0
-}
-
-func (pq pairQueue) Len() int {
-	return len(pq)
-}
-
 func kSmallestPairs(nums1 []int, nums2 []int, k int) [][]int {
-	pq := new(pairQueue)
-	visited := make(map[Pair]bool)
+	h := new(minHeap3)
+	heap.Init(h)
 
-	heap.Push(pq, PairSum{nums1[0] + nums2[0], 0, 0})
-	visited[Pair{0, 0}] = true
+	// seed heap with (nums1[i], nums2[0]) for first min(len(nums1), k)
+	for i := 0; i < len(nums1) && i < k; i++ {
+		heap.Push(h, Pair{i, 0, nums1[i] + nums2[0]})
+	}
 
 	out := [][]int{}
 
-	for k > 0 && !pq.isEmpty() {
-		p := heap.Pop(pq).(PairSum)
-		out = append(out, []int{nums1[p.index1], nums2[p.index2]})
-
-		if p.index1+1 < len(nums1) && !visited[Pair{p.index1 + 1, p.index2}] {
-			heap.Push(pq, PairSum{nums1[p.index1+1] + nums2[p.index2], p.index1 + 1, p.index2})
-			visited[Pair{p.index1 + 1, p.index2}] = true
-		}
-
-		if p.index2+1 < len(nums2) && !visited[Pair{p.index1, p.index2 + 1}] {
-			heap.Push(pq, PairSum{nums1[p.index1] + nums2[p.index2+1], p.index1, p.index2 + 1})
-			visited[Pair{p.index1, p.index2 + 1}] = true
-		}
+	for k > 0 && h.Len() > 0 {
+		p := heap.Pop(h).(Pair)
+		out = append(out, []int{nums1[p.i], nums2[p.j]})
 		k--
+
+		// push next pair (i, j+1) if exists
+		if p.j+1 < len(nums2) {
+			heap.Push(h, Pair{p.i, p.j + 1, nums1[p.i] + nums2[p.j+1]})
+		}
 	}
+
 	return out
 }

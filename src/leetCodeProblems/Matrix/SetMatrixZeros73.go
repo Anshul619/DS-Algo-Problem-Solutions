@@ -1,5 +1,10 @@
 package main
 
+/*
+- Leetcode - https://leetcode.com/problems/set-matrix-zeroes/
+- Time - O(m*n)
+- Space - O(1)
+*/
 func setZerosRow(matrix [][]int, row, startCol int) {
 	for j := startCol; j < len(matrix[0]); j++ {
 		matrix[row][j] = 0
@@ -14,22 +19,22 @@ func setZerosCol(matrix [][]int, col, startRow int) {
 
 func setZeroes(matrix [][]int) {
 
-	isFirstRowZero := false
+	firstRowZero := false
 
-	// Traverse the first row & set isFirstRowZero if its supposed to be zero
+	// Traverse the first row & set firstRowZero if its supposed to be zero
 	for j := 0; j < len(matrix[0]); j++ {
 		if matrix[0][j] == 0 {
-			isFirstRowZero = true
+			firstRowZero = true
 			break
 		}
 	}
 
-	isFirstColumnZero := false
+	firstColZero := false
 
-	// Traverse the second row & set isFirstColumnZero if its supposed to be zero
+	// Traverse the second row & set firstColZero if its supposed to be zero
 	for i := 0; i < len(matrix); i++ {
 		if matrix[i][0] == 0 {
-			isFirstColumnZero = true
+			firstColZero = true
 			break
 		}
 	}
@@ -58,11 +63,11 @@ func setZeroes(matrix [][]int) {
 		}
 	}
 
-	if isFirstRowZero {
+	if firstRowZero {
 		setZerosRow(matrix, 0, 0)
 	}
 
-	if isFirstColumnZero {
+	if firstColZero {
 		setZerosCol(matrix, 0, 0)
 	}
 }
