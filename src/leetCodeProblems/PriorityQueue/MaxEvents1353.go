@@ -29,18 +29,18 @@ func (pq ongoingEventsQueue) Swap(i, j int) {
 	pq[i], pq[j] = pq[j], pq[i]
 }
 
-func (pq *ongoingEventsQueue) Push(num interface{}) {
+func (pq *ongoingEventsQueue) Push(num any) {
 	*pq = append(*pq, num.(int))
 }
 
-func (pq *ongoingEventsQueue) Pop() interface{} {
+func (pq *ongoingEventsQueue) Pop() any {
 	len := len(*pq)
 	num := (*pq)[len-1]
 	*pq = (*pq)[:len-1]
 	return num
 }
 
-func (pq ongoingEventsQueue) Peek() interface{} {
+func (pq ongoingEventsQueue) Peek() any {
 	return pq[0]
 }
 

@@ -89,11 +89,11 @@ func (h tasksPriorityQueue) Swap(i int, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *tasksPriorityQueue) Push(a interface{}) {
+func (h *tasksPriorityQueue) Push(a any) {
 	*h = append(*h, a.(task))
 }
 
-func (h *tasksPriorityQueue) Pop() interface{} {
+func (h *tasksPriorityQueue) Pop() any {
 	l := len(*h)
 	res := (*h)[l-1]
 	*h = (*h)[:l-1]

@@ -18,11 +18,11 @@ func (h pq) Len() int {
 	return len(h)
 }
 
-func (h *pq) Push(a interface{}) {
+func (h *pq) Push(a any) {
 	*h = append(*h, a.(wordFreq))
 }
 
-func (h *pq) Pop() interface{} {
+func (h *pq) Pop() any {
 	len := len(*h)
 	elem := (*h)[len-1]
 	*h = (*h)[:len-1]

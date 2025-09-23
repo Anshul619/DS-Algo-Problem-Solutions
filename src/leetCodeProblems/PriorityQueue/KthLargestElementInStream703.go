@@ -29,12 +29,12 @@ func (pq elementsQueue) Swap(i, j int) {
 	pq[i], pq[j] = pq[j], pq[i]
 }
 
-func (pq *elementsQueue) Push(num interface{}) {
+func (pq *elementsQueue) Push(num any) {
 	*pq = append(*pq, num.(int))
 }
 
 // This is how PQ works - same way as stack
-func (pq *elementsQueue) Pop() interface{} {
+func (pq *elementsQueue) Pop() any {
 	len := len(*pq)
 	num := (*pq)[len-1]
 	*pq = (*pq)[:len-1]
@@ -42,7 +42,7 @@ func (pq *elementsQueue) Pop() interface{} {
 }
 
 // This is again special case of PQ peek - peek from start
-func (pq elementsQueue) Peek() interface{} {
+func (pq elementsQueue) Peek() any {
 	return pq[0]
 }
 

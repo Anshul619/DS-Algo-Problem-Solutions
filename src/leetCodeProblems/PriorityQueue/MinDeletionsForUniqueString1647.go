@@ -29,11 +29,11 @@ func (h charPQ) Swap(i int, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *charPQ) Push(a interface{}) {
+func (h *charPQ) Push(a any) {
 	*h = append(*h, a.(Character))
 }
 
-func (h *charPQ) Pop() interface{} {
+func (h *charPQ) Pop() any {
 	l := len(*h)
 	res := (*h)[l-1]
 	*h = (*h)[:l-1]

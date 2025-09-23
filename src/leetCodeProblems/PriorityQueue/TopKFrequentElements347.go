@@ -29,11 +29,11 @@ func (h minHeap) Len() int {
 	return len(h)
 }
 
-func (h *minHeap) Push(i interface{}) {
+func (h *minHeap) Push(i any) {
 	*h = append(*h, i.(Element))
 }
 
-func (h *minHeap) Pop() interface{} {
+func (h *minHeap) Pop() any {
 	t := (*h)[len(*h)-1]
 	*h = (*h)[:len(*h)-1]
 	return t

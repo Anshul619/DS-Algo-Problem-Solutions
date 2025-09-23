@@ -29,11 +29,11 @@ func (pq CharPriorityQueue) Swap(i, j int) {
 	pq[i], pq[j] = pq[j], pq[i]
 }
 
-func (pq *CharPriorityQueue) Push(num interface{}) {
+func (pq *CharPriorityQueue) Push(num any) {
 	*pq = append(*pq, num.(Node))
 }
 
-func (pq *CharPriorityQueue) Pop() interface{} {
+func (pq *CharPriorityQueue) Pop() any {
 	len := len(*pq)
 	num := (*pq)[len-1]
 	*pq = (*pq)[:len-1]

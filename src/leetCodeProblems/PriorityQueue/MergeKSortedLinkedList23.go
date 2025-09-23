@@ -24,13 +24,13 @@ func (h minHeap2) Swap(i, j int) {
 	h[i], h[j] = h[j], h[i]
 }
 
-func (h *minHeap2) Pop() interface{} {
+func (h *minHeap2) Pop() any {
 	t := (*h)[len(*h)-1]
 	*h = (*h)[:len(*h)-1]
 	return t
 }
 
-func (h *minHeap2) Push(i interface{}) {
+func (h *minHeap2) Push(i any) {
 	*h = append(*h, i.(*ListNode))
 }
 

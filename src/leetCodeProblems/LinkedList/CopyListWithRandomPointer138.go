@@ -13,39 +13,41 @@ type Node struct {
 }
 
 func copyRandomList(head *Node) *Node {
+	if head == nil {
+		return nil
+	}
 
+	// Map from original node -> copied node
 	m := make(map[*Node]*Node)
+
+	dummyHead := &Node{}
+	prev := dummyHead
 
 	oldNext := head
 
-	var newHead *Node
-	var newNext *Node
-
+	// First pass: copy nodes (Val only), set up Next links later
 	for oldNext != nil {
-		newNode := new(Node)
-		newNode.Val = oldNext.Val
+		node := &Node{}
+		node.Val = oldNext.Val
 
-		m[oldNext] = newNode
+		m[oldNext] = node
 
-		if newHead == nil {
-			newHead = newNode
-			newNext = newNode
-		} else {
-			newNext.Next = newNode
-			newNext = newNext.Next
-		}
+		prev.Next = node
+		prev = prev.Next
+
 		oldNext = oldNext.Next
 	}
 
 	oldNext = head
 
 	for oldNext != nil {
-
 		m[oldNext].Random = m[oldNext.Random]
+		m[oldNext].Next = m[oldNext.Next]
+
 		oldNext = oldNext.Next
 	}
 
-	return newHead
+	return dummyHead.Next
 }
 
 // func main() {

@@ -23,13 +23,13 @@ func (h minHeap1) Len() int {
 	return len(h)
 }
 
-func (h *minHeap1) Pop() interface{} {
+func (h *minHeap1) Pop() any {
 	t := (*h)[len(*h)-1]
 	*h = (*h)[:len(*h)-1]
 	return t
 }
 
-func (h *minHeap1) Push(t interface{}) {
+func (h *minHeap1) Push(t any) {
 	*h = append(*h, t.(int))
 }
 
