@@ -21,59 +21,54 @@ func powInt(x, y int) int {
 }
 
 func findDepth(root *TreeNode) int {
-	depth := 0
-	node := root
+	d := 0
 
-	for node != nil {
-		depth++
-		node = node.Left
+	for root != nil && root.Left != nil {
+		d++
+		root = root.Left
 	}
-	return depth
+	return d
 }
 
-func exists(index, depth int, root *TreeNode) bool {
-	left := 1
-	right := powInt(2, depth-1)
+func exists(idx, d int, root *TreeNode) bool {
+	l := 1
+	r := powInt(2, d)
 
-	node := root
+	for range d {
+		m := l + (r-l)/2
 
-	for i := 0; i < depth-1; i++ {
-		mid := left + (right-left)/2
-
-		if index <= mid {
-			node = node.Left
-			right = mid
+		if idx <= m {
+			root = root.Left
+			r = m
 		} else {
-			node = node.Right
-			left = mid + 1
+			root = root.Right
+			l = m + 1
 		}
 	}
-
-	return node != nil
+	return root != nil
 }
 
 func countNodes(root *TreeNode) int {
-	depth := findDepth(root)
+	d := findDepth(root)
 
-	left := 1
-	right := powInt(2, depth-1)
+	l := 1
+	r := powInt(2, d)
 
-	for left <= right {
-		mid := (left + right) / 2
+	for l <= r {
+		m := l + (r-l)/2
 
-		if exists(mid, depth, root) {
-			left = mid + 1
+		if exists(m, d, root) {
+			l = m + 1
 		} else {
-			right = mid - 1
+			r = m - 1
 		}
 	}
 
 	out := 0
 
-	for i := 0; i < depth-1; i++ {
+	for i := range d {
 		out += powInt(2, i)
 	}
-
-	out += left
+	out += l
 	return out - 1
 }

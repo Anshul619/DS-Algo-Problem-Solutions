@@ -9,47 +9,29 @@ import (
 	"bytes"
 )
 
-func dfs(grid [][]byte, x int, y int) {
-
-	if x < 0 || x >= len(grid) || y < 0 || y >= len(grid[0]) || !bytes.Equal([]byte{grid[x][y]}, []byte{'1'}) {
+func dfs(grid [][]byte, x, y int) {
+	if x < 0 || y < 0 ||
+		x >= len(grid) || y >= len(grid[0]) ||
+		!bytes.Equal([]byte{grid[x][y]}, []byte{'1'}) {
 		return
 	}
 
 	grid[x][y] = 0
-
-	dfs(grid, x-1, y)
 	dfs(grid, x+1, y)
-	dfs(grid, x, y-1)
+	dfs(grid, x-1, y)
 	dfs(grid, x, y+1)
+	dfs(grid, x, y-1)
 }
-
 func numIslands(grid [][]byte) int {
+	out := 0
 
-	numberOfIslands := 0
-	for i := range grid {
-		for j := range grid[i] {
-			if bytes.Equal([]byte{grid[i][j]}, []byte{'1'}) {
-				numberOfIslands++
+	for i, v := range grid {
+		for j, v1 := range v {
+			if bytes.Equal([]byte{v1}, []byte{'1'}) {
+				out++
 				dfs(grid, i, j)
 			}
 		}
 	}
-
-	return numberOfIslands
+	return out
 }
-
-// func main() {
-
-// 	// grid := [][]byte{{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'},
-// 	// 	{'1', '1', '0', '0', '0'},
-// 	// 	{'0', '0', '0', '0', '0'}}
-
-// 	// log.Println(numIslands(grid))
-
-// 	grid := [][]byte{{'1', '1', '0', '0', '0'},
-// 		{'1', '1', '0', '0', '0'},
-// 		{'0', '0', '1', '0', '0'},
-// 		{'0', '0', '0', '1', '1'}}
-
-// 	log.Println(numIslands(grid))
-// }

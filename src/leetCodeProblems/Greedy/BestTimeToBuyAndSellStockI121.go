@@ -7,22 +7,21 @@ package main
 */
 
 func maxProfit(prices []int) int {
-
 	if len(prices) == 0 {
 		return 0
 	}
 
-	minPrice := prices[0]
-	maxProfit := 0
+	minPrice := prices[0] // Track the minimum price seen so far
+	maxProfit := 0        // Track the maximum profit so far
 
-	for _, v := range prices {
+	for i := 1; i < len(prices); i++ {
+		if prices[i]-minPrice > maxProfit {
+			maxProfit = prices[i] - minPrice
+		}
 
-		if v < minPrice {
-			minPrice = v
-		} else if v-minPrice > maxProfit {
-			maxProfit = v - minPrice
+		if prices[i] < minPrice {
+			minPrice = prices[i]
 		}
 	}
-
 	return maxProfit
 }

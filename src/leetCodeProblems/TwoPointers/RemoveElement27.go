@@ -9,9 +9,9 @@ package main
 func removeElement(nums []int, val int) int {
 	out := 0
 
-	for i := 0; i < len(nums); i++ {
-		if nums[i] != val {
-			nums[out] = nums[i]
+	for _, v := range nums {
+		if v != val {
+			nums[out] = v
 			out++
 		}
 	}
