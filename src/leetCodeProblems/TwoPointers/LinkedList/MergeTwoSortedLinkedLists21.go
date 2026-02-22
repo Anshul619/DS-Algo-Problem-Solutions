@@ -7,36 +7,29 @@ package main
 */
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	var outHead, outNext *ListNode
+	dummy := new(ListNode)
+	cur := dummy
 
-	for list1 != nil || list2 != nil {
-		var nodeToInsert *ListNode
-
-		switch {
-		case list1 == nil:
-			nodeToInsert = list2
-			list2 = nil
-		case list2 == nil:
-			nodeToInsert = list1
-			list1 = nil
-		default:
-			if list1.Val < list2.Val {
-				nodeToInsert = list1
-				list1 = list1.Next
-			} else {
-				nodeToInsert = list2
-				list2 = list2.Next
-			}
-		}
-
-		if outHead != nil {
-			outNext.Next = nodeToInsert
+	for list1 != nil && list2 != nil {
+		if list1.Val < list2.Val {
+			cur.Next = list1
+			list1 = list1.Next
 		} else {
-			outHead = nodeToInsert
+			cur.Next = list2
+			list2 = list2.Next
 		}
-
-		outNext = nodeToInsert
+		cur.Next.Next = nil
+		cur = cur.Next
 	}
 
-	return outHead
+	// Attach the remaining part
+	if list1 != nil {
+		cur.Next = list1
+	}
+
+	if list2 != nil {
+		cur.Next = list2
+	}
+
+	return dummy.Next
 }
