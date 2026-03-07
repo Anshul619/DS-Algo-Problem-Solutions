@@ -5,26 +5,19 @@ package main
 - Time - O(n)
 - Space - O(h)
 */
-import "strconv"
-
-func sumNumbersUtil(node *TreeNode, pathSum string, out *int) {
-	if node == nil {
-		return
+func dfs1(root *TreeNode, cur int) int {
+	if root == nil {
+		return 0
 	}
 
-	pathSum += strconv.Itoa(node.Val)
+	cur = cur*10 + root.Val
 
-	if node.Left == nil && node.Right == nil {
-		a, _ := strconv.Atoi(pathSum)
-		*out += a
-		return
+	if root.Left == nil && root.Right == nil {
+		return cur
 	}
-	sumNumbersUtil(node.Left, pathSum, out)
-	sumNumbersUtil(node.Right, pathSum, out)
+	return dfs1(root.Left, cur) + dfs1(root.Right, cur)
 }
 
 func sumNumbers(root *TreeNode) int {
-	out := 0
-	sumNumbersUtil(root, "", &out)
-	return out
+	return dfs1(root, 0)
 }

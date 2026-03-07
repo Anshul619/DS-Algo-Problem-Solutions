@@ -8,16 +8,16 @@ package main
 
 func containsDuplicate(nums []int) bool {
 	// Create an empty map to track seen integers
-	m := make(map[int]bool)
+	seen := make(map[int]struct{})
 
 	// Iterate over all numbers in nums
 	for _, v := range nums {
 		// If v is already in the map, we found a duplicate
-		if _, ok := m[v]; ok {
+		if _, ok := seen[v]; ok {
 			return true
 		}
 		// Otherwise, mark v as seen
-		m[v] = true
+		seen[v] = struct{}{}
 	}
 	// No duplicates found
 	return false
