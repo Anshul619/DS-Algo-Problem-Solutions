@@ -13,37 +13,38 @@ import (
 )
 
 func threeSum(nums []int) [][]int {
-
-	hashMap := make(map[int]int)
-	targetSum := 0
-	uniqueOutMap := make(map[string]bool)
-
-	var out [][]int
-
 	sort.Ints(nums)
 
-	for i, v := range nums {
-		hashMap[v] = i
-	}
+	out := [][]int{}
+	m := make(map[string]struct{})
 
-	for i, v := range nums {
+	for i := 0; i < len(nums)-2; i++ {
+		l := i + 1
+		r := len(nums) - 1
 
-		for j := i + 1; j < len(nums); j++ {
+		for l < r {
+			s := nums[i] + nums[l] + nums[r]
 
-			sum := targetSum - v - nums[j]
+			if s == 0 {
 
-			if mapV, ok := hashMap[sum]; ok && mapV > i && mapV > j {
+				p := strconv.Itoa(nums[i]) + strconv.Itoa(nums[l]) + strconv.Itoa(nums[r])
 
-				pairKey := strconv.Itoa(v) + "_" + strconv.Itoa(nums[j]) + "_" + strconv.Itoa(sum)
-				temp := append([]int{}, v, nums[j], sum)
-
-				if _, uOk := uniqueOutMap[pairKey]; !uOk {
-					out = append(out, temp)
-					uniqueOutMap[pairKey] = true
+				if _, ok := m[p]; !ok {
+					out = append(out, []int{nums[i], nums[l], nums[r]})
+					m[p] = struct{}{}
 				}
+
+				l++
+				r--
+				continue
+			}
+
+			if s < 0 {
+				l++
+			} else {
+				r--
 			}
 		}
 	}
-
 	return out
 }

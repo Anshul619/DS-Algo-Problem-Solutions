@@ -7,41 +7,30 @@ import "strconv"
 - Time - O(n)
 - Space - O(n)
 */
-type stackRPN []int
-
-func (s *stackRPN) pop() int {
-	t := (*s)[len(*s)-1]
-	*s = (*s)[:len(*s)-1]
-	return t
-}
-
-func (s *stackRPN) push(t int) {
-	*s = append(*s, t)
-}
-
 func evalRPN(tokens []string) int {
-	s := new(stackRPN)
+	st := []int{}
 
 	for _, v := range tokens {
 		switch v {
-		case "+", "-", "/", "*":
-			n1 := s.pop()
-			n2 := s.pop()
+		case "-", "/", "*", "+":
+			b := st[len(st)-1]
+			a := st[len(st)-2]
+			st = st[:len(st)-2]
+
 			switch v {
 			case "+":
-				s.push(n2 + n1)
+				st = append(st, a+b)
 			case "-":
-				s.push(n2 - n1)
+				st = append(st, a-b)
 			case "/":
-				s.push(n2 / n1)
+				st = append(st, a/b)
 			default:
-				s.push(n2 * n1)
+				st = append(st, a*b)
 			}
 		default:
-			i, _ := strconv.Atoi(v)
-			s.push(i)
-
+			n, _ := strconv.Atoi(v)
+			st = append(st, n)
 		}
 	}
-	return s.pop()
+	return st[0]
 }

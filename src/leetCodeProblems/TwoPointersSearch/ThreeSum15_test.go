@@ -1,11 +1,5 @@
 package main
 
-/*
-- LeetCode - https://leetcode.com/problems/two-sum/description/
-- Time - O(n)
-- Space - O(n)
-*/
-
 import (
 	"reflect"
 	"testing"

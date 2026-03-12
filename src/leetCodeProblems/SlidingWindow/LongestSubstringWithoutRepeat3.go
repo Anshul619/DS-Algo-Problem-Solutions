@@ -7,7 +7,7 @@ package main
 */
 
 func lengthOfLongestSubstring(s string) int {
-	m := make(map[rune]int)
+	m := make(map[rune]int, len(s))
 	out := 0
 
 	// Tracks the beginning of the current window of unique characters.
@@ -15,13 +15,13 @@ func lengthOfLongestSubstring(s string) int {
 
 	for i, v := range s {
 
-		if _, ok := m[v]; ok &&
-			m[v] >= start { // Ensures you don’t move the window backward when seeing old duplicates.
-			start = m[v] + 1
+		if prev, ok := m[v]; ok &&
+			prev >= start { // Ensures you don’t move the window backward when seeing old duplicates.
+			start = prev + 1
 		}
 
-		if i-start+1 > out {
-			out = i - start + 1
+		if l := i - start + 1; l > out {
+			out = l
 		}
 
 		// Keeps the latest index of each character.

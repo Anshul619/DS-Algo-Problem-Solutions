@@ -2,14 +2,13 @@ package main
 
 /*
 - Leetcode - https://leetcode.com/problems/add-two-numbers/
-- Time - O(n)
+- Time - O(max(N,M))
 - Space - O(1)
 */
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	var head *ListNode
-	var tail *ListNode
-
+	dummyHead := new(ListNode)
+	prev := dummyHead
 	carry := 0
 
 	for l1 != nil || l2 != nil || carry > 0 {
@@ -27,16 +26,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 		carry = sum / 10
 
-		newNode := &ListNode{}
-		newNode.Val = sum % 10
-
-		if head != nil {
-			tail.Next = newNode
-		} else {
-			head = newNode
-		}
-		tail = newNode
+		prev.Next = &ListNode{Val: sum % 10}
+		prev = prev.Next
 	}
 
-	return head
+	return dummyHead.Next
 }
