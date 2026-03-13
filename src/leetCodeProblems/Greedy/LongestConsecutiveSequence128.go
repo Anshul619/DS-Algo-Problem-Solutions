@@ -6,29 +6,30 @@ package main
 - Space - O(n)
 */
 func longestConsecutive(nums []int) int {
-	m := make(map[int]bool)
+	m := make(map[int]struct{})
 
 	for _, v := range nums {
-		m[v] = true
+		m[v] = struct{}{}
 	}
 
 	out := 0
 
-	for _, v := range nums {
-		if ok := m[v-1]; !ok {
-			j := 0
+	for v := range m {
+		if _, ok := m[v-1]; ok {
+			continue
+		}
 
-			for m[v+j] {
-				j++
-			}
+		len := 0
 
-			if j > out {
-				out = j
-			}
-
-			if j > len(nums)/2 {
+		for {
+			if _, ok := m[v+len]; !ok {
 				break
 			}
+			len++
+		}
+
+		if len > out {
+			out = len
 		}
 	}
 	return out
