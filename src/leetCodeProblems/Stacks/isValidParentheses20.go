@@ -6,47 +6,24 @@ package main
 - Space - O(n)
 */
 
-type stackP []rune
-
-func (s *stackP) push(r rune) {
-	*s = append(*s, r)
-}
-
-func (s *stackP) pop() rune {
-	if s.isEmpty() {
-		return rune(0)
-	}
-
-	t := (*s)[len(*s)-1]
-	*s = (*s)[:len(*s)-1]
-	return t
-}
-
-func (s stackP) isEmpty() bool {
-	return len(s) == 0
-}
-
 func isValid(s string) bool {
-	st := new(stackP)
+	st := make([]rune, 0, len(s))
+
+	m := map[rune]rune{
+		')': '(',
+		'}': '{',
+		']': '[',
+	}
 
 	for _, v := range s {
-		switch string(v) {
-		case ")":
-			if string(st.pop()) != "(" {
+		if open, ok := m[v]; ok {
+			if len(st) == 0 || st[len(st)-1] != open {
 				return false
 			}
-		case "}":
-			if string(st.pop()) != "{" {
-				return false
-			}
-		case "]":
-			if string(st.pop()) != "[" {
-				return false
-			}
-		default:
-			st.push(v)
+			st = st[:len(st)-1]
+		} else {
+			st = append(st, v)
 		}
 	}
-
-	return st.isEmpty()
+	return len(st) == 0
 }
