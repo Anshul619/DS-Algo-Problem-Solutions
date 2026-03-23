@@ -8,45 +8,59 @@ package main
 
 import "container/list"
 
-type KeyValue struct {
-	Key int
-	Val int
+type Node struct {
+	key int
+	val int
 }
 
 type LRUCache struct {
-	m        map[int]*list.Element
-	l        *list.List
-	capacity int
+	l    *list.List
+	m    map[int]*list.Element
+	size int
 }
 
 func Constructor(capacity int) LRUCache {
-	return LRUCache{
-		make(map[int]*list.Element),
-		list.New(),
-		capacity,
+	lru := LRUCache{
+		size: capacity,
+		l:    list.New(),
+		m:    make(map[int]*list.Element),
 	}
+	return lru
 }
 
 func (this *LRUCache) Get(key int) int {
-	if v, ok := this.m[key]; ok {
-		this.l.MoveToFront(v)
-		return v.Value.(KeyValue).Val
+	if e, ok := this.m[key]; ok {
+		this.l.MoveToBack(e)
+		return e.Value.(*Node).val
 	}
 	return -1
 }
 
 func (this *LRUCache) Put(key int, value int) {
-	if v, ok := this.m[key]; ok {
-		v.Value = KeyValue{key, value}
-		this.l.MoveToFront(v)
+	// ✅ If key exists → update + move
+	if e, ok := this.m[key]; ok {
+		node := e.Value.(*Node)
+		node.val = value
+
+		this.l.MoveToBack(e)
 		return
 	}
 
-	if this.l.Len() == this.capacity {
-		e := this.l.Back()
-		this.l.Remove(e)
-		delete(this.m, e.Value.(KeyValue).Key)
+	// ✅ If full → evict LRU
+	if this.l.Len() == this.size {
+		f := this.l.Front()
+
+		if f != nil {
+			this.l.Remove(f)
+			delete(this.m, f.Value.(*Node).key)
+		}
 	}
-	e := this.l.PushFront(KeyValue{key, value})
-	this.m[key] = e
+
+	// ✅ Insert new
+	node := &Node{
+		key: key,
+		val: value,
+	}
+
+	this.m[key] = this.l.PushBack(node)
 }

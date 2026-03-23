@@ -2,18 +2,19 @@ package main
 
 /*
 - Leetcode - https://leetcode.com/problems/invert-binary-tree/description/
-- Time - O(n)
-- Space - O(1)
+- Time - O(n) where n = number of nodes in the tree
+- Space - O(1) + O(h) (recursion call stack) = O(h)
 */
-
 func invertTree(root *TreeNode) *TreeNode {
 	if root == nil {
-		return nil
+		return root
 	}
 
-	node := new(TreeNode)
-	node.Val = root.Val
-	node.Left = invertTree(root.Right)
-	node.Right = invertTree(root.Left)
-	return node
+	// Swap in same instruction
+	root.Left, root.Right = root.Right, root.Left
+
+	invertTree(root.Left)
+	invertTree(root.Right)
+
+	return root
 }

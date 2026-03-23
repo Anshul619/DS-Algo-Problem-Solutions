@@ -5,31 +5,28 @@ package main
 - Time - O(m+n)
 - Space - O(1)
 */
-
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	dummy := new(ListNode)
-	cur := dummy
+	dummyHead := &ListNode{}
+	prev := dummyHead
 
-	for list1 != nil && list2 != nil {
-		if list1.Val < list2.Val {
-			cur.Next = list1
-			list1 = list1.Next
+	for list1 != nil || list2 != nil {
+		if list1 != nil && list2 != nil {
+			if list1.Val > list2.Val {
+				prev.Next = list2
+				list2 = list2.Next
+			} else {
+				prev.Next = list1
+				list1 = list1.Next
+			}
+
+			prev = prev.Next
+		} else if list1 != nil {
+			prev.Next = list1
+			list1 = nil
 		} else {
-			cur.Next = list2
-			list2 = list2.Next
+			prev.Next = list2
+			list2 = nil
 		}
-		cur.Next.Next = nil
-		cur = cur.Next
 	}
-
-	// Attach the remaining part
-	if list1 != nil {
-		cur.Next = list1
-	}
-
-	if list2 != nil {
-		cur.Next = list2
-	}
-
-	return dummy.Next
+	return dummyHead.Next
 }
