@@ -3,40 +3,31 @@ package main
 /*
 - LeetCode - https://leetcode.com/problems/valid-anagram/description/
 - Time complexity: O(n)
-- Space complexity: O(26)
+- Space complexity: O(26) = O(1)
 */
 
+/*
+Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+- Have to use map[rune]int, instead of make([]int, 26)
+- Time - O(n)
+- Space - O(n)
+*/
 func isAnagram(s string, t string) bool {
-
 	if len(s) != len(t) {
 		return false
 	}
-
-	a := make([]int, 26)
+	m := make([]int, 26)
 
 	for _, v := range s {
-		a[v-'a']++
+		m[v-'a']++
 	}
 
 	for _, v := range t {
-		a[v-'a']--
-	}
-
-	for _, v := range a {
-		if v != 0 {
+		m[v-'a']--
+		if m[v-'a'] < 0 {
 			return false
 		}
 	}
 
 	return true
 }
-
-// func main() {
-// 	s := "anagram"
-// 	t := "nagaram"
-
-// 	// s := "rat"
-// 	// t := "car"
-
-// 	log.Println(isAnagram(s, t))
-// }
