@@ -1,19 +1,15 @@
 /*
 - LeetCode - https://leetcode.com/problems/linked-list-cycle/
+- Time - O(n)
+- Space - O(1)
 */
 package main
 
 func hasCycle(head *ListNode) bool {
-
-	if head == nil {
-		return false
-	}
-
 	slow := head
 	fast := head
 
-	for slow != nil && fast != nil && fast.Next != nil {
-
+	for fast != nil && fast.Next != nil {
 		slow = slow.Next
 		fast = fast.Next.Next
 
@@ -21,6 +17,5 @@ func hasCycle(head *ListNode) bool {
 			return true
 		}
 	}
-
 	return false
 }

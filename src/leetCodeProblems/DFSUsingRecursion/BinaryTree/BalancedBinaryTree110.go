@@ -2,42 +2,29 @@ package main
 
 /*
 - LeetCode - https://leetcode.com/problems/balanced-binary-tree
+- Time - O(n)
+- Space - O(h)
 */
-//import "log"
 
-// type TreeNode struct {
-// 	Val   int
-// 	Left  *TreeNode
-// 	Right *TreeNode
-// }
-
-func isBalancedUtil(root *TreeNode) (int, bool) {
-
-	if root == nil {
-		return -1, true
+func dfs2(node *TreeNode) (int, bool) {
+	if node == nil {
+		return 0, true
 	}
 
-	leftHeight, leftIsBalanced := isBalancedUtil(root.Left)
-	rightHeight, rightIsBalanced := isBalancedUtil(root.Right)
+	leftHeight, leftBalanced := dfs2(node.Left)
+	rightHeight, rightBalanced := dfs2(node.Right)
 
-	leftHeight++
-	rightHeight++
-
-	diff, isBalanced, height := leftHeight-rightHeight, false, rightHeight
-
-	if -1 <= diff && diff <= 1 {
-		isBalanced = leftIsBalanced && rightIsBalanced
+	diff := leftHeight - rightHeight
+	if diff < 0 {
+		diff = -diff
 	}
 
-	if leftHeight > rightHeight {
-		height = leftHeight
-	}
+	isBalanced := diff <= 1 && leftBalanced && rightBalanced
 
-	return height, isBalanced
+	return max(rightHeight, leftHeight) + 1, isBalanced
 }
-
 func isBalanced(root *TreeNode) bool {
-	_, isBalanced := isBalancedUtil(root)
+	_, isBalanced := dfs2(root)
 	return isBalanced
 }
 
